@@ -1,0 +1,9 @@
+UBD_ost_politik_decisions_category = {
+	allowed = {
+		original_tag = UBD
+	}
+	visible = {
+		has_completed_focus = UBD_start_ostpolitik
+	}
+	icon = decision_category_generic_political_actions
+}

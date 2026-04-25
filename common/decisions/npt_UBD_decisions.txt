@@ -1,0 +1,58 @@
+UBD_ost_politik_decisions_category = {
+	
+	UBD_land_measurements = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+		}
+		visible = {
+			has_completed_focus = UBD_start_ostpolitik
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = UBD_land_measurements_finished
+		}
+	}
+	
+	UBD_buy_land = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			has_country_flag = UBD_land_measurements_finished
+		}
+		visible = {
+			has_completed_focus = UBD_start_ostpolitik
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = UBD_land_bought
+		}
+	}
+	
+	UBD_german_immigration = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			has_country_flag = UBD_land_bought
+		}
+		visible = {
+			has_completed_focus = UBD_start_ostpolitik
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = UBD_germans_migrated
+		}
+	}
+}

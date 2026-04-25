@@ -1,0 +1,22 @@
+add_namespace = UBD
+
+
+country_event = {
+	id = ubd.1
+	title = ubd.1.t
+	desc = ubd.1.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.1.a
+	}
+}
+
+country_event = {
+	id = ubd.2
+	title = ubd.2.t
+	desc = ubd.2.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.2.a
+	}
+}

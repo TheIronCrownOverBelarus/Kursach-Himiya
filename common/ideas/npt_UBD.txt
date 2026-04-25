@@ -1,0 +1,243 @@
+ideas = {
+
+	#United Baltic Duchy
+	
+	head_of_government = {
+
+		Adolf_Pilar_von_Pilchau_1 = {
+			allowed = {
+				original_tag = UBD
+				NOT = { has_country_flag = Adolf_Pilar_von_Pilchau_dead }
+			}
+			traits = { head_of_government_trait conservative_counselor min_1_silent_workhorse conservative_min_1 }
+			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
+			allowed_to_remove = {
+                always = yes
+            }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+				}
+			}
+		}
+		
+	}
+	
+	military_minister = {
+		
+		Rudiger_von_der_Golz_6 = {
+			allowed = {
+				OR = {
+					original_tag = UBD
+				}
+				NOT = { has_country_flag = Rudiger_von_der_Golz_dead }
+			}
+			traits = { military_minister_trait conservative_counselor min_6_enlister conservative_min_6 }
+			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
+			allowed_to_remove = {
+                always = yes
+            }
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+	}
+	
+	country = {
+	
+		UBD_german_occupation_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				stability_weekly = -0.005
+			}
+		}
+		
+		UBD_financial_problem_2_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_factor = -0.3
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				stability_factor = -0.1
+			}
+		}
+		
+		UBD_financial_problem_1_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_factor = -0.15
+				production_speed_buildings_factor = -0.07
+				industrial_capacity_factory = -0.07
+				stability_factor = -0.05
+			}
+		}
+		
+		UBD_weak_state_apparatus_3_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				head_of_government_cost_factor = 2
+				foreign_minister_cost_factor = 2
+				economy_minister_cost_factor = 2
+				security_minister_cost_factor = 2
+				head_of_intel_cost_factor = 2
+				military_minister_cost_factor = 2
+				political_advisor_cost_factor = 2
+				political_power_cost = 0.25
+				political_power_factor = -0.25
+				stability_factor = -0.25
+			}
+		}
+		
+		UBD_ethnic_problem_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				training_time_army_factor = 0.05
+				conscription_factor = -0.05
+				political_power_cost = 0.05
+				stability_factor = -0.05
+				industrial_capacity_factory = -0.05
+			}
+		}
+		
+		UBD_landwehr_1_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_victors_of_ww1
+			modifier = {
+				army_org_factor = 0.07
+				army_morale_factor = 0.04
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		
+		UBD_landwehr_2_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_victors_of_ww1
+			modifier = {
+				army_org_factor = 0.15
+				army_morale_factor = 0.08
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+		
+		UBD_RUS_regiments_idea = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			available = {  }
+			removal_cost = -1
+			cancel_if_invalid = yes
+			modifier = {
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.1
+			} 
+		}
+		
+		UBD_service_for_land_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				training_time_army_factor = -0.1
+				war_support_weekly = 0.002
+				weekly_manpower = 300
+				
+			}
+		}
+		
+	}
+
+	tank_manufacturer = {
+		
+		designer = yes
+	}
+
+	industrial_concern = {
+		
+	}
+
+	naval_manufacturer = {
+		
+		designer = yes
+	}
+
+	materiel_manufacturer = {
+		
+		designer = yes
+	}
+	
+	aircraft_manufacturer = {
+		
+		designer = yes
+	}
+
+}
