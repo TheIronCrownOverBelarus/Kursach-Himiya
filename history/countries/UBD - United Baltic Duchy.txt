@@ -1,9 +1,9 @@
-﻿capital = 12
+﻿capital = 808
 
 set_country_flag = this_country_is_not_a_nation
 
-set_stability = 0.5
-set_war_support = 0.3
+set_stability = 0.15
+set_war_support = 0.05
 starting_train_buffer = 1.0
 set_convoys = 20
 
@@ -16,42 +16,113 @@ set_air_techs_2 = yes
 set_researched_doctrine_6 = yes
 set_grand_doctrine = mass_assault
 
-
 add_ideas = {
 	limited_monarchy_gov_form
-	federal_gov_terr
-	uncodified_constitution_b_law
+	unitary_gov_terr
+	local_assembly_decisions_b_law
 	poliparty_system_law
-	neutral_foreign_policy_law
+	realpolitic_policy_law
 	
-	landlordism steel_agricultural_tools
 	cities_averange_education
-}
-set_politics = {
-	ruling_party = authoritarism
-	last_election = "1910.1.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	radical_socialism = 0
-	communism = 5
-	conservatism = 20
-	authoritarism = 60
-	fascism = 15
-}
-
-add_ideas = {
+	steel_agricultural_tools
+	landlordism 
+	
+	interventionalism_law
+	no_legislation
 	export_focus
-	extensive_conscription
-	minimum_legislation
-	partial_economic_mobilisation
-	UBD_separatism
+	civilian_economy
+	disarmed_nation
+	
+	peasant_and_land_and_bread_question_0_5
+	foodstuffs_supply_crisis_1
+	UBD_weak_state_apparatus_3_idea
+	UBD_ethnic_problem_idea
+	UBD_financial_problem_2_idea
+	UBD_german_occupation_idea
 }
-
-#create_country_leader = { name = "Adolf von Pilchau" desc = EST_Adolf_von_Pilchau_DESC picture = "gfx/leaders/EST/Portrait_Adolf_von_Pilchau.dds" ideology = authoritarism_ideology traits = { } }
-create_country_leader = { name = "Albert Wilhelm Heinrich von Preußen" desc = GER_Albert_Wilhelm_Heinrich_von_Preußen_DESC picture = "gfx/leaders/UBD/Portrait_Henrich_Hohenzollern.dds" ideology = authoritarism_ideology traits = { } }
 
 1918.3.14 = {
-			GER = { puppet = UBD }
+
+GER = { puppet = UBD }
+
+set_politics = {
+	ruling_party = conservatism
+	elections_allowed = no
 }
+
+set_cosmetic_tag = UBD_authoritarism
+
+set_popularities = {
+	radical_socialism = 5
+	communism = 10
+	social_democracy = 40
+	social_liberalism = 17
+	market_liberalism = 6
+	conservatism = 7
+	authoritarism = 5
+	despotism = 10
+	fascism = 0
+	national_syndicalism = 0
+}
+
+set_party_name = { 
+	ideology = radical_socialism
+	long_name = "Революционный Социализм"
+	name = "Революционный Социализм"
+}
+
+set_party_name = { 
+	ideology = communism
+	long_name = "РКП (б)"
+	name = "РКП (б)"
+}
+
+set_party_name = { 
+	ideology = social_democracy
+	long_name = "ЛСДРП/ЭСДРП"
+	name = "ЛСДРП/ЭСДРП"
+}
+
+set_party_name = { 
+	ideology = social_liberalism
+	long_name = "ЛРДП/ЭПСР"
+	name = "ЛРСП/ЭПСР"
+}
+
+set_party_name = { 
+	ideology = market_liberalism
+	long_name = "ЛВНС/ЭДП"
+	name = "ЛВНС/ЭДП"
+}
+
+set_party_name = { 
+	ideology = conservatism
+	long_name = "Регентский Совет"
+	name = "Регентский Совет"
+}
+
+set_party_name = { 
+	ideology = despotism
+	long_name = "Немецкая Военная Администрация"
+	name = "Военная Администрация"
+}
+
+set_party_name = { 
+	ideology = authoritarism
+	long_name = "Дом Мекленбург-Шверин"
+	name = "Дом Мекленбург-Шверин"
+}
+
+set_party_name = { 
+	ideology = fascism
+	long_name = "Немецкая Военная Администрация"
+	name = "Военная Администрация"
+}
+
+}
+
+create_country_leader = { name = "Adolf Pilar von Pilchau" desc = UBD_Adolf_Pilar_von_Pilchau_DESC picture = "gfx/leaders/UBD/Portrait_Adolf_Pilar_von_Pilchau.dds" ideology = conservatism_ideology traits = { } }
+create_country_leader = { name = "Adolf Friedreich Mecklenburg" desc = UBD_Adolf_Friedreich_Mecklenburg_DESC picture = "gfx/leaders/UBD/Portrait_Adolf_Friedreich_Mecklenburg.dds" ideology = authoritarism_ideology traits = { } }
+create_country_leader = { name = "Hugo von Kathen" desc = GER_Hugo_von_Kathen_DESC picture = "gfx/leaders/GER/Portrait_Hugo_von_Kathen.dds" ideology = despotism_ideology traits = { } }
+
+	
