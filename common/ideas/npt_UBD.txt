@@ -57,7 +57,34 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				stability_weekly = -0.005
+				stability_weekly = -0.002
+				local_resources_factor = -0.15
+				command_power_gain = -0.25
+				required_garrison_factor = -0.2
+				resistance_activity = 0.3
+				resistance_target = 0.3
+				consumer_goods_factor = 0.07
+				despotism_drift = 0.02
+				custom_modifier_tooltip = UBD_german_occupation_idea_tt
+			}
+		}
+		
+		UBD_knighthood_support_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_factor = 0.1
+				improve_relations_maintain_cost_factor = -0.3
+				political_advisor_cost_factor = -0.2
+				stability_weekly = 0.001
+				conservatism_drift = 0.03
+				authoritarism_drift = 0.02
 			}
 		}
 		
@@ -71,10 +98,10 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				political_power_factor = -0.3
-				production_speed_buildings_factor = -0.15
-				industrial_capacity_factory = -0.15
-				stability_factor = -0.1
+				political_power_factor = -0.2
+				production_speed_buildings_factor = -0.5
+				industrial_capacity_factory = -0.5
+				industrial_capacity_dockyard = -0.5
 			}
 		}
 		
@@ -88,10 +115,73 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				political_power_factor = -0.15
-				production_speed_buildings_factor = -0.07
-				industrial_capacity_factory = -0.07
-				stability_factor = -0.05
+				political_power_factor = -0.1
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+		
+		UBD_weak_state_apparatus_6_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_cost = 0.6
+				stability_factor = -0.25
+				research_speed_factor = -0.18
+				surrender_limit = -0.12
+				party_popularity_stability_factor = -0.3
+				drift_defence_factor = -0.4
+			}
+		}
+		
+		UBD_weak_state_apparatus_5_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_cost = 0.5
+				stability_factor = -0.20
+				research_speed_factor = -0.15
+				surrender_limit = -0.1
+				party_popularity_stability_factor = -0.25
+				drift_defence_factor = -0.35
+			}
+		}
+		
+		UBD_weak_state_apparatus_4_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_cost = 0.4
+				stability_factor = -0.20
+				research_speed_factor = -0.12
+				surrender_limit = -0.08
+				party_popularity_stability_factor = -0.2
+				drift_defence_factor = -0.3
 			}
 		}
 		
@@ -107,16 +197,55 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				head_of_government_cost_factor = 2
-				foreign_minister_cost_factor = 2
-				economy_minister_cost_factor = 2
-				security_minister_cost_factor = 2
-				head_of_intel_cost_factor = 2
-				military_minister_cost_factor = 2
-				political_advisor_cost_factor = 2
-				political_power_cost = 0.25
-				political_power_factor = -0.25
-				stability_factor = -0.25
+				political_power_cost = 0.3
+				stability_factor = -0.15
+				research_speed_factor = -0.09
+				surrender_limit = -0.06
+				party_popularity_stability_factor = -0.15
+				drift_defence_factor = -0.25
+			}
+		}
+		
+		UBD_weak_state_apparatus_2_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_cost = 0.2
+				stability_factor = -0.10
+				research_speed_factor = -0.06
+				surrender_limit = -0.04
+				party_popularity_stability_factor = -0.1
+				drift_defence_factor = -0.2
+			}
+		}
+		
+		UBD_weak_state_apparatus_1_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				political_power_cost = 0.1
+				stability_factor = -0.05
+				research_speed_factor = -0.03
+				surrender_limit = -0.02
+				party_popularity_stability_factor = -0.05
+				drift_defence_factor = -0.08
+				drift_defence_factor = -0.1
 			}
 		}
 		
@@ -132,11 +261,13 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				training_time_army_factor = 0.05
-				conscription_factor = -0.05
-				political_power_cost = 0.05
-				stability_factor = -0.05
-				industrial_capacity_factory = -0.05
+				conscription_factor = -0.75
+				stability_factor = -0.3
+				attrition = 0.1
+				autonomy_gain_global_factor = -0.1
+				radical_socialism_drift = 0.01
+				communism_drift = 0.02
+				social_democracy_drift = 0.03
 			}
 		}
 		
@@ -186,13 +317,14 @@ ideas = {
 			available = {  }
 			removal_cost = -1
 			cancel_if_invalid = yes
-			modifier = {
-			}
 			targeted_modifier = {
 				tag = RUS
 				attack_bonus_against = 0.05
 				defense_bonus_against = 0.1
 			} 
+			modifier = {
+				national_syndicalism_drift = 0.01
+			}
 		}
 		
 		UBD_service_for_land_idea = {

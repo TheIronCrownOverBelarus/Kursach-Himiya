@@ -51,9 +51,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_independance_cry
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 0
@@ -70,9 +73,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_independance_cry
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 2
@@ -92,9 +98,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_material_support
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 1
@@ -131,16 +140,20 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_coronation
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 5
         y = 3
         cost = 8
 		completion_reward = {
-		
+			add_popularity = { ideology = conservatism popularity = 0.05 }
+			add_ideas = UBD_knighthood_support_idea
 		}
 	}
 	
@@ -150,16 +163,58 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_coronation
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 3
         y = 3
         cost = 5
 		completion_reward = {
-		
+			add_ideas = emergency_laws_b_law
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
 		}
 	}
 	
@@ -169,16 +224,57 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 0
         y = 4
         cost = 7
 		completion_reward = {
-		
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
 		}
 	}
 	
@@ -188,9 +284,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 2
@@ -213,16 +312,57 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_wellfare
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 1
         y = 5
         cost = 10
 		completion_reward = {
-		
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
 		}
 	}
 	
@@ -232,9 +372,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 3
@@ -251,9 +394,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
-		available = { 
+		available = {
 			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+				has_global_flag = WWI_GER_HAS_CAPITULATED 
 			}
 		}
         x = 4
@@ -270,9 +413,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 6
@@ -282,6 +428,45 @@ focus_tree = {
 			add_political_power = -75
 			add_ideas = mixed_economy_law
 			add_ideas = partial_economic_mobilisation
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
 		}
 	}
 	
@@ -294,9 +479,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_german_economic_integration
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 5
@@ -306,6 +494,45 @@ focus_tree = {
 			add_popularity = { ideology = conservatism popularity = 0.05 }
 			add_popularity = { ideology = authoritarism popularity = 0.02 }
 			add_ideas = free_trade
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
 		}
 	}
 	
@@ -316,8 +543,11 @@ focus_tree = {
 			focus = UBD_independance_cry
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 			has_country_flag = UBD_financial_peoblem_solved
 		}
@@ -326,6 +556,48 @@ focus_tree = {
         cost = 4
 		completion_reward = {
 			custom_effect_tooltip = UBD_police_organisation_tt
+			if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+				remove_ideas = UBD_weak_state_apparatus_1_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_2_idea
+					add_idea = UBD_weak_state_apparatus_1_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_3_idea
+					add_idea = UBD_weak_state_apparatus_2_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_4_idea
+					add_idea = UBD_weak_state_apparatus_3_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_5_idea
+					add_idea = UBD_weak_state_apparatus_4_idea
+				}
+			}
+			else_if = {
+				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+				swap_ideas = {
+					remove_idea = UBD_weak_state_apparatus_6_idea
+					add_idea = UBD_weak_state_apparatus_5_idea
+				}
+			}
+			hidden_effect = {
+				create_intelligence_agency = { name = "Geheimdienst des Herzogtums Baltikum" icon = "GFX_agency_logo_RUS_okhranka" }
+			}
 		}
 	}
 	
@@ -346,7 +618,9 @@ focus_tree = {
         cost = 4
 		completion_reward = {
 			custom_effect_tooltip = UBD_form_landwehr_tt
+			set_country_flag = UBD_landwehr_formed
 			add_ideas = UBD_landwehr_1_idea
+			add_ideas = volunteer_only
 			create_corps_commander = { name = "Alfred Fletcher" id = 77777 portrait_path = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds" traits = { infantry_officer inflexible_strategist } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 			hidden_effect = {
 				lack_of_officers_rise = yes
@@ -383,9 +657,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_form_landwehr
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 7
@@ -412,9 +689,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_form_landwehr
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 9
@@ -468,8 +748,11 @@ focus_tree = {
 			focus = UBD_form_ethnic_batalions
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 			RUS = {
 				OR = {
@@ -490,6 +773,7 @@ focus_tree = {
 			}
 			country_event = { id = ubd.ruskoe.komandovanie days = 1 }
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
+			add_ideas = UBD_RUS_regiments_idea
 			hidden_effect = {
 				lack_of_officers_fall = yes
 				UBD = {
@@ -526,9 +810,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_open_arsenals
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 8
@@ -538,7 +825,7 @@ focus_tree = {
 			custom_effect_tooltip = UBD_mobilise_officers_tt
 			add_popularity = { ideology = despotism popularity = 0.03 }
 			add_command_power = 30
-			create_corps_commander = { name = "Hans Zege-von Manteuffel" id = 77779 portrait_path = "gfx/leaders/UBD/Portrait_Hans_Zege-von_Manteuffel.dds" traits = { infantry_officer inflexible_strategist } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+			create_corps_commander = { name = "Hans Zege-von Manteuffel" id = 77779 portrait_path = "gfx/leaders/UBD/Portrait_Hans_von_Manteuffel-Szoege.dds" traits = { infantry_officer inflexible_strategist } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 			hidden_effect = {
 				lack_of_officers_fall = yes
 				lack_of_officers_fall = yes
@@ -555,9 +842,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_mobilise_officers
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 10
@@ -573,13 +863,33 @@ focus_tree = {
 			create_country_leader = {
 				name = "Alfred Fletcher"
 				desc = ""
-				picture = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds" expire = "1959.9.20" ideology = despotism_ideology traits = { warmonger_old_general } }
+				picture = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds" expire = "1959.9.20" ideology = despotism_ideology traits = { warmonger_old_general } 
+			}
 			remove_ideas = UBD_german_occupation_idea
+			add_ideas = extensive_conscription
 			hidden_effect = {
 				set_party_name = { 
 					ideology = fascism
 					long_name = "Штаб Остзейской армии"
 					name = "Штаб Остзейской армии"
+				}
+				create_country_leader = {
+					name = "Alfred Fletcher"
+					desc = ""
+					picture = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds" expire = "1959.9.20" ideology = fascism_ideology traits = { warmonger_old_general } 
+				}
+				if = {
+					limit = { NOT = { has_completed_focus = UBD_form_rus_batalions } }
+					set_party_name = { 
+						ideology = national_syndicalism
+						long_name = "Штаб Остзейской армии"
+						name = "Штаб Остзейской армии"
+					}
+					create_country_leader = {
+						name = "Alfred Fletcher"
+						desc = ""
+						picture = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds" expire = "1959.9.20" ideology = national_syndicalism_ideology traits = { warmonger_old_general } 
+					}
 				}
 			}
 			swap_ideas = {
@@ -596,9 +906,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_ostzee_army
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 10
@@ -684,8 +997,11 @@ focus_tree = {
 			focus = UBD_landowners_finance
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 			has_country_flag = UBD_financial_peoblem_solved
 		}
@@ -703,9 +1019,12 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_start_ostpolitik
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
+		available = {
+			OR = {
+				NOT = { 
+					has_global_flag = WWI_GER_HAS_CAPITULATED 
+				}
+				has_country_flag = UBD_martial_law
 			}
 		}
         x = 12

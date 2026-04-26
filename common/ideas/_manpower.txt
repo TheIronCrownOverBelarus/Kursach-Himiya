@@ -81,6 +81,13 @@ ideas = {
 					}
 					NOT = { has_idea = BUL_interunion_commission_idea }
 				}
+				if = {
+					limit = {
+						original_tag = UBD
+						has_idea = UBD_german_occupation_idea
+					}
+					NOT = { has_idea = UBD_german_occupation_idea }
+				}
 			}
 
 			modifier = {
@@ -159,6 +166,13 @@ ideas = {
 					}
 					NOT = { has_idea = IZH_local_peoples_armies_idea }
 					NOT = { has_idea = NVA_decentralization_of_army_a }
+				}
+				if = {
+					limit = {
+						original_tag = UBD
+						has_idea = UBD_german_occupation_idea
+					}
+					NOT = { has_idea = UBD_german_occupation_idea }
 				}
 			}
 
@@ -248,6 +262,13 @@ ideas = {
 					}
 					NOT = { has_idea = IZH_local_peoples_armies_idea }
 					NOT = { has_idea = NVA_decentralization_of_army_a }
+				}
+				if = {
+					limit = {
+						original_tag = UBD
+						has_idea = UBD_german_occupation_idea
+					}
+					NOT = { has_idea = UBD_german_occupation_idea }
 				}
 			}
 
@@ -353,6 +374,13 @@ ideas = {
 					NOT = { has_idea = IZH_local_peoples_armies_idea }
 					NOT = { has_idea = NVA_decentralization_of_army_a }
 				}
+				if = {
+					limit = {
+						original_tag = UBD
+						has_idea = UBD_german_occupation_idea
+					}
+					NOT = { has_idea = UBD_german_occupation_idea }
+				}
 			}
 
 			ai_will_do = {
@@ -456,6 +484,13 @@ ideas = {
 					}
 					NOT = { has_idea = IZH_local_peoples_armies_idea }
 					NOT = { has_idea = NVA_decentralization_of_army_a }
+				}
+				if = {
+					limit = {
+						original_tag = UBD
+						has_idea = UBD_german_occupation_idea
+					}
+					NOT = { has_idea = UBD_german_occupation_idea }
 				}
 			}
 
