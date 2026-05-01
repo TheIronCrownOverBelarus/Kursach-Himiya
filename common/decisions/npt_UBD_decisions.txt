@@ -1,59 +1,247 @@
 UBD_ost_politik_decisions_category = {
 	
-	UBD_land_measurements = {
+	UBD_land_measurements_decision = {
 		allowed = {
-			tag = UBD
+			original_tag = UBD
 		}
 		available = {
 		}
 		visible = {
-			has_completed_focus = UBD_start_ostpolitik
+			always = yes
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		days_remove = 30
-		complete_effect = {
-			set_country_flag = UBD_land_measurements_finished
+		days_remove = 100
+		remove_effect = {
+			set_country_flag = UBD_land_measured_flag
 		}
+		complete_effect = {
+			custom_effect_tooltip = UBD_land_measurements_decision_tt
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+		fire_only_once = yes
 	}
 	
-	UBD_buy_land = {
+	UBD_take_land_decision = {
 		allowed = {
-			tag = UBD
+			original_tag = UBD
 		}
 		available = {
-			has_country_flag = UBD_land_measurements_finished
+			has_country_flag = UBD_land_measured_flag
 		}
 		visible = {
-			has_completed_focus = UBD_start_ostpolitik
+			always = yes
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		days_remove = 30
-		complete_effect = {
-			set_country_flag = UBD_land_bought
+		days_remove = 100
+		remove_effect = {
+			set_country_flag = UBD_land_taken_flag
 		}
+		complete_effect = {
+			custom_effect_tooltip = UBD_take_land_decision_tt
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+		fire_only_once = yes
 	}
 	
-	UBD_german_immigration = {
+	UBD_german_immigration_decision = {
 		allowed = {
-			tag = UBD
+			original_tag = UBD
 		}
 		available = {
-			has_country_flag = UBD_land_bought
+			has_country_flag = UBD_land_taken_flag
 		}
 		visible = {
-			has_completed_focus = UBD_start_ostpolitik
+			always = yes
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		days_remove = 30
-		complete_effect = {
-			set_country_flag = UBD_germans_migrated
+		days_remove = 200
+		remove_effect = {
+			UBD = {
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4100 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 3900 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4500 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4600 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4700 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4800 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4900 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+				random_owned_state = {
+					set_temp_variable = { a1 = random }
+					set_temp_variable = { b1 = random }
+					set_temp_variable = { c1 = random }
+					set_temp_variable = { d1 = random }
+					multiply_temp_variable = { a1 = 3678 }
+					multiply_temp_variable = { b1 = 2549 }
+					multiply_temp_variable = { c1 = 1894 }
+					multiply_temp_variable = { d1 = 1213 }
+
+					set_temp_variable = { f1 = a1 }
+					add_to_temp_variable = { f1 = b1 }
+					add_to_temp_variable = { f1 = c1 }
+					add_to_temp_variable = { f1 = d1 }
+					clamp_temp_variable = { var = f1 min = 1000 max = 4400 }
+					round_temp_variable = f1
+
+					add_manpower = f1
+				}
+			}
 		}
+		complete_effect = {
+			if = { 
+				limit = {
+					OR = {
+						has_idea = peasant_and_land_and_bread_question
+						has_idea = peasant_and_land_and_bread_question_0_5
+						has_idea = peasant_and_land_and_bread_question_0_25
+					}
+				}
+				peasant_and_land_and_bread_question_fall = yes
+				add_timed_idea = { 
+					idea = peasant_and_land_and_bread_question_reformation_period 
+					days = 360 
+				}
+			}
+		}
+		modifier = { 
+			consumer_goods_factor = 0.2
+		}
+		fire_only_once = no
+		days_re_enable = 100
 	}
 }
 
@@ -95,6 +283,7 @@ UBD_investments_decisions_category = {
 			}
 		}
 		fire_only_once = no
+		days_re_enable = 60
 		visible = {
 			has_completed_focus = UBD_german_economic_integration
 			has_idea = = UBD_german_integration_idea
@@ -140,6 +329,7 @@ UBD_investments_decisions_category = {
 			}
 		}
 		fire_only_once = no
+		days_re_enable = 60
 		visible = {
 			has_completed_focus = UBD_german_economic_integration
 			has_idea = = UBD_german_integration_idea
@@ -185,6 +375,7 @@ UBD_investments_decisions_category = {
 			}
 		}
 		fire_only_once = no
+		days_re_enable = 60
 		visible = {
 			has_completed_focus = UBD_german_economic_integration
 			has_idea = = UBD_german_integration_idea
@@ -350,7 +541,7 @@ UBD_education_decisions_category = {
 		}
 	}
 
-	UBD_narva_university_decision = {
+	UBD_tartu_university_decision = {
 		allowed = {
 			tag = UBD
 		}
@@ -471,8 +662,8 @@ UBD_education_decisions_category = {
 				set_country_flag = UBD_education_reform_completed
 			}
 		}
-		days_re_enable = 30
         fire_only_once = no
+		days_re_enable = 60
 		visible = {
 			has_completed_focus = UBD_education_reform
 			NOT = {
