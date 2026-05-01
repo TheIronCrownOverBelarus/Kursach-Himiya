@@ -57,6 +57,269 @@ UBD_ost_politik_decisions_category = {
 	}
 }
 
+UBD_investments_decisions_category = {
+
+	UBD_infrastructure_investment_decision = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			NOT = {
+				has_country_flag = UBD_already_investing_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		remove_effect = {
+			clr_country_flag = UBD_already_investing_flag
+			UBD = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = UBD_already_investing_flag
+			GER = {
+				add_timed_idea = {
+					idea = UBD_GER_invested_idea
+					days = 30
+				}
+			}
+		}
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UBD_german_economic_integration
+			has_idea = = UBD_german_integration_idea
+		}
+		modifier = { 
+			production_speed_buildings_factor = -0.10
+		}
+	}
+	
+	UBD_industrial_complex_investment_decision = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			NOT = {
+				has_country_flag = UBD_already_investing_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		remove_effect = {
+			clr_country_flag = UBD_already_investing_flag
+			UBD = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = UBD_already_investing_flag
+			GER = {
+				add_timed_idea = {
+					idea = UBD_GER_invested_idea
+					days = 30
+				}
+			}
+		}
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UBD_german_economic_integration
+			has_idea = = UBD_german_integration_idea
+		}
+		modifier = { 
+			production_speed_buildings_factor = -0.10
+		}
+	}
+	
+	UBD_arms_factory_investment_decision = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			NOT = {
+				has_country_flag = UBD_already_investing_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		remove_effect = {
+			clr_country_flag = UBD_already_investing_flag
+			UBD = {
+				random_owned_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = UBD_already_investing_flag
+			GER = {
+				add_timed_idea = {
+					idea = UBD_GER_invested_idea
+					days = 30
+				}
+			}
+		}
+		fire_only_once = no
+		visible = {
+			has_completed_focus = UBD_german_economic_integration
+			has_idea = = UBD_german_integration_idea
+		}
+		modifier = { 
+			production_speed_buildings_factor = -0.10
+		}
+	}
+	
+	UBD_narva_forts_decision = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			NOT = {
+				has_country_flag = UBD_already_investing_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 50
+		remove_effect = {
+			clr_country_flag = UBD_already_investing_flag
+			UBD = {
+				915 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 4640
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 14568
+						instant_build = yes
+					}
+				}
+				1002 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 13390
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 13391
+						instant_build = yes
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = UBD_already_investing_flag
+			GER = {
+				add_timed_idea = {
+					idea = UBD_GER_invested_idea
+					days = 50
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UBD_german_economic_integration
+			has_idea = = UBD_german_integration_idea
+		}
+		modifier = { 
+			production_speed_buildings_factor = -0.10
+		}
+	}
+	
+	UBD_west_dvina_forts_decision = {
+		allowed = {
+			tag = UBD
+		}
+		available = {
+			NOT = {
+				has_country_flag = UBD_already_investing_flag
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 50
+		remove_effect = {
+			clr_country_flag = UBD_already_investing_flag
+			UBD = {
+				808 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 9340
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 13518
+						instant_build = yes
+					}
+				}
+				809 = {
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 310
+						instant_build = yes
+					}
+				}
+			}
+		}
+		complete_effect = {
+			set_country_flag = UBD_already_investing_flag
+			GER = {
+				add_timed_idea = {
+					idea = UBD_GER_invested_idea
+					days = 50
+				}
+			}
+		}
+		fire_only_once = yes
+		visible = {
+			has_completed_focus = UBD_german_economic_integration
+			has_idea = = UBD_german_integration_idea
+		}
+		modifier = { 
+			production_speed_buildings_factor = -0.10
+		}
+	}
+	
+}
+
 UBD_education_decisions_category = {
 	
 	UBD_education_germanisation_decision = {

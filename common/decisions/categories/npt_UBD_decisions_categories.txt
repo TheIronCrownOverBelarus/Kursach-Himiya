@@ -20,3 +20,14 @@ UBD_education_decisions_category = {
 	}
 	icon = decision_category_generic_political_actions
 }
+
+UBD_investments_decisions_category = {
+	allowed = {
+		original_tag = UBD
+	}
+	visible = {
+		has_completed_focus = UBD_german_economic_integration
+		has_idea = = UBD_german_integration_idea
+	}
+	icon = decision_category_generic_political_actions
+}

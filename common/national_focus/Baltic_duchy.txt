@@ -74,6 +74,7 @@ focus_tree = {
 			focus = UBD_independance_cry
 		}
 		available = {
+			has_completed_focus = UBD_form_landwehr
 			OR = {
 				NOT = { 
 					has_global_flag = WWI_GER_HAS_CAPITULATED 
@@ -404,6 +405,7 @@ focus_tree = {
         cost = 2
 		completion_reward = {
 			custom_effect_tooltip = UBD_german_economic_integration_tt
+			add_ideas = UBD_german_integration_idea
 		}
 	}
 	
