@@ -7,3 +7,16 @@ UBD_ost_politik_decisions_category = {
 	}
 	icon = decision_category_generic_political_actions
 }
+
+UBD_education_decisions_category = {
+	allowed = {
+		original_tag = UBD
+	}
+	visible = {
+		has_completed_focus = UBD_education_reform
+		NOT = {
+				has_country_flag = UBD_education_reform_completed
+		}
+	}
+	icon = decision_category_generic_political_actions
+}
