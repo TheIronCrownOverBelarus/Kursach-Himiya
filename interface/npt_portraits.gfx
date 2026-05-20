@@ -877,4 +877,45 @@ spriteTypes = {
 	#	name = "GFX_portrait_GER_Paul_von_Hindenburg_military_small"
 	#	texturefile = "gfx/interface/ideas/ministers/GER/idea_Paul_von_Hindenburg_military.dds"
 	#}
+	
+	spriteType = {
+		name = "GFX_portrait_UBD_Adolf_Friedreich_Mecklenburg"
+		texturefile = "gfx/leaders/UBD/Portrait_Adolf_Friedreich_Mecklenburg.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Adolf_Pilar_von_Pilchau"
+		texturefile = "gfx/leaders/UBD/Portrait_Adolf_Pilar_von_Pilchau.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Adolf_von_Seckendorff"
+		texturefile = "gfx/leaders/UBD/Portrait_Adolf_von_Seckendorff.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Alfred_Fletcher"
+		texturefile = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Alfred_von_Gossler"
+		texturefile = "gfx/leaders/UBD/Portrait_Alfred_von_Gossler.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Hans_von_Manteuffel_Szoege"
+		texturefile = "gfx/leaders/UBD/Portrait_Hans_von_Manteuffel_Szoege.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Hugo_von_Kathen"
+		texturefile = "gfx/leaders/UBD/Portrait_Hugo_von_Kathen.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Josef_Bischoff"
+		texturefile = "gfx/leaders/UBD/Portrait_Josef_Bischoff.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_Rudiger_von_der_Goltz"
+		texturefile = "gfx/leaders/UBD/Portrait_Rudiger_von_der_Goltz.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_UBD_William_von_Engelhart"
+		texturefile = "gfx/leaders/UBD/Portrait_William_von_Engelhart.dds"
+	}
 }

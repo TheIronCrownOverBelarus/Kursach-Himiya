@@ -1,6 +1,6 @@
 add_namespace = UBD
 
-
+#Власть Рейхсхеера#
 country_event = {
 	id = ubd.1
 	title = ubd.1.t
@@ -11,6 +11,7 @@ country_event = {
 	}
 }
 
+#Сопротивление реквизициям#
 country_event = {
 	id = ubd.2
 	title = ubd.2.t
@@ -18,5 +19,192 @@ country_event = {
 	picture = GFX_report_event_sib_czechoslovakians
 	option = {
 		name = ubd.2.a
+	}
+}
+
+#Созыв Объединенного Ландрата#
+country_event = {
+	id = ubd.3
+	title = ubd.3.t
+	desc = ubd.3.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.3.a
+		country_event = { id = ubd.4 days = 4 }
+	}
+}
+#Обсуждение конституции#
+country_event = {
+	id = ubd.4
+	title = ubd.4.t
+	desc = ubd.4.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.4.a
+	}
+}
+
+#Просьба признания#
+country_event = {
+	id = ubd.5
+	title = ubd.5.t
+	desc = ubd.5.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.5.a
+		UBD = {
+			country_event = { id = ubd.6 days = 3 }
+		}
+	}
+}
+
+#Ответ Германии#
+country_event = {
+	id = ubd.6
+	title = ubd.6.t
+	desc = ubd.6.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.6.a
+		RUS = {
+			country_event = { id = ubd.7 days = 10 }
+		}
+	}
+}
+
+#Ивент России на добавочный протокол#
+country_event = {
+	id = ubd.7
+	title = ubd.7.t
+	desc = ubd.7.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.7.a
+		GER = {
+			country_event = { id = ubd.8 days = 5 }
+		}
+	}
+}
+
+#Ивент Германии на отказ России от Балтики#
+country_event = {
+	id = ubd.8
+	title = ubd.8.t
+	desc = ubd.8.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.8.a
+		UBD = {
+			country_event = { id = ubd.9 days = 5 }
+		}
+	}
+}
+
+#Германия признает герцогство#
+country_event = {
+	id = ubd.9
+	title = ubd.9.t
+	desc = ubd.9.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.9.a
+	}
+}
+
+#Вопрос о Латгалии#
+country_event = {
+	id = ubd.10
+	title = ubd.10.t
+	desc = ubd.10.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.10.a
+		GER = {
+			country_event = { id = ubd.11 days = 5 }
+		}
+	}
+	option = {
+		name = ubd.10.b
+	}
+}
+
+#Ивент Германии о Латгалии#
+country_event = {
+	id = ubd.11
+	title = ubd.11.t
+	desc = ubd.11.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.11.a
+		UBD = {
+			country_event = { id = ubd.12 days = 3 }
+		}
+	}
+	option = {
+		name = ubd.10.b
+		UBD = {
+			country_event = { id = ubd.13 days = 3 }
+		}
+	}
+}
+
+#Ответ Германии о Латгалии согласие#
+country_event = {
+	id = ubd.12
+	title = ubd.12.t
+	desc = ubd.12.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.12.a
+	}
+}
+
+#Ответ Германии о Латгалии отказ#
+country_event = {
+	id = ubd.13
+	title = ubd.13.t
+	desc = ubd.13.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.13.a
+	}
+}
+
+#Образование регентского совета#
+country_event = {
+	id = ubd.14
+	title = ubd.14.t
+	desc = ubd.14.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.14.a
+	}
+}
+
+#Образование регентского совета чрезвычайное#
+country_event = {
+	id = ubd.15
+	title = ubd.15.t
+	desc = ubd.15.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.15.a
+	}
+}
+
+country_event = {
+	id = ubd.67
+	title = ubd.67.t
+	desc = ubd.67.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	option = {
+		name = ubd.67.a
+		UBD = {
+			every_owned_state = {
+				add_dynamic_modifier = { 
+					modifier = UBD_state_rebellion_dynamic_modifier 
+				}
+			}
+		}
 	}
 }

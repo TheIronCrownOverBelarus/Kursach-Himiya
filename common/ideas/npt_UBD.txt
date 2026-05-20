@@ -2,52 +2,9 @@ ideas = {
 
 	#United Baltic Duchy
 	
-	head_of_government = {
-
-		Adolf_Pilar_von_Pilchau_1 = {
-			allowed = {
-				original_tag = UBD
-				NOT = { has_country_flag = Adolf_Pilar_von_Pilchau_dead }
-			}
-			traits = { head_of_government_trait conservative_counselor min_1_silent_workhorse conservative_min_1 }
-			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
-			allowed_to_remove = {
-                always = yes
-            }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-				}
-			}
-		}
-		
-	}
-	
-	military_minister = {
-		
-		Rudiger_von_der_Golz_6 = {
-			allowed = {
-				OR = {
-					original_tag = UBD
-				}
-				NOT = { has_country_flag = Rudiger_von_der_Golz_dead }
-			}
-			traits = { military_minister_trait conservative_counselor min_6_enlister conservative_min_6 }
-			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
-			allowed_to_remove = {
-                always = yes
-            }
-			ai_will_do = {
-				factor = 1
-			}
-		}
-		
-	}
-	
 	country = {
 	
-		UBD_german_occupation_idea = {
+		UBD_german_occupation_1_idea = {
 			allowed = {
 				always = no
 			}
@@ -64,13 +21,40 @@ ideas = {
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
 				stability_weekly = -0.002
-				local_resources_factor = -0.15
-				command_power_gain = -0.25
+				command_power_gain = 0.25
+				required_garrison_factor = -0.2
+				resistance_activity = 0.15
+				resistance_target = 0.15
+				consumer_goods_factor = 0.03
+				despotism_drift = 0.02
+				custom_modifier_tooltip = UBD_german_occupation_idea_tt
+			}
+		}
+		
+		UBD_german_occupation_2_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { 
+				OR = {
+					UBD = { is_ally_with = GER }
+					UBD = { is_puppet_of = GER }
+				}
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				stability_weekly = -0.003
+				local_resources_factor = -0.2
+				command_power_gain = 0.25
 				required_garrison_factor = -0.2
 				resistance_activity = 0.3
 				resistance_target = 0.3
-				consumer_goods_factor = 0.07
-				despotism_drift = 0.02
+				consumer_goods_factor = 0.08
+				despotism_drift = 0.03
 				custom_modifier_tooltip = UBD_german_occupation_idea_tt
 			}
 		}

@@ -1,0 +1,236 @@
+characters = {
+	
+	UBD_Adolf_Friedreich_Mecklenburg = {
+		name = UBD_Adolf_Friedreich_Mecklenburg
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Adolf_Friedreich_Mecklenburg
+			}
+		}
+		country_leader = {
+			ideology = monarchism
+			traits = { }
+			desc = UBD_Adolf_Friedreich_Mecklenburg_DESC
+		}
+	}
+	
+	UBD_Adolf_Pilar_von_Pilchau = {
+		name = UBD_Adolf_Pilar_von_Pilchau
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Adolf_Pilar_von_Pilchau
+			}
+		}
+		country_leader = {
+			ideology = conservatism_ideology
+			traits = { }
+			desc = UBD_Adolf_Pilar_von_Pilchau_DESC
+		}
+	}
+	
+	UBD_Adolf_von_Seckendorff = {
+		name = UBD_Adolf_von_Seckendorff
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Adolf_von_Seckendorff
+			}
+			army = {
+				large = GFX_portrait_Adolf_von_Seckendorff
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 10001
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Alfred_Fletcher = {
+		name = UBD_Alfred_Fletcher
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Alfred_Fletcher
+			}
+			army = {
+				large = GFX_portrait_UBD_Alfred_Fletcher
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 1
+			legacy_id = 10001
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Alfred_von_Gossler = {
+		name = UBD_Alfred_von_Gossler
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Alfred_von_Gossler
+			}
+			army = {
+				large = GFX_portrait_Alfred_von_Gossler
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 4
+			legacy_id = 10002
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Hans_von_Manteuffel_Szoege = {
+		name = UBD_Hans_von_Manteuffel_Szoege
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Hans_von_Manteuffel_Szoege
+			}
+			army = {
+				large = GFX_portrait_UBD_Hans_von_Manteuffel_Szoege
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = 10002
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Hugo_von_Kathen = {
+		name = UBD_Hugo_von_Kathen
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Hugo_von_Kathen
+			}
+			army = {
+				large = GFX_portrait_UBD_Hugo_von_Kathen
+			}
+		}
+		country_leader = {
+			ideology = despotism_ideology
+			traits = { warmonger_old_general }
+			desc = UBD_Hugo_von_Kathen_DESC
+		}
+		country_leader = {
+			ideology = authoritarism_ideology
+			traits = { warmonger_old_general }
+			desc = UBD_Hugo_von_Kathen_DESC
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { warmonger_old_general }
+			desc = UBD_Hugo_von_Kathen_DESC
+		}
+		country_leader = {
+			ideology = national_syndicalism_ideology
+			traits = { warmonger_old_general }
+			desc = UBD_Hugo_von_Kathen_DESC
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 10003
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Josef_Bischoff = {
+		name = UBD_Josef_Bischoff
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Josef_Bischoff
+			}
+			army = {
+				large = GFX_portrait_UBD_Josef_Bischoff
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 10004
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Rudiger_von_der_Goltz = {
+		name = UBD_Rudiger_von_der_Goltz
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_Rudiger_von_der_Goltz
+			}
+			army = {
+				large = GFX_portrait_UBD_Rudiger_von_der_Goltz
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 4
+			planning_skill = 3
+			logistics_skill = 4
+			legacy_id = 10005
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_William_von_Engelhart = {
+		name = UBD_William_von_Engelhart
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_UBD_William_von_Engelhart
+			}
+			army = {
+				large = GFX_portrait_UBD_William_von_Engelhart
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = 10006
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+}

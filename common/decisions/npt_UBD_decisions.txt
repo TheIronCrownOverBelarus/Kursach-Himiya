@@ -7,7 +7,7 @@ UBD_ost_politik_decisions_category = {
 		available = {
 		}
 		visible = {
-			always = yes
+			has_completed_focus = UBD_start_ostpolitik
 		}
 		ai_will_do = {
 			factor = 1
@@ -33,17 +33,60 @@ UBD_ost_politik_decisions_category = {
 			has_country_flag = UBD_land_measured_flag
 		}
 		visible = {
-			always = yes
+			has_completed_focus = UBD_start_ostpolitik
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		days_remove = 100
+		days_remove = 30
 		remove_effect = {
 			set_country_flag = UBD_land_taken_flag
 		}
 		complete_effect = {
 			custom_effect_tooltip = UBD_take_land_decision_tt
+		}
+		modifier = {
+			political_power_cost = 0.5
+		}
+		fire_only_once = yes
+	}
+	
+	UBD_loyalist_lands_decision = {
+		allowed = {
+			original_tag = UBD
+		}
+		available = {
+			has_country_flag = UBD_land_taken_flag
+		}
+		visible = {
+			has_completed_focus = UBD_start_ostpolitik
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 50
+		remove_effect = {
+			set_country_flag = UBD_loyalist_rewarded_flag
+			add_popularity = { ideology = social_democracy popularity = -0.1 }
+			add_stability = 0.07
+			add_war_support = 0.04
+			if = { 
+				limit = {
+					OR = {
+						has_idea = peasant_and_land_and_bread_question
+						has_idea = peasant_and_land_and_bread_question_0_5
+						has_idea = peasant_and_land_and_bread_question_0_25
+					}
+				}
+				peasant_and_land_and_bread_question_fall = yes
+				add_timed_idea = { 
+					idea = peasant_and_land_and_bread_question_reformation_period 
+					days = 360 
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = UBD_loyalist_lands_decision_tt
 		}
 		modifier = {
 			political_power_cost = 0.5
@@ -57,15 +100,30 @@ UBD_ost_politik_decisions_category = {
 		}
 		available = {
 			has_country_flag = UBD_land_taken_flag
+			has_country_flag = UBD_loyalist_rewarded_flag
 		}
 		visible = {
-			always = yes
+			has_completed_focus = UBD_start_ostpolitik
 		}
 		ai_will_do = {
 			factor = 1
 		}
-		days_remove = 200
+		days_remove = 150
 		remove_effect = {
+			if = { 
+				limit = {
+					OR = {
+						has_idea = peasant_and_land_and_bread_question
+						has_idea = peasant_and_land_and_bread_question_0_5
+						has_idea = peasant_and_land_and_bread_question_0_25
+					}
+				}
+				peasant_and_land_and_bread_question_fall = yes
+				add_timed_idea = { 
+					idea = peasant_and_land_and_bread_question_reformation_period 
+					days = 360 
+				}
+			}
 			UBD = {
 				random_owned_state = {
 					set_temp_variable = { a1 = random }
@@ -221,28 +279,184 @@ UBD_ost_politik_decisions_category = {
 				}
 			}
 		}
-		complete_effect = {
-			if = { 
-				limit = {
-					OR = {
-						has_idea = peasant_and_land_and_bread_question
-						has_idea = peasant_and_land_and_bread_question_0_5
-						has_idea = peasant_and_land_and_bread_question_0_25
-					}
-				}
-				peasant_and_land_and_bread_question_fall = yes
-				add_timed_idea = { 
-					idea = peasant_and_land_and_bread_question_reformation_period 
-					days = 360 
-				}
-			}
-		}
 		modifier = { 
 			consumer_goods_factor = 0.2
 		}
 		fire_only_once = no
 		days_re_enable = 100
 	}
+}
+
+UBD_crush_separatism_decisions_category = {
+
+	UBD_crush_separatism_in_courland_decision = {
+		allowed = {
+			original_tag = UBD
+		}
+		available = {
+			army_manpower_in_state = {
+				type = army
+				amount > 10000
+				state = 190
+			}
+		}
+		visible = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 60
+		remove_effect = {
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			add_stability = 0.07
+			UBD = {
+				190 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				810 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				1378 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+			}
+		}
+		modifier = {
+			command_power_gain = -0.5
+		}
+		fire_only_once = yes
+	}
+	
+	UBD_crush_separatism_in_estland_decision = {
+		allowed = {
+			original_tag = UBD
+		}
+		available = {
+			army_manpower_in_state = {
+				type = army
+				amount > 10000
+				state = 812
+			}
+		}
+		visible = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 60
+		remove_effect = {
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			add_stability = 0.07
+			UBD = {
+				812 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				813 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				1003 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				915 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				1002 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+			}
+		}
+		modifier = {
+			command_power_gain = -0.5
+		}
+		fire_only_once = yes
+	}
+	
+	UBD_crush_separatism_in_osel_and_dago_decision = {
+		allowed = {
+			original_tag = UBD
+		}
+		available = {
+			army_manpower_in_state = {
+				type = army
+				amount > 5000
+				state = 811
+			}
+		}
+		visible = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 60
+		remove_effect = {
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			add_stability = 0.07
+			UBD = {
+				1393 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				811 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+			}
+		}
+		modifier = {
+			command_power_gain = -0.5
+		}
+		fire_only_once = yes
+	}
+	
+	UBD_crush_separatism_in_livonia_decision = {
+		allowed = {
+			original_tag = UBD
+		}
+		available = {
+			army_manpower_in_state = {
+				type = army
+				amount > 10000
+				state = 12
+			}
+		}
+		visible = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 60
+		remove_effect = {
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			add_stability = 0.07
+			UBD = {
+				12 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				13 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				191 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				809 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				1351 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+				1004 = {
+					remove_dynamic_modifier = { modifier = UBD_state_rebellion_dynamic_modifier }
+				}
+			}
+		}
+		modifier = {
+			command_power_gain = -0.5
+		}
+		fire_only_once = yes
+	}
+
 }
 
 UBD_investments_decisions_category = {
