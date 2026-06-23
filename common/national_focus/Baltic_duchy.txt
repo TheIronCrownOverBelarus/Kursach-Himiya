@@ -12,258 +12,33 @@ focus_tree = {
 	
 	continuous_focus_position = { x = 1 y = 1 }
 	
-	###ВЕТКА ВОЕННОЙ АДМИНИСТРАЦИИ###
-	
 	focus = {
-        id = UBD_form_administration
+        id = UBD_create_government_system
 		icon = GFX_goal_generic_improve_relations
-		available = { 
-		}
-        x = 15
-        y = 0
-        cost = 1
-		completion_reward = {
-			country_event = { id = ubd.1 days = 2 }
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
-		}
-	}
-	
-	focus = {
-        id = UBD_resources_explotation
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_form_administration
-		}
-		available = { 
+		available = {
 		}
         x = 14
-        y = 1
-        cost = 1
+        y = 0
+        cost = 5
 		completion_reward = {
-			add_popularity = { ideology = despotism popularity = 0.03 }
+			add_ideas = emergency_laws_b_law
 			swap_ideas = {
-				remove_idea = UBD_german_occupation_1_idea
-				add_idea = UBD_german_occupation_2_idea
+				remove_idea = RUS_weak_state_suppression_apparatus_1
+				add_idea = RUS_damage_to_police_and_special_services
 			}
-			hidden_effect = {
-				country_event = { id = ubd.2 days = 30 }
-			}
-		}
-	}
-	
-	focus = {
-        id = UBD_german_economic_integration
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_resources_explotation
-		}
-		available = {
-			NOT = { 
-				has_global_flag = WWI_GER_HAS_CAPITULATED 
-			}
-		}
-        x = 13
-        y = 2
-        cost = 2
-		completion_reward = {
-			custom_effect_tooltip = UBD_german_economic_integration_tt
-			add_ideas = UBD_german_integration_idea
 		}
 	}
 	
 	focus = {
         id = UBD_gather_landesrat
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_form_administration
-		}
 		available = { 
 		}
         x = 16
-        y = 1
+        y = 0
         cost = 1
 		completion_reward = {
 			country_event = { id = ubd.3 days = 5 }
-		}
-	}
-	
-	focus = {
-        id = UBD_create_government_system
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_gather_landesrat
-		}
-		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
-		}
-        x = 15
-        y = 2
-        cost = 5
-		completion_reward = {
-			add_ideas = emergency_laws_b_law
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
-		}
-	}
-	
-	focus = {
-        id = UBD_education_reform
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_create_government_system
-		}
-		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
-		}
-        x = 13
-        y = 3
-        cost = 3
-		completion_reward = {
-			custom_effect_tooltip = UBD_education_reform_tt
-		}
-	}
-	
-	focus = {
-        id = UBD_knighthood_support
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_create_government_system
-		}
-		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
-		}
-        x = 15
-        y = 3
-        cost = 8
-		completion_reward = {
-			add_popularity = { ideology = conservatism popularity = 0.05 }
-			add_ideas = UBD_knighthood_support_idea
-		}
-	}
-	
-	focus = {
-        id = UBD_recognition_attempt
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_gather_landesrat
-		}
-		available = { 
-		}
-        x = 17
-        y = 2
-        cost = 1
-		completion_reward = {
-			GER = {
-				country_event = { id = ubd.5 days = 3 }
-			}
-		}
-	}
-	
-	focus = {
-        id = UBD_take_latgalia
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_recognition_attempt
-		}
-		available = { 
-		}
-        x = 17
-        y = 3
-        cost = 1
-		completion_reward = {
-			GER = {
-				country_event = { id = ubd.10 days = 3 }
-			}
 		}
 	}
 	
@@ -273,16 +48,10 @@ focus_tree = {
         id = UBD_regentschaftsrat
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
-			focus = UBD_knighthood_support
-		}
-		prerequisite = {
-			focus = UBD_education_reform
-			focus = UBD_take_latgalia
+			focus = UBD_create_government_system
+			focus = UBD_gather_landesrat
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
-			}
 		}
         x = 15
         y = 4
@@ -293,210 +62,52 @@ focus_tree = {
 	}
 	
 	focus = {
-        id = UBD_coronation
+        id = UBD_constitution
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
-			}
-			has_country_flag = UBD_financial_peoblem_solved
-		}
-        x = 11
-        y = 5
-        cost = 3
-		completion_reward = {
-			
-		}
-	}
-	
-	focus = {
-        id = UBD_economic_regulation
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_coronation
-		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
-        x = 9
-        y = 6
-        cost = 5
+        x = 8
+        y = 5
+        cost = 10
 		completion_reward = {
-			add_political_power = -75
-			add_ideas = mixed_economy_law
-			add_ideas = partial_economic_mobilisation
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
+			add_ideas = constitution_b_law
 		}
 	}
 	
 	focus = {
-        id = UBD_trade_law
+        id = UBD_knighthood_support
 		icon = GFX_goal_generic_improve_relations
-		prerequisite = {
-			focus = UBD_economic_regulation
-		}
 		prerequisite = {
 			focus = UBD_constitution
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
-        x = 10
-        y = 7
-        cost = 6
+        x = 6
+        y = 6
+        cost = 8
 		completion_reward = {
 			add_popularity = { ideology = conservatism popularity = 0.05 }
-			add_popularity = { ideology = authoritarism popularity = 0.02 }
-			add_ideas = free_trade
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
+			add_ideas = UBD_knighthood_support_idea
 		}
 	}
+	
 	focus = {
-        id = UBD_constitution
+        id = UBD_education_reform
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
-			focus = UBD_coronation
+			focus = UBD_knighthood_support
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
+			has_country_flag = UBD_financial_peoblem_solved
 		}
-        x = 11
-        y = 6
-        cost = 10
+        x = 5
+        y = 7
+        cost = 3
 		completion_reward = {
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
+			custom_effect_tooltip = UBD_education_reform_tt
 		}
 	}
 	
@@ -504,23 +115,16 @@ focus_tree = {
         id = UBD_wellfare
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
-			focus = UBD_constitution
+			focus = UBD_knighthood_support
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
+			has_country_flag = UBD_financial_peoblem_solved
 		}
-        x = 12
+        x = 7
         y = 7
         cost = 5
 		completion_reward = {
-			add_popularity = { ideology = social_democracy popularity = -0.1 }
 			add_popularity = { ideology = conservatism popularity = 0.07 }
-			add_popularity = { ideology = authoritarism popularity = 0.03 }
 			add_ideas = acceptable_legislation
 		}
 	}
@@ -529,64 +133,155 @@ focus_tree = {
         id = UBD_police_organisation
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
-			focus = UBD_regentschaftsrat
+			focus = UBD_constitution
 		}
 		available = { 
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
+			has_country_flag = UBD_financial_peoblem_solved
+		}
+        x = 8
+        y = 6
+        cost = 4
+		completion_reward = {
+			add_popularity = { ideology = communism popularity = -0.03 }
+			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			remove_ideas = RUS_damage_to_police_and_special_services
+			create_intelligence_agency = { name = "Geheimdienst des Herzogtums Baltikum" icon = "GFX_agency_logo_RUS_okhranka" }
+		}
+	}
+	
+	focus = {
+        id = UBD_economic_regulation
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_regentschaftsrat
+		}
+		available = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 13
         y = 5
+        cost = 5
+		completion_reward = {
+			add_political_power = -75
+			add_ideas = mixed_economy_law
+			rise_mobilization_economy_law_war = yes
+		}
+	}
+	
+	focus = {
+        id = UBD_trade_law
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_constitution
+		}
+		prerequisite = {
+			focus = UBD_economic_regulation
+		}
+		available = {
+		}
+        x = 9
+        y = 7
+        cost = 6
+		completion_reward = {
+			add_political_power = 25
+			add_popularity = { ideology = conservatism popularity = 0.03 }
+			add_popularity = { ideology = market_liberalism popularity = 0.05 }
+			add_ideas = free_trade
+		}
+	}
+	
+	focus = {
+        id = UBD_german_economic_integration
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_trade_law
+		}
+		available = {
+			UBD = {
+				is_puppet_of = GER
+			}
+		}
+        x = 9
+        y = 8
+        cost = 2
+		completion_reward = {
+			custom_effect_tooltip = UBD_german_economic_integration_tt
+			add_ideas = UBD_german_integration_idea
+		}
+	}
+	
+	focus = {
+        id = UBD_forest_industry
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_economic_regulation
+		}
+		available = {
+		}
+        x = 10
+        y = 6
         cost = 4
 		completion_reward = {
-			custom_effect_tooltip = UBD_police_organisation_tt
-			if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-				remove_ideas = UBD_weak_state_apparatus_1_idea
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_2_idea
-					add_idea = UBD_weak_state_apparatus_1_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_3_idea
-					add_idea = UBD_weak_state_apparatus_2_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_4_idea
-					add_idea = UBD_weak_state_apparatus_3_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_5_idea
-					add_idea = UBD_weak_state_apparatus_4_idea
-				}
-			}
-			else_if = {
-				limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-				swap_ideas = {
-					remove_idea = UBD_weak_state_apparatus_6_idea
-					add_idea = UBD_weak_state_apparatus_5_idea
-				}
-			}
-			hidden_effect = {
-				create_intelligence_agency = { name = "Geheimdienst des Herzogtums Baltikum" icon = "GFX_agency_logo_RUS_okhranka" }
-			}
+		}
+	}
+	
+	focus = {
+        id = UBD_russo_balt_factory
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_economic_regulation
+		}
+		available = {
+		}
+        x = 12
+        y = 6
+        cost = 4
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+        id = UBD_airplane_production
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_russo_balt_factory
+		}
+		available = {
+		}
+        x = 11
+        y = 7
+        cost = 4
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+        id = UBD_revel_dockyards
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_economic_regulation
+		}
+		available = {
+		}
+        x = 13
+        y = 7
+        cost = 4
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+        id = UBD_river_fleet
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_revel_dockyards
+		}
+		available = {
+		}
+        x = 13
+        y = 8
+        cost = 4
+		completion_reward = {
 		}
 	}
 	
@@ -596,46 +291,36 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
-		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
-			}
+		available = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 15
         y = 5
         cost = 4
 		completion_reward = {
-			custom_effect_tooltip = UBD_form_landwehr_tt
 			set_country_flag = UBD_landwehr_formed
 			add_ideas = UBD_landwehr_1_idea
-			add_ideas = volunteer_only
-			
-			hidden_effect = {
-				lack_of_officers_rise = yes
-				lack_of_officers_rise = yes
-				lack_of_officers_rise = yes
-				UBD = {
-					recruit_character = UBD_Alfred_Fletcher
-					division_template = {
-						name = "Landeswehr Brigade"
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 1 y = 0 }
-							infantry = { x = 1 y = 1 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-						}
-					}
-					capital_scope = {
-						create_unit = {
-							division = "name = \"1.Landeswehr Brigade\" division_template = \"Landeswehr Brigade\" start_experience_factor = 0.1 start_manpower_factor = 0.6 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
+			rise_mobilization_law = yes
+			recruit_character = UBD_Alfred_Fletcher
+			lack_of_officers_rise = yes
+			division_template = {
+				name = "Landeswehr Brigade"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+					artillery = { x = 0 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1.Landeswehr Brigade\" division_template = \"Landeswehr Brigade\" start_experience_factor = 0.3 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
 				}
 			}
 		}
@@ -647,13 +332,10 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_form_landwehr
 		}
+		prerequisite = {
+			focus = UBD_economic_regulation
+		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
         x = 14
         y = 6
@@ -680,53 +362,43 @@ focus_tree = {
 			focus = UBD_form_landwehr
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
-			has_country_flag = UBD_loyalist_rewarded_flag
+			NOT = { country_exists = LAT }
+			NOT = { country_exists = EST }
 		}
         x = 16
         y = 6
         cost = 5
 		completion_reward = {
-			custom_effect_tooltip = UBD_form_ethnic_batalions_tt
-			create_corps_commander = { name = "Oskars Kalpaks" id = 77778 portrait_path = "gfx/leaders/LAT/Portrait_Oskars_Kalpaks.dds" traits = { infantry_officer inflexible_strategist } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
-			hidden_effect = {
-				lack_of_officers_rise = yes
-				UBD = {
-					division_template = {
-						name = "Ethnisches Bataillon"
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							infantry = { x = 1 y = 0 }
-						}
-						support = {
-							engineer = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-						}
-					}
-					810 = {
-						create_unit = {
-							division = "name = \"1.Lettische Bataillon\" division_template = \"Ethnisches Bataillon\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
-					12 = {
-						create_unit = {
-							division = "name = \"2.Lettische Bataillon\" division_template = \"Ethnisches Bataillon\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
-					812 = {
-						create_unit = {
-							division = "name = \"1.Estnische Bataillon\" division_template = \"Ethnisches Bataillon\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
+			lack_of_officers_rise = yes
+			lack_of_officers_rise = yes
+			division_template = {
+				name = "Ethnisches Regiment"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+				is_locked = yes
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"1.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"2.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"1.Estnische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
 				}
 			}
 		}
@@ -739,12 +411,6 @@ focus_tree = {
 			focus = UBD_form_ethnic_batalions
 		}
 		available = { 
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 			RUS = {
 				OR = {
 					has_government = radical_socialism
@@ -756,37 +422,42 @@ focus_tree = {
         y = 7
         cost = 5
 		completion_reward = {
-			custom_effect_tooltip = UBD_form_rus_batalions_tt
-			set_party_name = { 
-				ideology = national_syndicalism
-				long_name = "Союз фронтовиков"
-				name = "Союз фронтовиков"
-			}
-			country_event = { id = ubd.ruskoe.komandovanie days = 1 }
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
 			add_ideas = UBD_RUS_regiments_idea
-			hidden_effect = {
-				lack_of_officers_fall = yes
-				UBD = {
-					division_template = {
-						name = "Russisches Regiment"
-						regiments = {
-							infantry = { x = 0 y = 0 }
-							infantry = { x = 0 y = 1 }
-							cavalry = { x = 1 y = 0 }
-							cavalry = { x = 1 y = 1 }
-						}
-						support = {
-							recon = { x = 0 y = 0 }
-							artillery = { x = 0 y = 1 }
-						}
-					}
-					191 = {
-						create_unit = {
-							division = "name = \"1.Russisches Regiment\" division_template = \"Russisches Regiment\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
+			recruit_character = UBD_William_von_Engelhart
+			lack_of_officers_fall = yes
+			set_party_name = { 
+				ideology = national_syndicalism
+				long_name = "Союз Русских Офицеров"
+				name = "Союз Офицеров"
+			}
+			add_country_leader_role = {
+				character = UBD_William_von_Engelhart
+				promote_leader = yes
+				country_leader = {
+					ideology = national_syndicalism_ideology
+					traits = { warmonger_old_general }
+					expire = "1959.9.20"
+				}
+			}
+			division_template = {
+				name = "Russisches Regiment"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+				is_locked = no
+			}
+			random_owned_controlled_state = {
+				create_unit = {
+					division = "name = \"1.Russisches Regiment\" division_template = \"Russisches Regiment\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
 				}
 			}
 		}
@@ -802,25 +473,58 @@ focus_tree = {
 			focus = UBD_open_arsenals
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
         x = 15
         y = 7
         cost = 3
 		completion_reward = {
-			custom_effect_tooltip = UBD_mobilise_officers_tt
 			add_popularity = { ideology = despotism popularity = 0.03 }
 			add_command_power = 30
-			hidden_effect = {
-				lack_of_officers_fall = yes
-				lack_of_officers_fall = yes
-				recruit_character = UBD_Hans_von_Manteuffel_Szoege
-			}
+			recruit_character = UBD_Hans_von_Manteuffel_Szoege
+			lack_of_officers_fall = yes
+			lack_of_officers_fall = yes
+		}
+	}
+	
+	focus = {
+        id = UBD_shock_regiments
+		icon = GFX_goal_generic_improve_relations
+		prerequisite = {
+			focus = UBD_mobilise_officers
+		}
+		available = {
+		}
+        x = 15
+        y = 8
+        cost = 3
+		completion_reward = {
+			lack_of_officers_rise = yes
+			lack_of_officers_rise = yes
+				UBD = {
+					division_template = {
+						name = "Sturmtruppe Bataillon"
+						regiments = {
+							stormtroopers = { x = 0 y = 0 }
+						}
+						support = {
+							recon = { x = 0 y = 0 }
+							engineer = { x = 0 y = 1 }
+						}
+						is_locked = no
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"1.Sturmtruppe Bataillon - Riga\" division_template = \"Sturmtruppe Bataillon\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+							owner = UBD
+						}
+					}
+					random_owned_controlled_state = {
+						create_unit = {
+							division = "name = \"2.Sturmtruppe Bataillon - Revel\" division_template = \"Sturmtruppe Bataillon\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+							owner = UBD
+						}
+					}
+				}
 		}
 	}
 	
@@ -831,9 +535,6 @@ focus_tree = {
 			focus = UBD_regentschaftsrat
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
-			}
 		}
         x = 18
         y = 5
@@ -863,9 +564,6 @@ focus_tree = {
 			focus = UBD_regentschaftsrat
 		}
 		available = { 
-			NOT = { 
-				has_country_flag = WWI_GER_HAS_CAPITULATED 
-			}
 		}
         x = 20
         y = 5
@@ -899,12 +597,6 @@ focus_tree = {
 			focus = UBD_landowners_finance
 		}
 		available = { 
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 19
@@ -922,12 +614,6 @@ focus_tree = {
 			focus = UBD_start_ostpolitik
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 			has_country_flag = UBD_land_taken_flag
 		}
         x = 19
@@ -938,25 +624,21 @@ focus_tree = {
 				idea = UBD_service_for_land_idea
 				days = 100
 			}
-			custom_effect_tooltip = UBD_offer_the_land_tt
-			hidden_effect = {
-				UBD = {
-					recruit_character = UBD_Josef_Bischoff
-					division_template = {
-						name = "Eiserne Division"
-						regiments = {
-							infantry = { x = 0 y = 0 }
-						}
-						support = {
-							artillery = { x = 0 y = 0 }
-						}
-					}
-					capital_scope = {
-						create_unit = {
-							division = "name = \"Железная дивизия\" division_template = \"Eiserne Division\" start_experience_factor = 0.5 start_manpower_factor = 0.4 start_equipment_factor = 1"
-							owner = UBD
-						}
-					}
+			recruit_character = UBD_Josef_Bischoff
+			division_template = {
+				name = "Eiserne Division"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+				}
+				is_locked = no
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Eiserne Division\" division_template = \"Eiserne Division\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
 				}
 			}
 		}
@@ -969,19 +651,56 @@ focus_tree = {
 			focus = UBD_offer_the_land
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
+			GER = {
+				NOT = { has_government = radical_socialism }
+				NOT = { has_government = communism }
 			}
-			has_country_flag = UBD_land_taken_flag
 		}
-        x = 20
+        x = 19
         y = 8
         cost = 2
 		completion_reward = {
-			
+			recruit_character = UBD_Rudiger_von_der_Goltz
+			division_template = {
+				name = "Infanterie Brigade"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+				}
+				is_locked = no
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1.Garde Reserve Infanterie Brigade\" division_template = \"Infanterie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
+				}
+			}
+			division_template = {
+				name = "Artillerie Brigade"
+				regiments = {
+					artillery_brigade = { x = 0 y = 0 }
+					artillery_brigade = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+				is_locked = no
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"Garde Artillerie Kommandeur Nr.8\" division_template = \"Artillerie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = UBD
+				}
+			}
 		}
 	}
 	
@@ -995,27 +714,16 @@ focus_tree = {
 			focus = UBD_mobilise_officers
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
         x = 17
         y = 8
         cost = 5
 		completion_reward = {
-			add_manpower = 10000
-			set_nationality = {
-				target_country = GER
-				character = UBD_Hugo_von_Kathen
+			swap_ideas = {
+				remove_idea = UBD_landwehr_1_idea
+				add_idea = UBD_landwehr_2_idea
 			}
-			set_party_name = { 
-				ideology = despotism
-				long_name = "Штаб Остзейской армии"
-				name = "Штаб Остзейской армии"
-			}
+			rise_mobilization_law = yes
 			add_country_leader_role = {
 				character = UBD_Alfred_Fletcher
 				promote_leader = yes
@@ -1025,16 +733,11 @@ focus_tree = {
 					expire = "1959.9.20"
 				}
 			}
-			remove_ideas = UBD_german_occupation_idea
-			add_ideas = extensive_conscription
-			hidden_effect = {
-				recruit_character = UBD_Rudiger_von_der_Goltz
+			set_party_name = { 
+				ideology = despotism
+				long_name = "Штаб Остзейской армии"
+				name = "Штаб Остзейской армии"
 			}
-			swap_ideas = {
-				remove_idea = UBD_landwehr_1_idea
-				add_idea = UBD_landwehr_2_idea
-			}
-			
 		}
 	}
 	
@@ -1045,12 +748,6 @@ focus_tree = {
 			focus = UBD_ostzee_army
 		}
 		available = {
-			OR = {
-				NOT = { 
-					has_global_flag = WWI_GER_HAS_CAPITULATED 
-				}
-				has_country_flag = UBD_martial_law
-			}
 		}
         x = 17
         y = 9

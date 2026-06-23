@@ -6,8 +6,56 @@ country_event = {
 	title = ubd.1.t
 	desc = ubd.1.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.1.a
+		recruit_character = UBD_Adolf_von_Seckendorff
+		recruit_character = UBD_Alfred_von_Gossler
+		recruit_character = UBD_Hugo_von_Kathen	
+		add_ideas = {
+			Hugo_von_Kathen_1
+			Alfred_von_Gossler_4
+			Adolf_von_Seckendorff_6
+		}
+		if = {
+			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
+			remove_ideas = UBD_weak_state_apparatus_1_idea
+		}
+		else_if = {
+			limit = { has_idea = UBD_weak_state_apparatus_2_idea }
+			swap_ideas = {
+				remove_idea = UBD_weak_state_apparatus_2_idea
+				add_idea = UBD_weak_state_apparatus_1_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = UBD_weak_state_apparatus_3_idea }
+			swap_ideas = {
+				remove_idea = UBD_weak_state_apparatus_3_idea
+				add_idea = UBD_weak_state_apparatus_2_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = UBD_weak_state_apparatus_4_idea }
+			swap_ideas = {
+				remove_idea = UBD_weak_state_apparatus_4_idea
+				add_idea = UBD_weak_state_apparatus_3_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = UBD_weak_state_apparatus_5_idea }
+			swap_ideas = {
+				remove_idea = UBD_weak_state_apparatus_5_idea
+				add_idea = UBD_weak_state_apparatus_4_idea
+			}
+		}
+		else_if = {
+			limit = { has_idea = UBD_weak_state_apparatus_6_idea }
+			swap_ideas = {
+				remove_idea = UBD_weak_state_apparatus_6_idea
+				add_idea = UBD_weak_state_apparatus_5_idea
+			}
+		}
 	}
 }
 
@@ -17,6 +65,7 @@ country_event = {
 	title = ubd.2.t
 	desc = ubd.2.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.2.a
 	}
@@ -28,9 +77,14 @@ country_event = {
 	title = ubd.3.t
 	desc = ubd.3.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.3.a
 		country_event = { id = ubd.4 days = 4 }
+		recruit_character = UBD_Adolf_Pilar_von_Pilchau
+		add_ideas = {
+			Adolf_Pilar_von_Pilchau_7
+		}
 	}
 }
 #Обсуждение конституции#
@@ -39,6 +93,7 @@ country_event = {
 	title = ubd.4.t
 	desc = ubd.4.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.4.a
 	}
@@ -50,6 +105,7 @@ country_event = {
 	title = ubd.5.t
 	desc = ubd.5.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.5.a
 		UBD = {
@@ -64,6 +120,7 @@ country_event = {
 	title = ubd.6.t
 	desc = ubd.6.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.6.a
 		RUS = {
@@ -78,6 +135,7 @@ country_event = {
 	title = ubd.7.t
 	desc = ubd.7.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.7.a
 		GER = {
@@ -92,6 +150,7 @@ country_event = {
 	title = ubd.8.t
 	desc = ubd.8.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.8.a
 		UBD = {
@@ -106,6 +165,7 @@ country_event = {
 	title = ubd.9.t
 	desc = ubd.9.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.9.a
 	}
@@ -117,6 +177,7 @@ country_event = {
 	title = ubd.10.t
 	desc = ubd.10.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.10.a
 		GER = {
@@ -134,6 +195,7 @@ country_event = {
 	title = ubd.11.t
 	desc = ubd.11.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.11.a
 		UBD = {
@@ -154,6 +216,7 @@ country_event = {
 	title = ubd.12.t
 	desc = ubd.12.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.12.a
 	}
@@ -165,6 +228,7 @@ country_event = {
 	title = ubd.13.t
 	desc = ubd.13.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.13.a
 	}
@@ -176,6 +240,7 @@ country_event = {
 	title = ubd.14.t
 	desc = ubd.14.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.14.a
 	}
@@ -187,6 +252,7 @@ country_event = {
 	title = ubd.15.t
 	desc = ubd.15.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.15.a
 	}
@@ -197,6 +263,7 @@ country_event = {
 	title = ubd.67.t
 	desc = ubd.67.desc
 	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
 	option = {
 		name = ubd.67.a
 		UBD = {

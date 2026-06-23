@@ -9,7 +9,6 @@ state = {
 	history = {
 		owner = RUS
 		add_core_of = LAT
-		add_core_of = UBD
 		add_core_of = RUS
 		add_claim_by = BLR
 		buildings = {

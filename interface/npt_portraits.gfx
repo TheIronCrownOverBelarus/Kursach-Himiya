@@ -894,10 +894,7 @@ spriteTypes = {
 		name = "GFX_portrait_UBD_Alfred_Fletcher"
 		texturefile = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds"
 	}
-	spriteType = {
-		name = "GFX_portrait_Alfred_von_Gossler"
-		texturefile = "gfx/leaders/UBD/Portrait_Alfred_von_Gossler.dds"
-	}
+	
 	spriteType = {
 		name = "GFX_portrait_UBD_Hans_von_Manteuffel_Szoege"
 		texturefile = "gfx/leaders/UBD/Portrait_Hans_von_Manteuffel_Szoege.dds"
@@ -918,4 +915,14 @@ spriteTypes = {
 		name = "GFX_portrait_UBD_William_von_Engelhart"
 		texturefile = "gfx/leaders/UBD/Portrait_William_von_Engelhart.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_portrait_COU_Alexander_von_Rahden"
+		texturefile = "gfx/leaders/UBD/Portrait_Alexander_fon_Rahden.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_COU_Alfred_von_Gossler"
+		texturefile = "gfx/leaders/UBD/Portrait_Alfred_von_Gossler.dds"
+	}
+	
 }

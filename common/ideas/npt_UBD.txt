@@ -2,9 +2,261 @@ ideas = {
 
 	#United Baltic Duchy
 	
+	head_of_government = {
+	
+		Hugo_von_Kathen_1 = {
+			allowed = {
+				original_tag = UBD
+				NOT = { has_country_flag = Hugo_von_Kathen_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = UBD_Hugo_von_Kathen }
+					UBD_Hugo_von_Kathen = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = UBD_Hugo_von_Kathen
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+		
+		Adolf_Pilar_von_Pilchau_1 = {
+			allowed = {
+				original_tag = UBD
+				NOT = { has_country_flag = Adolf_Pilar_von_Pilchau_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = UBD_Adolf_Pilar_von_Pilchau }
+					UBD_Adolf_Pilar_von_Pilchau = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_conservatism_committed = yes
+			}
+			visible = {
+				has_character = UBD_Adolf_Pilar_von_Pilchau
+			}
+			traits = { head_of_government_trait conservative_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_conservatism_committed = no
+				}
+			}
+		}
+		
+		Alexander_von_Rahden_1 = {
+			allowed = {
+				original_tag = COU
+				NOT = { has_country_flag = Alexander_von_Rahden_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = COU_Alexander_von_Rahden }
+					COU_Alexander_von_Rahden = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_conservatism_committed = yes
+			}
+			visible = {
+				has_character = COU_Alexander_von_Rahden
+			}
+			traits = { head_of_government_trait conservative_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = conservatism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_conservatism_committed = no
+				}
+			}
+		}
+	
+	}
+	
+	foreign_minister = {
+	
+	}
+	
+	economy_minister = {
+	
+	}
+	
+	security_minister = {
+	
+		Alfred_von_Gossler_4 = {
+			allowed = {
+				original_tag = UBD
+				NOT = { has_country_flag = Alfred_von_Gossler_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = COU_Alfred_von_Gossler }
+					COU_Alfred_von_Gossler = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = COU_Alfred_von_Gossler
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+		
+		Alfred_von_Gossler_4 = {
+			allowed = {
+				original_tag = COU
+				NOT = { has_country_flag = Alfred_von_Gossler_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = COU_Alfred_von_Gossler }
+					COU_Alfred_von_Gossler = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = COU_Alfred_von_Gossler
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+	
+	}
+	
+	head_of_intel = {
+	
+	}
+	
+	military_minister = {
+	
+		Adolf_von_Seckendorff_6 = {
+			allowed = {
+				original_tag = Г
+				NOT = { has_country_flag = Alfred_von_Gossler_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = COU_Alfred_von_Gossler }
+					COU_Alfred_von_Gossler = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = COU_Alfred_von_Gossler
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+		
+		Alfred_Fletcher_6 = {
+			allowed = {
+				original_tag = Г
+				NOT = { has_country_flag = Alfred_von_Gossler_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = COU_Alfred_von_Gossler }
+					COU_Alfred_von_Gossler = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = COU_Alfred_von_Gossler
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+		
+		Rudiger_von_der_Goltz_6 = {
+			allowed = {
+				original_tag = UBD
+				NOT = { has_country_flag = Rudiger_von_der_Goltz_dead }
+			}
+			available = {
+				if = {
+					limit = { has_character = UBD_Rudiger_von_der_Goltz }
+					UBD_Rudiger_von_der_Goltz = {
+						NOT = { has_character_flag = dismissed_flag }
+					}
+				}
+				min_despotism_committed = yes
+			}
+			visible = {
+				has_character = UBD_Rudiger_von_der_Goltz
+			}
+			traits = { head_of_government_trait despotist_counselor min_1_gentleman_politician minister_flag_trait }
+			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					min_despotism_committed = no
+				}
+			}
+		}
+	
+	}
+	
+	political_advisor = {
+		
+	}
+	
 	country = {
 	
-		UBD_german_occupation_1_idea = {
+		UBD_german_occupation_idea = {
 			allowed = {
 				always = no
 			}
@@ -27,34 +279,6 @@ ideas = {
 				resistance_target = 0.15
 				consumer_goods_factor = 0.03
 				despotism_drift = 0.02
-				custom_modifier_tooltip = UBD_german_occupation_idea_tt
-			}
-		}
-		
-		UBD_german_occupation_2_idea = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = { 
-				OR = {
-					UBD = { is_ally_with = GER }
-					UBD = { is_puppet_of = GER }
-				}
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				stability_weekly = -0.003
-				local_resources_factor = -0.2
-				command_power_gain = 0.25
-				required_garrison_factor = -0.2
-				resistance_activity = 0.3
-				resistance_target = 0.3
-				consumer_goods_factor = 0.08
-				despotism_drift = 0.03
 				custom_modifier_tooltip = UBD_german_occupation_idea_tt
 			}
 		}
@@ -123,133 +347,6 @@ ideas = {
 			}
 		}
 		
-		UBD_weak_state_apparatus_6_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.6
-				stability_factor = -0.25
-				research_speed_factor = -0.18
-				surrender_limit = -0.12
-				party_popularity_stability_factor = -0.3
-				drift_defence_factor = -0.4
-			}
-		}
-		
-		UBD_weak_state_apparatus_5_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.5
-				stability_factor = -0.20
-				research_speed_factor = -0.15
-				surrender_limit = -0.1
-				party_popularity_stability_factor = -0.25
-				drift_defence_factor = -0.35
-			}
-		}
-		
-		UBD_weak_state_apparatus_4_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.4
-				stability_factor = -0.20
-				research_speed_factor = -0.12
-				surrender_limit = -0.08
-				party_popularity_stability_factor = -0.2
-				drift_defence_factor = -0.3
-			}
-		}
-		
-		UBD_weak_state_apparatus_3_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.3
-				stability_factor = -0.15
-				research_speed_factor = -0.09
-				surrender_limit = -0.06
-				party_popularity_stability_factor = -0.15
-				drift_defence_factor = -0.25
-			}
-		}
-		
-		UBD_weak_state_apparatus_2_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.2
-				stability_factor = -0.10
-				research_speed_factor = -0.06
-				surrender_limit = -0.04
-				party_popularity_stability_factor = -0.1
-				drift_defence_factor = -0.2
-			}
-		}
-		
-		UBD_weak_state_apparatus_1_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_cost = 0.1
-				stability_factor = -0.05
-				research_speed_factor = -0.03
-				surrender_limit = -0.02
-				party_popularity_stability_factor = -0.05
-				drift_defence_factor = -0.08
-				drift_defence_factor = -0.1
-			}
-		}
-		
 		UBD_german_integration_idea = {
 			
 			picture = generic_foreign_capital
@@ -313,7 +410,7 @@ ideas = {
 			}
 		}
 		
-		UBD_ethnic_problem_idea = {
+		UBD_ethnic_conflict_idea = {
 		
 			allowed = {
 				always = no
@@ -340,9 +437,9 @@ ideas = {
 				stability_factor = -0.3
 				attrition = 0.1
 				autonomy_gain_global_factor = -0.1
-				radical_socialism_drift = 0.01
-				communism_drift = 0.02
-				social_democracy_drift = 0.03
+				radical_socialism_drift = 0.02
+				communism_drift = 0.03
+				social_democracy_drift = 0.04
 			}
 		}
 		

@@ -76,29 +76,6 @@ characters = {
 		}
 	}
 	
-	UBD_Alfred_von_Gossler = {
-		name = UBD_Alfred_von_Gossler
-		gender = male
-		portraits = {
-			civilian = {
-				large = GFX_portrait_Alfred_von_Gossler
-			}
-			army = {
-				large = GFX_portrait_Alfred_von_Gossler
-			}
-		}
-		corps_commander = {
-			skill = 4
-			attack_skill = 3
-			defense_skill = 2
-			planning_skill = 2
-			logistics_skill = 4
-			legacy_id = 10002
-			traits = {  }
-			visible = { NOT = { has_character_flag = dismissed_flag } }
-		}
-	}
-	
 	UBD_Hans_von_Manteuffel_Szoege = {
 		name = UBD_Hans_von_Manteuffel_Szoege
 		gender = male
@@ -135,21 +112,6 @@ characters = {
 		}
 		country_leader = {
 			ideology = despotism_ideology
-			traits = { warmonger_old_general }
-			desc = UBD_Hugo_von_Kathen_DESC
-		}
-		country_leader = {
-			ideology = authoritarism_ideology
-			traits = { warmonger_old_general }
-			desc = UBD_Hugo_von_Kathen_DESC
-		}
-		country_leader = {
-			ideology = fascism_ideology
-			traits = { warmonger_old_general }
-			desc = UBD_Hugo_von_Kathen_DESC
-		}
-		country_leader = {
-			ideology = national_syndicalism_ideology
 			traits = { warmonger_old_general }
 			desc = UBD_Hugo_von_Kathen_DESC
 		}

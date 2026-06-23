@@ -1,0 +1,66 @@
+characters = {
+	
+	COU_Alexander_von_Rahden = {
+		name = COU_Alexander_von_Rahden
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_COU_Alexander_von_Rahden
+			}
+		}
+		country_leader = {
+			ideology = conservatism_ideology
+			traits = { min_4_silent_lawyer }
+			desc = COU_Alexander_von_Rahden_DESC
+		}
+	}
+	
+	COU_Alfred_von_Gossler = {
+		name = UBD_Alfred_von_Gossler
+		gender = male
+		portraits = {
+			civilian = {
+				large = GFX_portrait_COU_Alfred_von_Gossler
+			}
+			army = {
+				large = GFX_portrait_COU_Alfred_von_Gossler
+			}
+		}
+		country_leader = {
+			ideology = despotism_ideology
+			traits = { min_1_silent_workhorse }
+			desc = COU_Alfred_von_Gossler_DESC
+		}
+		country_leader = {
+			ideology = despotism_ideology
+			traits = { warmonger_old_general }
+			desc = UBD_Hugo_von_Kathen_DESC
+		}
+		country_leader = {
+			ideology = authoritarism_ideology
+			traits = { min_1_silent_workhorse }
+			desc = COU_Alfred_von_Gossler_DESC
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { min_1_silent_workhorse }
+			desc = COU_Alfred_von_Gossler_DESC
+		}
+		country_leader = {
+			ideology = national_syndicalism_ideology
+			traits = { min_1_silent_workhorse }
+			desc = COU_Alfred_von_Gossler_DESC
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+			legacy_id = 10002
+			traits = {  }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+}

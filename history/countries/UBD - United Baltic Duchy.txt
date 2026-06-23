@@ -33,102 +33,55 @@ add_ideas = {
 	civilian_economy
 	disarmed_nation
 	
-	UBD_weak_state_apparatus_6_idea
-	UBD_ethnic_problem_idea
 	peasant_and_land_and_bread_question_0_5
-	foodstuffs_supply_crisis_1
-	UBD_german_occupation_1_idea
+	UBD_ethnic_conflict_idea
+	RUS_weak_state_suppression_apparatus_1
+	UBD_german_occupation_idea
 	UBD_financial_problem_2_idea
+	foodstuffs_supply_crisis_1
 }
 
-set_party_name = { 
-	ideology = radical_socialism
-	long_name = "Партия социалистов-революционеров (левое крыло)"
-	name = "ПСР (л)"
+set_politics = {
+	ruling_party = conservatism
+	elections_allowed = no
 }
 
-set_party_name = { 
-	ideology = communism
-	long_name = "Российская Коммунистическая Партия (большевиков)"
-	name = "РКП (б)"
+set_cosmetic_tag = UBD_authoritarism
+
+set_popularities = {
+	radical_socialism = 0
+	communism = 17
+	social_democracy = 32
+	social_liberalism = 13
+	market_liberalism = 11
+	conservatism = 17
+	authoritarism = 0
+	despotism = 10
+	fascism = 0
+	national_syndicalism = 0
 }
 
-set_party_name = { 
-	ideology = social_democracy
-	long_name = "Латвийкий Национальный Совет/Временное Правительство Эстонии"
-	name = "ЛНС/ВПЭ"
-}
+recruit_character = UBD_Adolf_Pilar_von_Pilchau
+create_country_leader = { name = "Fritsis Rozin" desc = "" picture = "gfx/leaders/LAT/Portrait_Fritsis_Rozin.dds" ideology = leninism traits = { } }
+create_country_leader = { name = "Nikolay Markov" desc = RUS_Nikolay_Markov_DESC picture = "gfx/leaders/RUS/Portrait_Nikolay_Markov.dds" ideology = fascism_ideology traits = { dislike_jew } }
+create_country_leader = { name = "Sergey Klimanov" desc = "" picture = "gfx/leaders/RUS/Portrait_Nikolay_Markov.dds" ideology = national_syndicalism_ideology traits = { } }
 
-set_party_name = { 
-	ideology = social_liberalism
-	long_name = "Немецко-балтийская прогрессивная партия"
-	name = "НБПП"
-}
-
-set_party_name = { 
-	ideology = market_liberalism
-	long_name = "Немецко-балтийская демократическая партия"
-	name = "НБДП"
-}
-
-set_party_name = { 
-	ideology = conservatism
-	long_name = "Балтийский Ландесрат"
-	name = "Балтийский Ландесрат"
-}
-
-set_party_name = { 
-	ideology = despotism
-	long_name = "Германская Военная Администрация"
-	name = "Военная Администрация"
-}
-
-set_party_name = { 
-	ideology = authoritarism
-	long_name = "Германская Военная Администрация"
-	name = "Военная Администрация"
-}
-
-set_party_name = { 
-	ideology = fascism
-	long_name = "Германская Военная Администрация"
-	name = "Военная Администрация"
-}
-
-set_party_name = { 
-	ideology = national_syndicalism
-	long_name = "Германская Военная Администрация"
-	name = "Военная Администрация"
-}
 
 1918.3.14 = {
 
-	GER = { puppet = UBD }
-	
-	recruit_character = UBD_Adolf_Pilar_von_Pilchau
-	recruit_character = UBD_Adolf_von_Seckendorff
-	recruit_character = UBD_Alfred_von_Gossler
-	recruit_character = UBD_Hugo_von_Kathen	
-	
-	set_politics = {
-		ruling_party = despotism
-		elections_allowed = no
-	}
-	
-	set_popularities = {
-		radical_socialism = 5
-		communism = 10
-		social_democracy = 50
-		social_liberalism = 4
-		market_liberalism = 6
-		conservatism = 10
-		authoritarism = 0
-		despotism = 15
-		fascism = 0
-		national_syndicalism = 0
-	}
-	
-	set_cosmetic_tag = UBD_authoritarism
+GER = { UBD = { subjecting_script_with_transfer_parties_poster_government = yes } }
+
+recruit_character = UBD_Adolf_von_Seckendorff
+recruit_character = UBD_Hugo_von_Kathen	
+recruit_character = UBD_Adolf_Friedreich_Mecklenburg
+
+
+set_politics = {
+	ruling_party = despotism
+	elections_allowed = no
+}
+
+set_cosmetic_tag = UBD_authoritarism
 	
 }
 
