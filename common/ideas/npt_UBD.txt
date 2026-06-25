@@ -256,6 +256,26 @@ ideas = {
 	
 	country = {
 	
+		UBD_ethnic_conflict_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				conscription_factor = -0.75
+				stability_factor = -0.3
+				attrition = 0.1
+				autonomy_gain_global_factor = -0.1
+				radical_socialism_drift = 0.02
+				communism_drift = 0.03
+				social_democracy_drift = 0.04
+			}
+		}
+		
 		UBD_german_occupation_idea = {
 			allowed = {
 				always = no
@@ -264,10 +284,7 @@ ideas = {
 				always = yes
 			}
 			available = { 
-				OR = {
-					UBD = { is_ally_with = GER }
-					UBD = { is_puppet_of = GER }
-				}
+				UBD = { is_puppet_of = GER }
 			}
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
@@ -280,36 +297,6 @@ ideas = {
 				consumer_goods_factor = 0.03
 				despotism_drift = 0.02
 				custom_modifier_tooltip = UBD_german_occupation_idea_tt
-			}
-		}
-		
-		UBD_knighthood_support_idea = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			available = { 
-				UBD = { 
-					NOT = { 
-						OR = { 
-							has_government = radical_socialism 
-							has_government = communism 
-							has_government = social_democracy 
-						} 
-					} 
-				}
-			}
-			removal_cost = -1
-			picture = generic_volunteer_expedition_bonus
-			modifier = {
-				political_power_factor = 0.1
-				improve_relations_maintain_cost_factor = -0.3
-				political_advisor_cost_factor = -0.2
-				stability_weekly = 0.001
-				conservatism_drift = 0.03
-				authoritarism_drift = 0.02
 			}
 		}
 		
@@ -347,77 +334,12 @@ ideas = {
 			}
 		}
 		
-		UBD_german_integration_idea = {
-			
-			picture = generic_foreign_capital
-			
+		UBD_knighthood_support_idea = {
 			allowed = {
 				always = no
 			}
-			
 			allowed_civil_war = {
 				always = yes
-			}
-			
-			available = { 
-				OR = {
-					UBD = { is_ally_with = GER }
-					UBD = { is_puppet_of = GER }
-				}
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_buildings_factor = 0.15
-				local_resources_factor = 0.07
-				industrial_capacity_factory = 0.1
-				autonomy_gain = -0.3
-				authoritarism_drift = 0.02
-				monthly_population = 0.1
-			}
-
-			targeted_modifier = {
-				tag = GER
-				extra_trade_to_target_factor = 0.4
-				trade_cost_for_target_factor = -0.5
-			}
-		}
-		
-		UBD_GER_invested_idea = {
-			
-			picture = generic_foreign_capital
-			
-			allowed = {
-				always = no
-			}
-			
-			allowed_civil_war = {
-				always = yes
-			}
-			
-			available = { 
-				OR = {
-					UBD = { is_ally_with = GER }
-					UBD = { is_puppet_of = GER }
-				}
-			}
-			
-			removal_cost = -1
-			
-			modifier = {
-				consumer_goods_factor = 0.07
-			}
-		}
-		
-		UBD_ethnic_conflict_idea = {
-		
-			allowed = {
-				always = no
-			}
-
-			allowed_civil_war = {
-				always = no
 			}
 			available = { 
 				UBD = { 
@@ -433,13 +355,109 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				conscription_factor = -0.75
-				stability_factor = -0.3
-				attrition = 0.1
-				autonomy_gain_global_factor = -0.1
-				radical_socialism_drift = 0.02
-				communism_drift = 0.03
-				social_democracy_drift = 0.04
+				political_power_factor = 0.1
+				improve_relations_maintain_cost_factor = -0.3
+				political_advisor_cost_factor = -0.2
+				stability_weekly = 0.001
+				conservatism_drift = 0.03
+				authoritarism_drift = 0.02
+			}
+		}
+		
+		UBD_russo_balt_factory_1_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			equipment_bonus = {
+				motorized_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				armored_car_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				train_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.05
+			}
+		}
+		
+		UBD_russo_balt_factory_2_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			equipment_bonus = {
+				motorized_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				armored_car_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				train_equipment  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				light_air  = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			modifier = {
+				industrial_capacity_factory = 0.07
+			}
+		}
+		
+		UBD_river_fleet_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				river_crossing_factor = -0.05
+			}
+		}
+		
+		UBD_german_integration_idea = {
+			picture = generic_foreign_capital
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { 
+				OR = {
+					UBD = { is_ally_with = GER }
+					UBD = { is_puppet_of = GER }
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				local_resources_factor = 0.07
+				industrial_capacity_factory = 0.1
+				autonomy_gain = -0.3
+				authoritarism_drift = 0.02
+				monthly_population = 0.1
+			}
+			targeted_modifier = {
+				tag = GER
+				extra_trade_to_target_factor = 0.4
+				trade_cost_for_target_factor = -0.5
 			}
 		}
 		
@@ -474,11 +492,9 @@ ideas = {
 		}
 		
 		UBD_landwehr_2_idea = {
-		
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
@@ -532,11 +548,9 @@ ideas = {
 		}
 		
 		UBD_service_for_land_idea = {
-		
 			allowed = {
 				always = no
 			}
-
 			allowed_civil_war = {
 				always = yes
 			}
@@ -557,7 +571,6 @@ ideas = {
 				training_time_army_factor = -0.1
 				war_support_weekly = 0.002
 				weekly_manpower = 300
-				
 			}
 		}
 		

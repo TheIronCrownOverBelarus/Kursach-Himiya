@@ -18,10 +18,10 @@ focus_tree = {
 		available = {
 		}
         x = 14
-        y = 0
+        y = 3
         cost = 5
 		completion_reward = {
-			add_ideas = emergency_laws_b_law
+			add_ideas = decrees_of_ruler_b_law
 			swap_ideas = {
 				remove_idea = RUS_weak_state_suppression_apparatus_1
 				add_idea = RUS_damage_to_police_and_special_services
@@ -35,23 +35,21 @@ focus_tree = {
 		available = { 
 		}
         x = 16
-        y = 0
+        y = 3
         cost = 1
 		completion_reward = {
 			country_event = { id = ubd.3 days = 5 }
 		}
 	}
 	
-	###ВЕТКА ГРАЖДАНСКОЙ АДМИНИСТРАЦИИ###
-	
 	focus = {
         id = UBD_regentschaftsrat
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_create_government_system
-			focus = UBD_gather_landesrat
 		}
-		available = { 
+		prerequisite = {
+			focus = UBD_gather_landesrat
 		}
         x = 15
         y = 4
@@ -67,8 +65,6 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
-		available = {
-		}
         x = 8
         y = 5
         cost = 10
@@ -82,8 +78,6 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_constitution
-		}
-		available = {
 		}
         x = 6
         y = 6
@@ -177,8 +171,6 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_economic_regulation
 		}
-		available = {
-		}
         x = 9
         y = 7
         cost = 6
@@ -205,7 +197,6 @@ focus_tree = {
         y = 8
         cost = 2
 		completion_reward = {
-			custom_effect_tooltip = UBD_german_economic_integration_tt
 			add_ideas = UBD_german_integration_idea
 		}
 	}
@@ -217,11 +208,21 @@ focus_tree = {
 			focus = UBD_economic_regulation
 		}
 		available = {
+			191 = { is_controlled_by = UBD }
 		}
         x = 10
         y = 6
         cost = 4
 		completion_reward = {
+			add_political_power = -20
+			191 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -232,11 +233,23 @@ focus_tree = {
 			focus = UBD_economic_regulation
 		}
 		available = {
+			808 = { is_controlled_by = UBD }
 		}
         x = 12
         y = 6
         cost = 4
 		completion_reward = {
+			add_political_power = -30
+			add_stability  = 0.05
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = UBD_russo_balt_factory_1_idea
 		}
 	}
 	
@@ -247,11 +260,24 @@ focus_tree = {
 			focus = UBD_russo_balt_factory
 		}
 		available = {
+			808 = { is_controlled_by = UBD }
 		}
         x = 11
         y = 7
         cost = 4
 		completion_reward = {
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = UBD_russo_balt_factory_1_idea
+				add_idea = UBD_russo_balt_factory_2_idea
+			}
 		}
 	}
 	
@@ -262,11 +288,27 @@ focus_tree = {
 			focus = UBD_economic_regulation
 		}
 		available = {
+			812 = { is_controlled_by = UBD }
 		}
         x = 13
         y = 7
         cost = 4
 		completion_reward = {
+			add_political_power = -50
+			808 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = 	dockyard
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 3152
+				}
+			}
 		}
 	}
 	
@@ -276,12 +318,11 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_revel_dockyards
 		}
-		available = {
-		}
         x = 13
         y = 8
         cost = 4
 		completion_reward = {
+			add_ideas = UBD_river_fleet_idea
 		}
 	}
 	
@@ -336,6 +377,7 @@ focus_tree = {
 			focus = UBD_economic_regulation
 		}
 		available = {
+			808 = { is_controlled_by = UBD }
 		}
         x = 14
         y = 6
@@ -472,8 +514,6 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_open_arsenals
 		}
-		available = {
-		}
         x = 15
         y = 7
         cost = 3
@@ -491,8 +531,6 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_mobilise_officers
-		}
-		available = {
 		}
         x = 15
         y = 8
@@ -534,8 +572,6 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
-		available = { 
-		}
         x = 18
         y = 5
         cost = 2
@@ -562,8 +598,6 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_regentschaftsrat
-		}
-		available = { 
 		}
         x = 20
         y = 5
@@ -713,8 +747,6 @@ focus_tree = {
 		prerequisite = {
 			focus = UBD_mobilise_officers
 		}
-		available = {
-		}
         x = 17
         y = 8
         cost = 5
@@ -738,6 +770,7 @@ focus_tree = {
 				long_name = "Штаб Остзейской армии"
 				name = "Штаб Остзейской армии"
 			}
+			remove_ideas = UBD_german_occupation_idea
 		}
 	}
 	
@@ -746,8 +779,6 @@ focus_tree = {
 		icon = GFX_goal_generic_improve_relations
 		prerequisite = {
 			focus = UBD_ostzee_army
-		}
-		available = {
 		}
         x = 17
         y = 9

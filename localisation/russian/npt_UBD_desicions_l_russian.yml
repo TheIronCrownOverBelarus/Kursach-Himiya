@@ -6,15 +6,14 @@
  UBD_german_immigration_decision: "Привлечение немецких поселенцев"
  
  UBD_crush_separatism_decisions_category: "Борьба с сепаратизмом"
- UBD_crush_separatism_decisions_category_desc: "Политика проводимая правительством в аграрной сфере спровоцировала вспышку недовольства в латышской и эстонской крестьянской среде. Беспорядки охватили всю страну и если ничего не предпринять националисты и большевики вновь поднимут головы и наверняка попытаются свергнуть правительство."
  UBD_crush_separatism_in_courland_decision: "Восстановление порядка в Курляндии"
  UBD_crush_separatism_in_estland_decision: "Восстановление порядка в Эстляндии"
  UBD_crush_separatism_in_osel_and_dago_decision: "Восстановление порядка на Эзеле и Даго"
- UBD_crush_separatism_in_osel_and_dago_decision_desc: "Эзель и Даго - крупнейшие острова Эстляндии, являющиеся вотчиной Эзельского рыцарства. Проживающее там немецкое население подвергается постоянным атакам эстонских националистов. Представители Ордена требуют немедленно положить этому конец."
  UBD_crush_separatism_in_livonia_decision: "Восстановление порядка в Ливонии"
- UBD_crush_separatism_in_livonia_decision_desc: "Ливония - центральная часть страны почти полностью покрытая лесами. Из-за этого она стала буквально центром сопротивления латышских партизан."
  
  UBD_education_decisions_category: "Образовательная Реформа"
- UBD_investments_decisions_category: "Немецкие Инвестиции"
+ UBD_education_germanisation_decision: "Германизация образования"
+ UBD_tartu_university_decision: "Восстановление Тартутского университета"
+ UBD_war_on_illiteracy_decision: "Борьба с неграмотностью"
  
  

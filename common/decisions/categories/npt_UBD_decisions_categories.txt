@@ -4,6 +4,7 @@ UBD_ost_politik_decisions_category = {
 	}
 	visible = {
 		has_completed_focus = UBD_start_ostpolitik
+		
 	}
 	picture = GFX_decision_cat_picture_rcw_CCA_right_monarcical_reaction_eser
 	icon = decision_category_generic_political_actions
@@ -14,7 +15,8 @@ UBD_crush_separatism_decisions_category = {
 		original_tag = UBD
 	}
 	visible = {
-		always = yes
+		has_completed_focus = UBD_crush_separatist_organisations
+		has_country_flag = UBD_separatist_uprising_flag
 	}
 	picture = GFX_decision_cat_picture_rcw_CCA_right_monarcical_reaction_eser
 	icon = decision_category_generic_political_actions
@@ -29,18 +31,6 @@ UBD_education_decisions_category = {
 		NOT = {
 				has_country_flag = UBD_education_reform_completed
 		}
-	}
-	picture = GFX_decision_cat_picture_rcw_CCA_right_monarcical_reaction_eser
-	icon = decision_category_generic_political_actions
-}
-
-UBD_investments_decisions_category = {
-	allowed = {
-		original_tag = UBD
-	}
-	visible = {
-		has_completed_focus = UBD_german_economic_integration
-		has_idea = = UBD_german_integration_idea
 	}
 	picture = GFX_decision_cat_picture_rcw_CCA_right_monarcical_reaction_eser
 	icon = decision_category_generic_political_actions
