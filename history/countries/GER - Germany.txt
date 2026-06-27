@@ -56,6 +56,10 @@ set_variable = { despotism_coalition = 4 }
 
 #ARMY
 recruit_character = GER_Paul_von_Hindenburg #34010
+recruit_character = GER_Adolf_von_Seckendorff
+recruit_character = GER_Hugo_von_Kathen
+recruit_character = GER_Rudiger_von_der_Goltz
+
 create_field_marshal = {  name = "Albrecht von Wurttemberg" id = 34011 portrait_path = "gfx/leaders/GER/Portrait_Albrecht_von_Wurttemberg.dds" traits = { cavalry_leader cavalry_officer trait_cautious organizer offensive_doctrine } skill = 4 attack_skill = 5 defense_skill = 3 planning_skill = 5 logistics_skill = 3 }
 create_field_marshal = {  name = "Rupprecht von Bayern" id = 34012 portrait_path = "gfx/leaders/GER/Portrait_Rupprecht_von_Bayern.dds" traits = { organizer expert_delegator inflexible_strategist inspirational_leader defensive_doctrine } skill = 4 attack_skill = 3 defense_skill = 5 planning_skill = 4 logistics_skill = 4 }
 create_field_marshal = {  name = "Wilhelm of Prussia" id = 34013 portrait_path = "gfx/leaders/GER/Portrait_Wilhelm_III_military.dds" traits = { politically_connected trait_cautious organizer expert_delegator infantry_expert } skill = 3 attack_skill = 3 defense_skill = 4 planning_skill = 3 logistics_skill = 5 }
@@ -75,7 +79,6 @@ create_corps_commander = {  name = "Felix von Bothmer" id = 34023 portrait_path 
 create_corps_commander = {  name = "Max von Boehn" id = 34024 portrait_path = "gfx/leaders/GER/Portrait_Max_von_Boehn.dds" traits = { old_guard trickster trait_reckless } skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 } 
 create_corps_commander = {  name = "Arnold von Winckler" id = 34025 portrait_path = "gfx/leaders/GER/Portrait_Arnold_von_Winckler.dds" traits = { commando trait_mountaineer } skill = 3 attack_skill = 3 defense_skill = 4 planning_skill = 3 logistics_skill = 3 }
 create_corps_commander = {  name = "Friedrich von Scholtz" id = 34026 portrait_path = "gfx/leaders/GER/Portrait_Friedrich_von_Scholtz.dds" traits = { bearer_of_artillery skilled_staffer career_officer } skill = 3 attack_skill = 4 defense_skill = 3 planning_skill = 4 logistics_skill = 3 }
-create_corps_commander = {  name = "Hugo von Kathen" id = 34027 portrait_path = "gfx/leaders/GER/Portrait_Hugo_von_Kathen.dds" traits = { infantry_officer trait_cautious } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 create_corps_commander = {  name = "Adolph von Carlowitz" id = 34028 portrait_path = "gfx/leaders/GER/Portrait_Adolph_von_Carlowitz.dds" traits = { winter_specialist infantry_leader } skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 2 }
 create_corps_commander = {  name = "Gunther von Kirchbach" id = 34029 portrait_path = "gfx/leaders/GER/Portrait_Gunther_von_Kirchbach.dds" traits = { commando skirmisher } skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 2 }
 create_corps_commander = {  name = "Ferdinand von Kaust" id = 34030 portrait_path = "gfx/leaders/GER/Portrait_Ferdinand_von_Kaust.dds" traits = { old_guard trait_engineer politically_connected } skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
@@ -84,7 +87,6 @@ create_corps_commander = {  name = "Georg von der Marwitz" id = 34032 portrait_p
 create_corps_commander = {  name = "Maximilian von Prittwitz" id = 34033 portrait_path = "gfx/leaders/GER/Portrait_Maximilian_von_Prittwitz.dds" traits = { old_guard winter_specialist } skill = 3 attack_skill = 3 defense_skill = 4 planning_skill = 2 logistics_skill = 3 }
 create_corps_commander = {  name = "Victor Franke" id = 34034 portrait_path = "gfx/leaders/GER/Portrait_Victor_Franke.dds" traits = { desert_fox trait_reckless commando } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 create_corps_commander = {  name = "Franz von Bayern" id = 34035 portrait_path = "gfx/leaders/GER/Portrait_Franz_von_Bayern.dds" traits = { trickster trait_engineer infantry_officer } skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 2 }
-create_corps_commander = { name = "Rudiger von der Goltz" id = 88169 portrait_path = "gfx/leaders/GER/Portrait_Rudiger_von_der_Goltz.dds" traits = { politically_connected organizer harsh_leader } skill = 3 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 4 }
 
 #LEADERS
 create_country_leader = { name = "Rudolph Rocker" desc = GER_rudolph_rocker_DESC picture = "gfx/leaders/GER/Portrait_Rudolph_Rocker.dds" ideology = anarchist_communism  traits = {  } }

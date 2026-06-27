@@ -138,8 +138,11 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = -0.03 }
 			add_popularity = { ideology = social_democracy popularity = -0.05 }
+			custom_effect_tooltip = UBD_police_organisation_tt
 			remove_ideas = RUS_damage_to_police_and_special_services
-			create_intelligence_agency = { name = "Geheimdienst des Herzogtums Baltikum" icon = "GFX_agency_logo_RUS_okhranka" }
+			hidden_effect = {
+				create_intelligence_agency = { name = "Geheimdienst des Herzogtums Baltikum" icon = "GFX_agency_logo_RUS_okhranka" }
+			}
 		}
 	}
 	
@@ -322,6 +325,7 @@ focus_tree = {
         y = 8
         cost = 4
 		completion_reward = {
+			add_manpower = -300
 			add_ideas = UBD_river_fleet_idea
 		}
 	}
@@ -343,25 +347,28 @@ focus_tree = {
 			add_ideas = UBD_landwehr_1_idea
 			rise_mobilization_law = yes
 			recruit_character = UBD_Alfred_Fletcher
-			lack_of_officers_rise = yes
-			division_template = {
-				name = "Landeswehr Brigade"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
+			custom_effect_tooltip = UBD_form_landwehr_tt
+			hidden_effect = {
+				lack_of_officers_rise = yes
+				division_template = {
+					name = "Landeswehr Brigade"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+						artillery = { x = 0 y = 2 }
+					}
 				}
-				support = {
-					recon = { x = 0 y = 0 }
-					engineer = { x = 0 y = 1 }
-					artillery = { x = 0 y = 2 }
-				}
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"1.Landeswehr Brigade\" division_template = \"Landeswehr Brigade\" start_experience_factor = 0.3 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				capital_scope = {
+					create_unit = {
+						division = "name = \"1.Landeswehr Brigade\" division_template = \"Landeswehr Brigade\" start_experience_factor = 0.3 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
 			}
 		}
@@ -383,11 +390,13 @@ focus_tree = {
         y = 6
         cost = 5
 		completion_reward = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -411,36 +420,39 @@ focus_tree = {
         y = 6
         cost = 5
 		completion_reward = {
-			lack_of_officers_rise = yes
-			lack_of_officers_rise = yes
-			division_template = {
-				name = "Ethnisches Regiment"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
+			custom_effect_tooltip = UBD_form_ethnic_batalions_tt
+			hidden_effect = {
+				lack_of_officers_rise = yes
+				lack_of_officers_rise = yes
+				division_template = {
+					name = "Ethnisches Regiment"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+					is_locked = no
 				}
-				support = {
-					engineer = { x = 0 y = 0 }
-					artillery = { x = 0 y = 1 }
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"1.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
-				is_locked = yes
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"1.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"2.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"2.Lettische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"1.Estnische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"1.Estnische Regiment\" division_template = \"Ethnisches Regiment\" start_experience_factor = 0.1 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
 			}
 		}
@@ -466,40 +478,37 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
 			add_ideas = UBD_RUS_regiments_idea
-			recruit_character = UBD_William_von_Engelhart
-			lack_of_officers_fall = yes
 			set_party_name = { 
 				ideology = national_syndicalism
 				long_name = "Союз Русских Офицеров"
 				name = "Союз Офицеров"
 			}
-			add_country_leader_role = {
+			recruit_character = UBD_William_von_Engelhart
+			promote_character = {
 				character = UBD_William_von_Engelhart
-				promote_leader = yes
-				country_leader = {
-					ideology = national_syndicalism_ideology
-					traits = { warmonger_old_general }
-					expire = "1959.9.20"
-				}
+				ideology = national_syndicalism_ideology
 			}
-			division_template = {
-				name = "Russisches Regiment"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					cavalry = { x = 1 y = 0 }
-					cavalry = { x = 1 y = 1 }
+			custom_effect_tooltip = UBD_form_rus_batalions_tt
+			hidden_effect = {
+				lack_of_officers_fall = yes
+				division_template = {
+					name = "Russisches Regiment"
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+						cavalry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						artillery = { x = 0 y = 1 }
+					}
+					is_locked = no
 				}
-				support = {
-					recon = { x = 0 y = 0 }
-					artillery = { x = 0 y = 1 }
-				}
-				is_locked = no
-			}
-			random_owned_controlled_state = {
-				create_unit = {
-					division = "name = \"1.Russisches Regiment\" division_template = \"Russisches Regiment\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				random_owned_controlled_state = {
+					create_unit = {
+						division = "name = \"1.Russisches Regiment\" division_template = \"Russisches Regiment\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
 			}
 		}
@@ -521,8 +530,10 @@ focus_tree = {
 			add_popularity = { ideology = despotism popularity = 0.03 }
 			add_command_power = 30
 			recruit_character = UBD_Hans_von_Manteuffel_Szoege
-			lack_of_officers_fall = yes
-			lack_of_officers_fall = yes
+			custom_effect_tooltip = UBD_mobilise_officers_tt
+			hidden_effect = {
+				lack_of_officers_fall = yes
+			}
 		}
 	}
 	
@@ -536,8 +547,9 @@ focus_tree = {
         y = 8
         cost = 3
 		completion_reward = {
-			lack_of_officers_rise = yes
-			lack_of_officers_rise = yes
+			custom_effect_tooltip = UBD_shock_regiments_tt
+			hidden_effect = {
+				lack_of_officers_rise = yes
 				UBD = {
 					division_template = {
 						name = "Sturmtruppe Bataillon"
@@ -563,6 +575,7 @@ focus_tree = {
 						}
 					}
 				}
+			}
 		}
 	}
 	
@@ -659,20 +672,23 @@ focus_tree = {
 				days = 100
 			}
 			recruit_character = UBD_Josef_Bischoff
-			division_template = {
-				name = "Eiserne Division"
-				regiments = {
-					infantry = { x = 0 y = 0 }
+			custom_effect_tooltip = UBD_eiserne_division_tt
+			hidden_effect = {
+				division_template = {
+					name = "Eiserne Division"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+					}
+					is_locked = no
 				}
-				support = {
-					artillery = { x = 0 y = 0 }
-				}
-				is_locked = no
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Eiserne Division\" division_template = \"Eiserne Division\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				capital_scope = {
+					create_unit = {
+						division = "name = \"Eiserne Division\" division_template = \"Eiserne Division\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
 			}
 		}
@@ -694,45 +710,57 @@ focus_tree = {
         y = 8
         cost = 2
 		completion_reward = {
-			recruit_character = UBD_Rudiger_von_der_Goltz
-			division_template = {
-				name = "Infanterie Brigade"
-				regiments = {
-					infantry = { x = 0 y = 0 }
-					infantry = { x = 0 y = 1 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
-					infantry = { x = 2 y = 0 }
-					infantry = { x = 2 y = 1 }
-				}
-				support = {
-					recon = { x = 0 y = 0 }
-				}
-				is_locked = no
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"1.Garde Reserve Infanterie Brigade\" division_template = \"Infanterie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+			GER = {
+				set_nationality = {
+					target_country = UBD
+					character = GER_Rudiger_von_der_Goltz
 				}
 			}
-			division_template = {
-				name = "Artillerie Brigade"
-				regiments = {
-					artillery_brigade = { x = 0 y = 0 }
-					artillery_brigade = { x = 0 y = 1 }
-					infantry = { x = 1 y = 0 }
-					infantry = { x = 1 y = 1 }
+			custom_effect_tooltip = UBD_six_reserve_corps_tt
+			hidden_effect = {
+				division_template = {
+					name = "Infanterie Brigade"
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+					}
+					is_locked = yes
 				}
-				support = {
-					engineer = { x = 0 y = 0 }
+				190 = {
+					create_unit = {
+						division = "name = \"1.Garde Reserve Infanterie Brigade\" division_template = \"Infanterie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
+					create_unit = {
+						division = "name = \"15.Reserve Infanterie Brigade\" division_template = \"Infanterie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
-				is_locked = no
-			}
-			capital_scope = {
-				create_unit = {
-					division = "name = \"Garde Artillerie Kommandeur Nr.8\" division_template = \"Artillerie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
-					owner = UBD
+				division_template = {
+					name = "Artillerie Brigade"
+					regiments = {
+						artillery_brigade = { x = 0 y = 0 }
+						artillery_brigade = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+					is_locked = yes
+				}
+				190 = {
+					create_unit = {
+						division = "name = \"Garde Reserve Feldartillerie Brigade\" division_template = \"Artillerie Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+						owner = UBD
+					}
 				}
 			}
 		}
@@ -756,21 +784,13 @@ focus_tree = {
 				add_idea = UBD_landwehr_2_idea
 			}
 			rise_mobilization_law = yes
-			add_country_leader_role = {
-				character = UBD_Alfred_Fletcher
-				promote_leader = yes
-				country_leader = {
-					ideology = despotism_ideology
-					traits = { warmonger_old_general }
-					expire = "1959.9.20"
-				}
-			}
+			remove_ideas = UBD_german_occupation_idea
 			set_party_name = { 
 				ideology = despotism
 				long_name = "Штаб Остзейской армии"
 				name = "Штаб Остзейской армии"
 			}
-			remove_ideas = UBD_german_occupation_idea
+			
 		}
 	}
 	
@@ -784,9 +804,10 @@ focus_tree = {
         y = 9
         cost = 2
 		completion_reward = {
-			custom_effect_tooltip = UBD_crush_separatist_organisations_tt
 		}
 	}
+
+}
 	
 	
 	

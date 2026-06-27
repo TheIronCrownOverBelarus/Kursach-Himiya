@@ -41,13 +41,6 @@ add_ideas = {
 	foodstuffs_supply_crisis_1
 }
 
-set_politics = {
-	ruling_party = conservatism
-	elections_allowed = no
-}
-
-set_cosmetic_tag = UBD_authoritarism
-
 set_popularities = {
 	radical_socialism = 0
 	communism = 17
@@ -61,28 +54,67 @@ set_popularities = {
 	national_syndicalism = 0
 }
 
-recruit_character = UBD_Adolf_Pilar_von_Pilchau
-create_country_leader = { name = "Fritsis Rozin" desc = "" picture = "gfx/leaders/LAT/Portrait_Fritsis_Rozin.dds" ideology = leninism traits = { } }
-create_country_leader = { name = "Nikolay Markov" desc = RUS_Nikolay_Markov_DESC picture = "gfx/leaders/RUS/Portrait_Nikolay_Markov.dds" ideology = fascism_ideology traits = { dislike_jew } }
-create_country_leader = { name = "Sergey Klimanov" desc = "" picture = "gfx/leaders/RUS/Portrait_Nikolay_Markov.dds" ideology = national_syndicalism_ideology traits = { } }
-
-
-1918.3.14 = {
-
-GER = { UBD = { subjecting_script_with_transfer_parties_poster_government = yes } }
-
-recruit_character = UBD_Adolf_von_Seckendorff
-recruit_character = UBD_Hugo_von_Kathen	
 recruit_character = UBD_Adolf_Friedreich_Mecklenburg
+promote_character = {
+    character = UBD_Adolf_Friedreich_Mecklenburg
+    ideology = monarchism
+}
+recruit_character = UBD_Adolf_Pilar_von_Pilchau
+promote_character = {
+    character = UBD_Adolf_Pilar_von_Pilchau
+    ideology = conservatism
+}
 
+create_country_leader = { name = "Фрицис Розинь" desc = "" picture = "gfx/leaders/LAT/Portrait_Fritsis_Rozin.dds" ideology = leninism traits = { } }
+create_country_leader = { name = "Август Деглав" desc = "" picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds" ideology = social_reformism traits = { min_4_man_of_the_people } }
+create_country_leader = { name = "Владимир Буковский" desc = "" picture = "gfx/leaders/Russia/Portrait_Russia_Generic_3.dds" ideology = narodopravstvo traits = { min_5_lawyer } }
 
 set_politics = {
-	ruling_party = despotism
+	ruling_party = conservatism
 	elections_allowed = no
 }
 
 set_cosmetic_tag = UBD_authoritarism
+
+1918.3.14 = {
+
+	GER = { UBD = { subjecting_script_with_transfer_parties_poster_government = yes } }
+	COU = {
+		set_nationality = {
+			target_country = UBD
+			character = UBD_Alexander_von_Rahden
+		}
+		set_nationality = {
+			target_country = UBD
+			character = UBD_Alfred_von_Gossler
+		}
+	}
+	UBD = {
+		promote_character = {
+			character = UBD_Alfred_von_Gossler
+			ideology = fascism_ideology
+		}
+	}
+	GER = {
+		set_nationality = {
+			target_country = UBD
+			character = GER_Adolf_von_Seckendorff
+		}
+		set_nationality = {
+			target_country = UBD
+			character = GER_Hugo_von_Kathen
+		}
+	}
+	UBD = {
+		promote_character = {
+			character = GER_Hugo_von_Kathen
+			ideology = despotism_ideology
+		}
+	}
+	set_politics = {
+		ruling_party = despotism
+		elections_allowed = no
+	}
+	set_cosmetic_tag = UBD_authoritarism
 	
 }
-
-

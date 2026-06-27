@@ -1078,4 +1078,22 @@ leader_traits = {
 		national_syndicalism_acceptance = 50
 		conscription_factor = 0.05
 	}
+	#Ландмаршал Ливонии
+	UBD_livonian_landmarshall = {
+		random = no
+		stability_factor = 0.1
+		political_power_factor = 0.07
+		conservatism_drift = 0.02
+	}
+	#Герцог Балтийский
+	UBD_baltenland_herzog = {
+		random = no
+		stability_factor = 0.15
+		consumer_goods_factor = 0.05
+		authoritarism_drift = 0.03
+	}
+	UBD_absent = {
+		random = no
+		political_power_cost = 0.5
+	}
 }

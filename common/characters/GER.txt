@@ -64,4 +64,77 @@
 			visible = { NOT = { has_character_flag = dismissed_flag } }
 		}
 	}
+	
+	GER_Adolf_von_Seckendorff = {
+		name = GER_Adolf_von_Seckendorff
+		gender = male
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_Adolf_von_Seckendorff.dds"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 3
+			traits = { old_guard logistics_wizard }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	GER_Hugo_von_Kathen = {
+		name = GER_Hugo_von_Kathen
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Hugo_von_Kathen.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_Hugo_von_Kathen.dds"
+			}
+		}
+		corps_commander = {
+			skill = 4
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+			traits = { career_officer organizer skilled_staffer }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = GER_Hugo_von_Kathen_DESC
+			ideology = despotism_ideology
+			traits = { warmonger_old_general good_administrator }
+		}
+	}
+	
+	GER_Rudiger_von_der_Goltz = {
+		name = GER_Rudiger_von_der_Goltz
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Rudiger_von_der_Goltz.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_Rudiger_von_der_Goltz.dds"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = { infantry_officer infantry_leader winter_specialist }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = GER_Rudiger_von_der_Goltz_DESC
+			ideology = despotism_ideology
+			traits = { warmonger_old_general dictator }
+		}
+	}
 }

@@ -28,15 +28,33 @@ add_ideas = {
 	no_legislation
 	export_focus
 	civilian_economy
-	disarmed_nation
+	volunteer_only
 }
 
+COU = {
+	recruit_character = UBD_Alexander_von_Rahden
+	promote_character = {
+		character = UBD_Alexander_von_Rahden
+		ideology = conservatism_ideology
+	}
+	recruit_character = UBD_Alfred_von_Gossler
+	promote_character = {
+		character = UBD_Alfred_von_Gossler
+		ideology = despotism_ideology
+	}
+	promote_character = {
+		character = UBD_Alfred_von_Gossler
+		ideology = authoritarism_ideology
+	}
+	promote_character = {
+		character = UBD_Alfred_von_Gossler
+		ideology = fascism_ideology
+	}
+}
 set_politics = {
 	ruling_party = conservatism
-	election_frequency = 108
 	elections_allowed = no
 }
-
 set_popularities = {
 	radical_socialism = 1
 	communism = 8
@@ -50,5 +68,3 @@ set_popularities = {
 	national_syndicalism = 0
 }
 
-recruit_character = COU_Alexander_von_Rahden
-recruit_character = COU_Alfred_von_Gossler

@@ -5,13 +5,13 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
-				large = GFX_portrait_UBD_Adolf_Friedreich_Mecklenburg
+				large = "gfx/leaders/UBD/Portrait_Adolf_Friedreich_Mecklenburg.dds"
 			}
 		}
 		country_leader = {
-			ideology = monarchism
-			traits = { }
 			desc = UBD_Adolf_Friedreich_Mecklenburg_DESC
+			ideology = monarchism
+			traits = { UBD_baltenland_herzog UBD_absent }
 		}
 	}
 	
@@ -20,36 +20,28 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
-				large = GFX_portrait_UBD_Adolf_Pilar_von_Pilchau
+				large = "gfx/leaders/UBD/Portrait_Adolf_Pilar_von_Pilchau.dds"
 			}
 		}
 		country_leader = {
-			ideology = conservatism_ideology
-			traits = { }
 			desc = UBD_Adolf_Pilar_von_Pilchau_DESC
+			ideology = conservatism_ideology
+			traits = { UBD_livonian_landmarshall }
 		}
 	}
 	
-	UBD_Adolf_von_Seckendorff = {
-		name = UBD_Adolf_von_Seckendorff
+	UBD_Alexander_von_Rahden = {
+		name = UBD_Alexander_von_Rahden
 		gender = male
 		portraits = {
 			civilian = {
-				large = GFX_portrait_Adolf_von_Seckendorff
-			}
-			army = {
-				large = GFX_portrait_Adolf_von_Seckendorff
+				large = "gfx/leaders/UBD/Portrait_Alexander_fon_Rahden.dds"
 			}
 		}
-		corps_commander = {
-			skill = 4
-			attack_skill = 4
-			defense_skill = 2
-			planning_skill = 3
-			logistics_skill = 1
-			legacy_id = 10001
-			traits = {  }
-			visible = { NOT = { has_character_flag = dismissed_flag } }
+		country_leader = {
+			desc = UBD_Alexander_von_Rahden_DESC
+			ideology = conservatism_ideology
+			traits = { min_1_gentleman_politician }
 		}
 	}
 	
@@ -58,10 +50,10 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
-				large = GFX_portrait_UBD_Alfred_Fletcher
+				large = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds"
 			}
 			army = {
-				large = GFX_portrait_UBD_Alfred_Fletcher
+				large = "gfx/leaders/UBD/Portrait_Alfred_Fletcher.dds"
 			}
 		}
 		corps_commander = {
@@ -70,9 +62,50 @@ characters = {
 			defense_skill = 2
 			planning_skill = 3
 			logistics_skill = 1
-			legacy_id = 10001
-			traits = {  }
+			traits = { career_officer bearer_of_artillery }
 			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = UBD_Alfred_Fletcher_DESC
+			ideology = despotism_ideology
+			traits = { warmonger_old_general }
+		}
+	}
+	
+	UBD_Alfred_von_Gossler = {
+		name = UBD_Alfred_von_Gossler
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Alfred_von_Gossler.dds"
+			}
+			army = {
+				large = "gfx/leaders/UBD/Portrait_Alfred_von_Gossler.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { cavalry_officer }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = UBD_Alfred_von_Gossler_DESC
+			ideology = despotism_ideology
+			traits = { good_administrator }
+		}
+		country_leader = {
+			desc = UBD_Alfred_von_Gossler_DESC
+			ideology = authoritarism_ideology
+			traits = { good_administrator }
+		}
+		country_leader = {
+			desc = UBD_Alfred_von_Gossler_DESC
+			ideology = fascism_ideology
+			traits = { good_administrator }
 		}
 	}
 	
@@ -80,49 +113,17 @@ characters = {
 		name = UBD_Hans_von_Manteuffel_Szoege
 		gender = male
 		portraits = {
-			civilian = {
-				large = GFX_portrait_UBD_Hans_von_Manteuffel_Szoege
-			}
 			army = {
-				large = GFX_portrait_UBD_Hans_von_Manteuffel_Szoege
+				large = "gfx/leaders/UBD/Portrait_Hans_von_Manteuffel_Szoege.dds"
 			}
 		}
 		corps_commander = {
-			skill = 4
+			skill = 3
 			attack_skill = 4
 			defense_skill = 2
 			planning_skill = 1
 			logistics_skill = 1
-			legacy_id = 10002
-			traits = {  }
-			visible = { NOT = { has_character_flag = dismissed_flag } }
-		}
-	}
-	
-	UBD_Hugo_von_Kathen = {
-		name = UBD_Hugo_von_Kathen
-		gender = male
-		portraits = {
-			civilian = {
-				large = GFX_portrait_UBD_Hugo_von_Kathen
-			}
-			army = {
-				large = GFX_portrait_UBD_Hugo_von_Kathen
-			}
-		}
-		country_leader = {
-			ideology = despotism_ideology
-			traits = { warmonger_old_general }
-			desc = UBD_Hugo_von_Kathen_DESC
-		}
-		corps_commander = {
-			skill = 2
-			attack_skill = 2
-			defense_skill = 1
-			planning_skill = 1
-			logistics_skill = 3
-			legacy_id = 10003
-			traits = {  }
+			traits = { reckless trickster }
 			visible = { NOT = { has_character_flag = dismissed_flag } }
 		}
 	}
@@ -131,44 +132,17 @@ characters = {
 		name = UBD_Josef_Bischoff
 		gender = male
 		portraits = {
-			civilian = {
-				large = GFX_portrait_UBD_Josef_Bischoff
-			}
 			army = {
-				large = GFX_portrait_UBD_Josef_Bischoff
+				large = "gfx/leaders/UBD/Portrait_Josef_Bischoff.dds"
 			}
 		}
 		corps_commander = {
 			skill = 2
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 1
 			logistics_skill = 2
-			legacy_id = 10004
-			traits = {  }
-			visible = { NOT = { has_character_flag = dismissed_flag } }
-		}
-	}
-	
-	UBD_Rudiger_von_der_Goltz = {
-		name = UBD_Rudiger_von_der_Goltz
-		gender = male
-		portraits = {
-			civilian = {
-				large = GFX_portrait_UBD_Rudiger_von_der_Goltz
-			}
-			army = {
-				large = GFX_portrait_UBD_Rudiger_von_der_Goltz
-			}
-		}
-		corps_commander = {
-			skill = 4
-			attack_skill = 4
-			defense_skill = 4
-			planning_skill = 3
-			logistics_skill = 4
-			legacy_id = 10005
-			traits = {  }
+			traits = { infantry_officer ranger }
 			visible = { NOT = { has_character_flag = dismissed_flag } }
 		}
 	}
@@ -178,10 +152,10 @@ characters = {
 		gender = male
 		portraits = {
 			civilian = {
-				large = GFX_portrait_UBD_William_von_Engelhart
+				large = "gfx/leaders/UBD/Portrait_William_von_Engelhart.dds"
 			}
 			army = {
-				large = GFX_portrait_UBD_William_von_Engelhart
+				large = "gfx/leaders/UBD/Portrait_William_von_Engelhart.dds"
 			}
 		}
 		corps_commander = {
@@ -191,8 +165,13 @@ characters = {
 			planning_skill = 2
 			logistics_skill = 2
 			legacy_id = 10006
-			traits = {  }
+			traits = { old_guard cavalry_officer cavalry_leader }
 			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = UBD_William_von_Engelhart_DESC
+			ideology = national_syndicalism_ideology
+			traits = { min_1_traditionalist }
 		}
 	}
 }
