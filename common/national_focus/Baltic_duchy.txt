@@ -14,13 +14,14 @@ focus_tree = {
 	
 	focus = {
         id = UBD_create_government_system
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_create_government_system
 		available = {
 		}
         x = 14
-        y = 3
+        y = 0
         cost = 5
 		completion_reward = {
+			country_event = { id = ubd.1 days = 2 }
 			add_ideas = decrees_of_ruler_b_law
 			swap_ideas = {
 				remove_idea = RUS_weak_state_suppression_apparatus_1
@@ -31,20 +32,20 @@ focus_tree = {
 	
 	focus = {
         id = UBD_gather_landesrat
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_gather_landesrat
 		available = { 
 		}
         x = 16
-        y = 3
+        y = 0
         cost = 1
 		completion_reward = {
-			country_event = { id = ubd.3 days = 5 }
+			country_event = { id = ubd.2 days = 2 }
 		}
 	}
 	
 	focus = {
         id = UBD_regentschaftsrat
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_regentschaftsrat
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
@@ -52,45 +53,47 @@ focus_tree = {
 			focus = UBD_gather_landesrat
 		}
         x = 15
-        y = 4
+        y = 1
         cost = 1
 		completion_reward = {
-			country_event = { id = ubd.14 days = 1 }
+			add_political_power = 50
+			add_stability = 0.07
+			country_event = { id = ubd.3 days = 2 }
 		}
 	}
 	
 	focus = {
         id = UBD_constitution
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_constitution
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
         x = 8
-        y = 5
+        y = 2
         cost = 10
 		completion_reward = {
-			add_ideas = constitution_b_law
+			country_event = { id = ubd.4 days = 2 }
 		}
 	}
 	
 	focus = {
         id = UBD_knighthood_support
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_knighthood_support
 		prerequisite = {
 			focus = UBD_constitution
 		}
         x = 6
-        y = 6
+        y = 3
         cost = 8
 		completion_reward = {
-			add_popularity = { ideology = conservatism popularity = 0.05 }
+			add_popularity = { ideology = ROOT popularity = 0.03 }
 			add_ideas = UBD_knighthood_support_idea
 		}
 	}
 	
 	focus = {
         id = UBD_education_reform
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_education_reform
 		prerequisite = {
 			focus = UBD_knighthood_support
 		}
@@ -98,7 +101,7 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 5
-        y = 7
+        y = 4
         cost = 3
 		completion_reward = {
 			custom_effect_tooltip = UBD_education_reform_tt
@@ -107,7 +110,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_wellfare
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_wellfare
 		prerequisite = {
 			focus = UBD_knighthood_support
 		}
@@ -115,17 +118,19 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 7
-        y = 7
+        y = 4
         cost = 5
 		completion_reward = {
-			add_popularity = { ideology = conservatism popularity = 0.07 }
+			add_popularity = { ideology = communism popularity = -0.03 }
+			add_popularity = { ideology = social_democracy popularity = -0.04 }
+			add_popularity = { ideology = ROOT popularity = 0.07 }
 			add_ideas = acceptable_legislation
 		}
 	}
 	
 	focus = {
         id = UBD_police_organisation
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_police_organisation
 		prerequisite = {
 			focus = UBD_constitution
 		}
@@ -133,7 +138,7 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 8
-        y = 6
+        y = 3
         cost = 4
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = -0.03 }
@@ -148,7 +153,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_economic_regulation
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_economic_regulation
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
@@ -156,7 +161,7 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 13
-        y = 5
+        y = 2
         cost = 5
 		completion_reward = {
 			add_political_power = -75
@@ -167,7 +172,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_trade_law
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_trade_law
 		prerequisite = {
 			focus = UBD_constitution
 		}
@@ -175,11 +180,11 @@ focus_tree = {
 			focus = UBD_economic_regulation
 		}
         x = 9
-        y = 7
+        y = 4
         cost = 6
 		completion_reward = {
 			add_political_power = 25
-			add_popularity = { ideology = conservatism popularity = 0.03 }
+			add_popularity = { ideology = ROOT popularity = 0.03 }
 			add_popularity = { ideology = market_liberalism popularity = 0.05 }
 			add_ideas = free_trade
 		}
@@ -187,7 +192,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_german_economic_integration
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_german_economic_integration
 		prerequisite = {
 			focus = UBD_trade_law
 		}
@@ -197,7 +202,7 @@ focus_tree = {
 			}
 		}
         x = 9
-        y = 8
+        y = 5
         cost = 2
 		completion_reward = {
 			add_ideas = UBD_german_integration_idea
@@ -206,7 +211,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_forest_industry
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_forest_industry
 		prerequisite = {
 			focus = UBD_economic_regulation
 		}
@@ -214,7 +219,7 @@ focus_tree = {
 			191 = { is_controlled_by = UBD }
 		}
         x = 10
-        y = 6
+        y = 3
         cost = 4
 		completion_reward = {
 			add_political_power = -20
@@ -231,7 +236,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_russo_balt_factory
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_russo_balt_factory
 		prerequisite = {
 			focus = UBD_economic_regulation
 		}
@@ -239,7 +244,7 @@ focus_tree = {
 			808 = { is_controlled_by = UBD }
 		}
         x = 12
-        y = 6
+        y = 3
         cost = 4
 		completion_reward = {
 			add_political_power = -30
@@ -258,7 +263,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_airplane_production
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_airplane_production
 		prerequisite = {
 			focus = UBD_russo_balt_factory
 		}
@@ -266,7 +271,7 @@ focus_tree = {
 			808 = { is_controlled_by = UBD }
 		}
         x = 11
-        y = 7
+        y = 4
         cost = 4
 		completion_reward = {
 			808 = {
@@ -286,7 +291,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_revel_dockyards
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_revel_dockyards
 		prerequisite = {
 			focus = UBD_economic_regulation
 		}
@@ -294,7 +299,7 @@ focus_tree = {
 			812 = { is_controlled_by = UBD }
 		}
         x = 13
-        y = 7
+        y = 4
         cost = 4
 		completion_reward = {
 			add_political_power = -50
@@ -317,12 +322,12 @@ focus_tree = {
 	
 	focus = {
         id = UBD_river_fleet
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_river_fleet
 		prerequisite = {
 			focus = UBD_revel_dockyards
 		}
         x = 13
-        y = 8
+        y = 5
         cost = 4
 		completion_reward = {
 			add_manpower = -300
@@ -332,7 +337,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_form_landwehr
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_form_landwehr
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
@@ -340,7 +345,7 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 15
-        y = 5
+        y = 2
         cost = 4
 		completion_reward = {
 			set_country_flag = UBD_landwehr_formed
@@ -376,7 +381,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_open_arsenals
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_open_arsenals
 		prerequisite = {
 			focus = UBD_form_landwehr
 		}
@@ -387,7 +392,7 @@ focus_tree = {
 			808 = { is_controlled_by = UBD }
 		}
         x = 14
-        y = 6
+        y = 3
         cost = 5
 		completion_reward = {
 			808 = {
@@ -408,7 +413,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_form_ethnic_batalions
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_form_ethnic_batalions
 		prerequisite = {
 			focus = UBD_form_landwehr
 		}
@@ -417,7 +422,7 @@ focus_tree = {
 			NOT = { country_exists = EST }
 		}
         x = 16
-        y = 6
+        y = 3
         cost = 5
 		completion_reward = {
 			custom_effect_tooltip = UBD_form_ethnic_batalions_tt
@@ -460,7 +465,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_form_rus_batalions
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_form_rus_batalions
 		prerequisite = {
 			focus = UBD_form_ethnic_batalions
 		}
@@ -473,7 +478,7 @@ focus_tree = {
 			}
 		}
         x = 17
-        y = 7
+        y = 4
         cost = 5
 		completion_reward = {
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
@@ -516,7 +521,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_mobilise_officers
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_mobilise_officers
 		prerequisite = {
 			focus = UBD_form_ethnic_batalions
 		}
@@ -524,7 +529,7 @@ focus_tree = {
 			focus = UBD_open_arsenals
 		}
         x = 15
-        y = 7
+        y = 4
         cost = 3
 		completion_reward = {
 			add_popularity = { ideology = despotism popularity = 0.03 }
@@ -539,12 +544,12 @@ focus_tree = {
 	
 	focus = {
         id = UBD_shock_regiments
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_shock_regiments
 		prerequisite = {
 			focus = UBD_mobilise_officers
 		}
         x = 15
-        y = 8
+        y = 5
         cost = 3
 		completion_reward = {
 			custom_effect_tooltip = UBD_shock_regiments_tt
@@ -581,12 +586,12 @@ focus_tree = {
 	
 	focus = {
         id = UBD_ost_ruble
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_ost_ruble
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
         x = 18
-        y = 5
+        y = 2
         cost = 2
 		completion_reward = {
 			add_stability = 0.07
@@ -608,12 +613,12 @@ focus_tree = {
 	
 	focus = {
         id = UBD_landowners_finance
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_landowners_finance
 		prerequisite = {
 			focus = UBD_regentschaftsrat
 		}
         x = 20
-        y = 5
+        y = 2
         cost = 1
 		completion_reward = {
 			add_political_power = -50
@@ -636,7 +641,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_start_ostpolitik
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_start_ostpolitik
 		prerequisite = {
 			focus = UBD_ost_ruble
 		}
@@ -647,7 +652,7 @@ focus_tree = {
 			has_country_flag = UBD_financial_peoblem_solved
 		}
         x = 19
-        y = 6
+        y = 3
         cost = 3
 		completion_reward = {
 			custom_effect_tooltip = UBD_start_ostpolitik_tt
@@ -656,7 +661,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_offer_the_land
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_offer_the_land
 		prerequisite = {
 			focus = UBD_start_ostpolitik
 		}
@@ -664,7 +669,7 @@ focus_tree = {
 			has_country_flag = UBD_land_taken_flag
 		}
         x = 19
-        y = 7
+        y = 4
         cost = 2
 		completion_reward = {
 			add_timed_idea = {
@@ -696,7 +701,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_six_reserve_corps
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_six_reserve_corps
 		prerequisite = {
 			focus = UBD_offer_the_land
 		}
@@ -707,7 +712,7 @@ focus_tree = {
 			}
 		}
         x = 19
-        y = 8
+        y = 5
         cost = 2
 		completion_reward = {
 			GER = {
@@ -768,7 +773,7 @@ focus_tree = {
 	
 	focus = {
         id = UBD_ostzee_army
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_ostzee_army
 		prerequisite = {
 			focus = UBD_offer_the_land
 		}
@@ -776,7 +781,7 @@ focus_tree = {
 			focus = UBD_mobilise_officers
 		}
         x = 17
-        y = 8
+        y = 5
         cost = 5
 		completion_reward = {
 			swap_ideas = {
@@ -796,14 +801,15 @@ focus_tree = {
 	
 	focus = {
         id = UBD_crush_separatist_organisations
-		icon = GFX_goal_generic_improve_relations
+		icon = GFX_UBD_crush_separatist_organisations
 		prerequisite = {
 			focus = UBD_ostzee_army
 		}
         x = 17
-        y = 9
+        y = 6
         cost = 2
 		completion_reward = {
+			country_event = { id = ubd.8 days = 5 }
 		}
 	}
 

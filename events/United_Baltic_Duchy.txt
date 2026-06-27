@@ -9,57 +9,15 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.1.a
-		recruit_character = UBD_Adolf_von_Seckendorff
-		recruit_character = UBD_Alfred_von_Gossler
-		recruit_character = UBD_Hugo_von_Kathen	
 		add_ideas = {
 			Hugo_von_Kathen_1
 			Alfred_von_Gossler_4
 			Adolf_von_Seckendorff_6
 		}
-		if = {
-			limit = { has_idea = UBD_weak_state_apparatus_1_idea }
-			remove_ideas = UBD_weak_state_apparatus_1_idea
-		}
-		else_if = {
-			limit = { has_idea = UBD_weak_state_apparatus_2_idea }
-			swap_ideas = {
-				remove_idea = UBD_weak_state_apparatus_2_idea
-				add_idea = UBD_weak_state_apparatus_1_idea
-			}
-		}
-		else_if = {
-			limit = { has_idea = UBD_weak_state_apparatus_3_idea }
-			swap_ideas = {
-				remove_idea = UBD_weak_state_apparatus_3_idea
-				add_idea = UBD_weak_state_apparatus_2_idea
-			}
-		}
-		else_if = {
-			limit = { has_idea = UBD_weak_state_apparatus_4_idea }
-			swap_ideas = {
-				remove_idea = UBD_weak_state_apparatus_4_idea
-				add_idea = UBD_weak_state_apparatus_3_idea
-			}
-		}
-		else_if = {
-			limit = { has_idea = UBD_weak_state_apparatus_5_idea }
-			swap_ideas = {
-				remove_idea = UBD_weak_state_apparatus_5_idea
-				add_idea = UBD_weak_state_apparatus_4_idea
-			}
-		}
-		else_if = {
-			limit = { has_idea = UBD_weak_state_apparatus_6_idea }
-			swap_ideas = {
-				remove_idea = UBD_weak_state_apparatus_6_idea
-				add_idea = UBD_weak_state_apparatus_5_idea
-			}
-		}
 	}
 }
 
-#Сопротивление реквизициям#
+#Созыв Объединенного Ландрата#
 country_event = {
 	id = ubd.2
 	title = ubd.2.t
@@ -71,7 +29,7 @@ country_event = {
 	}
 }
 
-#Созыв Объединенного Ландрата#
+#Регентский Совет#
 country_event = {
 	id = ubd.3
 	title = ubd.3.t
@@ -80,14 +38,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.3.a
-		country_event = { id = ubd.4 days = 4 }
-		recruit_character = UBD_Adolf_Pilar_von_Pilchau
-		add_ideas = {
-			Adolf_Pilar_von_Pilchau_7
-		}
 	}
 }
-#Обсуждение конституции#
+
+#Вопрос о государственной власти#
 country_event = {
 	id = ubd.4
 	title = ubd.4.t
@@ -96,10 +50,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.4.a
+		country_event = { id = ubd.5 days = 5 }
 	}
 }
 
-#Просьба признания#
+#Вопрос о территориальном устройстве#
 country_event = {
 	id = ubd.5
 	title = ubd.5.t
@@ -108,13 +63,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.5.a
-		UBD = {
-			country_event = { id = ubd.6 days = 3 }
-		}
+		country_event = { id = ubd.6 days = 5 }
 	}
 }
 
-#Ответ Германии#
+#Вопрос о флаге#
 country_event = {
 	id = ubd.6
 	title = ubd.6.t
@@ -123,13 +76,11 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.6.a
-		RUS = {
-			country_event = { id = ubd.7 days = 10 }
-		}
+		country_event = { id = ubd.7 days = 5}
 	}
 }
 
-#Ивент России на добавочный протокол#
+#Завершение собрания#
 country_event = {
 	id = ubd.7
 	title = ubd.7.t
@@ -138,13 +89,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.7.a
-		GER = {
-			country_event = { id = ubd.8 days = 5 }
-		}
 	}
 }
 
-#Ивент Германии на отказ России от Балтики#
+#Арест Демблока#
 country_event = {
 	id = ubd.8
 	title = ubd.8.t
@@ -153,13 +101,10 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.8.a
-		UBD = {
-			country_event = { id = ubd.9 days = 5 }
-		}
 	}
 }
 
-#Германия признает герцогство#
+#Восстание сепаратистов#
 country_event = {
 	id = ubd.9
 	title = ubd.9.t
@@ -171,93 +116,7 @@ country_event = {
 	}
 }
 
-#Вопрос о Латгалии#
-country_event = {
-	id = ubd.10
-	title = ubd.10.t
-	desc = ubd.10.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.10.a
-		GER = {
-			country_event = { id = ubd.11 days = 5 }
-		}
-	}
-	option = {
-		name = ubd.10.b
-	}
-}
-
-#Ивент Германии о Латгалии#
-country_event = {
-	id = ubd.11
-	title = ubd.11.t
-	desc = ubd.11.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.11.a
-		UBD = {
-			country_event = { id = ubd.12 days = 3 }
-		}
-	}
-	option = {
-		name = ubd.10.b
-		UBD = {
-			country_event = { id = ubd.13 days = 3 }
-		}
-	}
-}
-
-#Ответ Германии о Латгалии согласие#
-country_event = {
-	id = ubd.12
-	title = ubd.12.t
-	desc = ubd.12.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.12.a
-	}
-}
-
-#Ответ Германии о Латгалии отказ#
-country_event = {
-	id = ubd.13
-	title = ubd.13.t
-	desc = ubd.13.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.13.a
-	}
-}
-
-#Образование регентского совета#
-country_event = {
-	id = ubd.14
-	title = ubd.14.t
-	desc = ubd.14.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.14.a
-	}
-}
-
-#Образование регентского совета чрезвычайное#
-country_event = {
-	id = ubd.15
-	title = ubd.15.t
-	desc = ubd.15.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.15.a
-	}
-}
-
+#Рост Инфляции#
 country_event = {
 	id = ubd.67
 	title = ubd.67.t
@@ -266,12 +125,18 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.67.a
-		UBD = {
-			every_owned_state = {
-				add_dynamic_modifier = { 
-					modifier = UBD_state_rebellion_dynamic_modifier 
-				}
-			}
-		}
 	}
 }
+
+#Продовольственный кризис#
+country_event = {
+	id = ubd.68
+	title = ubd.68.t
+	desc = ubd.68.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.68.a
+	}
+}
+

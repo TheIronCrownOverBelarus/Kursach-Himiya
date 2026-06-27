@@ -6942,4 +6942,123 @@ spriteTypes = {
 		name = "GFX_LIT_final_agrreform"
 		texturefile = "gfx/interface/goals/LIT/LIT_final_agrreform.dds"
 	}
+	
+	#Baltic
+	
+	SpriteType = { 
+		name = "GFX_UBD_create_government_system"
+		texturefile = "gfx/interface/goals/UBD/UBD_create_government_system.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_gather_landesrat"
+		texturefile = "gfx/interface/goals/UBD/UBD_gather_landesrat.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_regentschaftsrat"
+		texturefile = "gfx/interface/goals/UBD/UBD_regentschaftsrat.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_constitution"
+		texturefile = "gfx/interface/goals/UBD/UBD_constitution.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_knighthood_support"
+		texturefile = "gfx/interface/goals/UBD/UBD_knighthood_support.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_education_reform"
+		texturefile = "gfx/interface/goals/UBD/UBD_education_reform.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_wellfare"
+		texturefile = "gfx/interface/goals/UBD/UBD_wellfare.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_police_organisation"
+		texturefile = "gfx/interface/goals/UBD/UBD_police_organisation.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_economic_regulation"
+		texturefile = "gfx/interface/goals/UBD/UBD_economic_regulation.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_trade_law"
+		texturefile = "gfx/interface/goals/UBD/UBD_trade_law.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_german_economic_integration"
+		texturefile = "gfx/interface/goals/UBD/UBD_german_economic_integration.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_forest_industry"
+		texturefile = "gfx/interface/goals/UBD/UBD_forest_industry.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_russo_balt_factory"
+		texturefile = "gfx/interface/goals/UBD/UBD_russo_balt_factory.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_airplane_production"
+		texturefile = "gfx/interface/goals/UBD/UBD_airplane_production.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_revel_dockyards"
+		texturefile = "gfx/interface/goals/UBD/UBD_revel_dockyards.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_river_fleet"
+		texturefile = "gfx/interface/goals/UBD/UBD_river_fleet.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_form_landwehr"
+		texturefile = "gfx/interface/goals/UBD/UBD_form_landwehr.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_open_arsenals"
+		texturefile = "gfx/interface/goals/UBD/UBD_open_arsenals.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_form_ethnic_batalions"
+		texturefile = "gfx/interface/goals/UBD/UBD_form_ethnic_batalions.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_form_rus_batalions"
+		texturefile = "gfx/interface/goals/UBD/UBD_form_rus_batalions.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_mobilise_officers"
+		texturefile = "gfx/interface/goals/UBD/UBD_mobilise_officers.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_shock_regiments"
+		texturefile = "gfx/interface/goals/UBD/UBD_shock_regiments.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_ost_ruble"
+		texturefile = "gfx/interface/goals/UBD/UBD_ost_ruble.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_landowners_finance"
+		texturefile = "gfx/interface/goals/UBD/UBD_landowners_finance.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_start_ostpolitik"
+		texturefile = "gfx/interface/goals/UBD/UBD_start_ostpolitik.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_offer_the_land"
+		texturefile = "gfx/interface/goals/UBD/UBD_offer_the_land.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_six_reserve_corps"
+		texturefile = "gfx/interface/goals/UBD/UBD_six_reserve_corps.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_ostzee_army"
+		texturefile = "gfx/interface/goals/UBD/UBD_ostzee_army.dds"
+	}
+	SpriteType = { 
+		name = "GFX_UBD_crush_separatist_organisations"
+		texturefile = "gfx/interface/goals/UBD/UBD_crush_separatist_organisations.dds"
+	}
 }

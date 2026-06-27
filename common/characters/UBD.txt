@@ -70,6 +70,12 @@ characters = {
 			ideology = despotism_ideology
 			traits = { warmonger_old_general }
 		}
+		advisor = {
+			slot = theorist
+			idea_token = UBD_Alfred_Fletcher_theorist
+			ledger = army
+			traits = { superior_firepower_expert }
+		}
 	}
 	
 	UBD_Alfred_von_Gossler = {
