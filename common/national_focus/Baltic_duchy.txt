@@ -86,6 +86,8 @@ focus_tree = {
         y = 3
         cost = 8
 		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.04
 			add_popularity = { ideology = ROOT popularity = 0.03 }
 			add_ideas = UBD_knighthood_support_idea
 		}
@@ -330,6 +332,7 @@ focus_tree = {
         y = 5
         cost = 4
 		completion_reward = {
+			add_command_power = -20
 			add_manpower = -300
 			add_ideas = UBD_river_fleet_idea
 		}
@@ -623,7 +626,7 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = -50
 			add_war_support = -0.05
-			add_popularity = { ideology = conservatism popularity = -0.03 }
+			add_popularity = { ideology = ROOT popularity = -0.03 }
 			if = {
 				limit = { has_idea = UBD_financial_problem_1_idea }
 				remove_ideas = UBD_financial_problem_1_idea
@@ -788,12 +791,16 @@ focus_tree = {
 				remove_idea = UBD_landwehr_1_idea
 				add_idea = UBD_landwehr_2_idea
 			}
-			rise_mobilization_law = yes
+			rise_2_mobilization_law = yes
 			remove_ideas = UBD_german_occupation_idea
 			set_party_name = { 
 				ideology = despotism
 				long_name = "Штаб Остзейской армии"
 				name = "Штаб Остзейской армии"
+			}
+			promote_character = {
+				character = UBD_Alfred_Fletcher
+				ideology = despotism_ideology
 			}
 			
 		}

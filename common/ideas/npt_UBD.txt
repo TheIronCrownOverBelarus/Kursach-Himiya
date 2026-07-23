@@ -266,10 +266,14 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				conscription_factor = -0.75
-				stability_factor = -0.3
-				attrition = 0.1
-				autonomy_gain_global_factor = -0.1
+				conscription_factor = -0.8
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				global_building_slots_factor = -0.07
+				resistance_target = 0.12
+				army_core_defence_factor = -0.1
+				army_claim_defence_factor = -0.12
+				army_morale_factor = -0.05
 				radical_socialism_drift = 0.02
 				communism_drift = 0.03
 				social_democracy_drift = 0.04
@@ -289,12 +293,13 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				stability_weekly = -0.002
+				stability_weekly = -0.003
 				command_power_gain = 0.25
 				required_garrison_factor = -0.2
 				resistance_activity = 0.15
 				resistance_target = 0.15
 				consumer_goods_factor = 0.03
+				autonomy_gain_global_factor = -0.1
 				despotism_drift = 0.02
 				custom_modifier_tooltip = UBD_german_occupation_idea_tt
 			}
@@ -310,10 +315,17 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				political_power_factor = -0.2
-				production_speed_buildings_factor = -0.5
-				industrial_capacity_factory = -0.5
-				industrial_capacity_dockyard = -0.5
+				political_power_factor = -0.1
+				stability_weekly = -0.004
+				war_support_weekly = -0.003
+				party_popularity_stability_factor = -1
+				trade_opinion_factor = 1
+				research_speed_factor = -0.06
+				local_resources_factor = -0.09
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = -0.5 
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 			}
 		}
 		
@@ -327,10 +339,17 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				political_power_factor = -0.1
-				production_speed_buildings_factor = -0.25
-				industrial_capacity_factory = -0.25
-				industrial_capacity_dockyard = -0.25
+				political_power_factor = -0.07
+				stability_weekly = -0.003
+				war_support_weekly = -0.001
+				party_popularity_stability_factor = -1
+				trade_opinion_factor = 1
+				research_speed_factor = -0.02
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = -0.17
+				production_factory_max_efficiency_factor = -0.3
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
 		
@@ -355,12 +374,16 @@ ideas = {
 			removal_cost = -1
 			picture = generic_volunteer_expedition_bonus
 			modifier = {
-				political_power_factor = 0.1
-				improve_relations_maintain_cost_factor = -0.3
-				political_advisor_cost_factor = -0.2
-				stability_weekly = 0.001
-				conservatism_drift = 0.03
-				authoritarism_drift = 0.02
+				political_power_factor = 0.15
+				improve_relations_maintain_cost_factor = -0.12
+				opinion_gain_monthly_factor = 0.15
+				annex_cost_factor = -0.1
+				stability_weekly = 0.002
+				drift_defence_factor = 0.2
+				conservatism_drift = 0.04
+				conservatism_acceptance = 20
+				despotism_acceptance = 20
+				authoritarism_acceptance = 20
 			}
 		}
 		
@@ -484,10 +507,13 @@ ideas = {
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
-				army_org_factor = 0.07
-				army_morale_factor = 0.04
-				army_core_attack_factor = 0.1
-				army_core_defence_factor = 0.1
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.04
+				land_doctrine_cost_factor = 0.2
+				equipment_capture_factor = 0.1
+				minimum_training_level = -0.07
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
 			}
 		}
 		
@@ -512,8 +538,10 @@ ideas = {
 			removal_cost = -1
 			picture = generic_victors_of_ww1
 			modifier = {
-				army_org_factor = 0.15
+				army_org_factor = 0.05
 				army_morale_factor = 0.08
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.07
 				army_core_attack_factor = 0.15
 				army_core_defence_factor = 0.15
 			}
@@ -539,7 +567,7 @@ ideas = {
 			cancel_if_invalid = yes
 			targeted_modifier = {
 				tag = RUS
-				attack_bonus_against = 0.05
+				attack_bonus_against = 0.07
 				defense_bonus_against = 0.1
 			} 
 			modifier = {
