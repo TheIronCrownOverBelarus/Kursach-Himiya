@@ -553,7 +553,6 @@ guiTypes = {
 				name = "national_spirit_container"
 				position = { x = 84 y = 13 }
 				size = { width = 375 height = 136 }
-				
 				verticalScrollbar = "right_vertical_slider"
 				
 				background = {
@@ -974,7 +973,7 @@ guiTypes = {
 		buttonType = {
 			name = "idea_entry_bg"
 			position = { x = 3 y = 0 }
-			spriteType = "GFX_idea_entry_bg_2"
+			spriteType = "GFX_idea_entry_bg_22"
 		}
 			
 		iconType = {

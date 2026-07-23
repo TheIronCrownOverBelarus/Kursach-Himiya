@@ -808,6 +808,13 @@ country_event = {
 				}
 			}
 			has_stability < 0.3
+			#AND = {
+			#	has_stability < 0.45
+            #    is_ai = yes 
+			#	is_historical_focus_on = yes
+			#	has_start_date > 1918.8.5
+			#	date > 1918.10.17
+			#}
 			AND = {
 				has_stability < 0.35
 				OR = {
@@ -894,7 +901,8 @@ country_event = {
 	option = {
 		name = austro-hungarian.98.a
 		set_global_flag = AUH_lost_hope
-		news_event = { id = news_n.105 hours = 1 }
+		hidden_effect = { country_event = { id = poland.37 hours = 1 } }
+		news_event = { id = news_n.105 hours = 2 }
 		ROM = {
 				every_owned_state = {
 					limit = { is_demilitarized_zone = yes }
@@ -1026,7 +1034,11 @@ country_event = {
 				NOT = { is_core_of = ROOT }
 				is_core_of = GAL
 			}
-			GAL = { transfer_state = PREV }
+			if = {
+				limit = { UKR = { OR = { controls_state = 89 controls_state = 91 } } }
+				UKR = { transfer_state = PREV }
+				else = { GAL = { transfer_state = PREV } }
+			}
 		}
 		every_state = {
 			limit = {
@@ -1041,6 +1053,7 @@ country_event = {
 				is_core_of = POL
 			}
 			POL = { transfer_state = PREV }
+			POL = { country_event = poland.53 }
 		}
 		hidden_effect = {
 			if = {
@@ -1072,6 +1085,15 @@ country_event = {
 			}
 			CZE = { transfer_state = PREV }
 		}
+		CZE = {
+			if = {
+			    limit = {
+				    country_exists = GAL
+					GAL = { is_subject = no }
+				}
+				hidden_effect = { CZE = { country_event = { id = w_ukraine.19 days = 10 } } }
+			}
+		}
 		CZE = { hidden_effect = { country_event = { id = austro-hungarian.105 days = 2 } } }
 		CZE = { hidden_effect = { country_event = { id = austro-hungarian.106 days = 3 } } }
 		CZE = { inherit_technology = ROOT }
@@ -1090,6 +1112,15 @@ country_event = {
 				}
 			}
 			CZE = { transfer_state = PREV }
+		}
+		CZE = {
+			if = {
+			    limit = {
+				    country_exists = GAL
+					GAL = { is_subject = no }
+				}
+				hidden_effect = { CZE = { country_event = { id = w_ukraine.19 days = 10 } } }
+			}
 		}
 		CZE = { inherit_technology = ROOT }
 		CZE = { hidden_effect = { country_event = { id = austro-hungarian.105 days = 2 } } }

@@ -364,7 +364,6 @@ country_event = {
 						state = 814
 						state = 11
 						state = 189
-						state = 1441
 						state = 815
 						state = 1440
 						state = 95
@@ -2781,7 +2780,6 @@ country_event = {
 					OR = {
 						state = 11
 						state = 784
-						state = 1441
 						state = 189
 						state = 1366
 						state = 910
@@ -2799,7 +2797,7 @@ country_event = {
 				}
 				GER = { transfer_state = PREV }
 			}
-			93 = { OWNER = { transfer_state = 204 } }
+			1468 = { OWNER = { transfer_state = 204 } }
 			#RUS = { annex_country = { target = SLT transfer_troops = no } }
 			if = {
 				limit = { RUS = { has_country_flag = brest_average_alt } }
@@ -3085,7 +3083,6 @@ country_event = {
 					OR = {
 						state = 11
 						state = 784
-						state = 1441
 						state = 1378
 						state = 810
 						
@@ -4773,7 +4770,6 @@ country_event = {
 							state = 814
 							state = 11
 							state = 189
-							state = 1441
 							state = 815
 							is_core_of = LIT
 						}

@@ -424,7 +424,7 @@ economy_decisions = {
 		}
 	}
 }
-#Дела сибирские
+#Р”РµР»Р° СЃРёР±РёСЂСЃРєРёРµ
 rcw_sibirian_affairs_CCA_desisions = {
 	tomsk_duma_help = {
 
@@ -506,7 +506,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			}
 		}
 	}
-	#Взорвать Сибирь изнутри
+	#Р’Р·РѕСЂРІР°С‚СЊ РЎРёР±РёСЂСЊ РёР·РЅСѓС‚СЂРё
 	destroy_sibir = {
 
 		icon = generic_economy
@@ -582,8 +582,8 @@ rcw_sibirian_affairs_CCA_desisions = {
 			}
 		}
 	}
-	#При анексии сибири по совещанию
-	#Интеграция Сибири
+	#РџСЂРё Р°РЅРµРєСЃРёРё СЃРёР±РёСЂРё РїРѕ СЃРѕРІРµС‰Р°РЅРёСЋ
+	#РРЅС‚РµРіСЂР°С†РёСЏ РЎРёР±РёСЂРё
 	CCA_sib_integration = {
 		icon = generic_army_support
 		available = {
@@ -608,7 +608,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			set_country_flag = CCA_sib_integration_flag
 		}
 	}
-	#Арест Михайлова
+	#РђСЂРµСЃС‚ РњРёС…Р°Р№Р»РѕРІР°
 	CCA_arest_mikhailov = {
 		icon = generic_army_support
 		available = {
@@ -627,7 +627,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			SIB = { retire_ideology_leader = conservatism }
 		}
 	}
-	#Перестройка Сибирской армии
+	#РџРµСЂРµСЃС‚СЂРѕР№РєР° РЎРёР±РёСЂСЃРєРѕР№ Р°СЂРјРёРё
 	CCA_army_perestoy = {
 		icon = generic_army_support
 		available = {
@@ -653,7 +653,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			set_country_flag = CCA_army_perestoy_flag
 		}
 	}
-	#Ревизия дел Сибирского правительства
+	#Р РµРІРёР·РёСЏ РґРµР» РЎРёР±РёСЂСЃРєРѕРіРѕ РїСЂР°РІРёС‚РµР»СЊСЃС‚РІР°
 	CCA_sib_gov_revision = {
 		icon = generic_army_support
 		available = {
@@ -671,7 +671,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			set_country_flag = CCA_sib_gov_revision_flag
 		}
 	}
-	#Разгром сибирской оппозиции
+	#Р Р°Р·РіСЂРѕРј СЃРёР±РёСЂСЃРєРѕР№ РѕРїРїРѕР·РёС†РёРё
 	CCA_destroy_opposition = {
 		icon = generic_army_support
 		available = {
@@ -693,7 +693,7 @@ rcw_sibirian_affairs_CCA_desisions = {
 			add_popularity = { ideology = despotism popularity = -0.04 }
 		}
 	}
-	#Освобождение Сибири
+	#РћСЃРІРѕР±РѕР¶РґРµРЅРёРµ РЎРёР±РёСЂРё
 	CCA_free_siberia = {
 		icon = generic_army_support
 		available = {
@@ -921,7 +921,7 @@ rcw_CCA_right_monarcical_reaction_eser = {
 					subtract_from_temp_variable = { temp1 = temp2 }
 					check_variable = { temp1 > 0 }
 				}
-				country_event = rcw_usfev.215 # эсеры
+				country_event = rcw_usfev.215 # СЌСЃРµСЂС‹
 			}
 			else_if = {
 				limit = {
@@ -931,7 +931,7 @@ rcw_CCA_right_monarcical_reaction_eser = {
 					subtract_from_temp_variable = { temp2 = temp1 }
 					check_variable = { temp2 > 0 }
 				}
-				country_event = rcw_usfev.216 # правые
+				country_event = rcw_usfev.216 # РїСЂР°РІС‹Рµ
 			}
 			else = {
 				country_event = rcw_usfev.214
@@ -1814,7 +1814,7 @@ rcw_CCA_right_monarcical_reaction_right = {
 					subtract_from_temp_variable = { temp1 = temp2 }
 					check_variable = { temp1 > 0 }
 				}
-				country_event = rcw_usfev.215 # эсеры
+				country_event = rcw_usfev.215 # СЌСЃРµСЂС‹
 			}
 			else_if = {
 				limit = {
@@ -1824,7 +1824,7 @@ rcw_CCA_right_monarcical_reaction_right = {
 					subtract_from_temp_variable = { temp2 = temp1 }
 					check_variable = { temp2 > 0 }
 				}
-				country_event = rcw_usfev.216 # правые
+				country_event = rcw_usfev.216 # РїСЂР°РІС‹Рµ
 			}
 			else = {
 				country_event = rcw_usfev.214
@@ -2642,8 +2642,8 @@ rcw_CCA_right_monarcical_reaction_right = {
 	}
 }
 
-#Решения реворка
-#Контроль офицерства
+#Р РµС€РµРЅРёСЏ СЂРµРІРѕСЂРєР°
+#РљРѕРЅС‚СЂРѕР»СЊ РѕС„РёС†РµСЂСЃС‚РІР°
 CCA_officers_controll = {
 	CCA_send_commisars_to_officers = {
 		icon = generic_army_support
@@ -2820,7 +2820,7 @@ CCA_officers_controll = {
 	CCA_send_minorities_officers = {
 		icon = generic_army_support
 		available = {
-			has_idea = RSS_inorodci
+			has_idea = RSS_inorodci_idea
 		}
 		
 		visible = {
@@ -3007,7 +3007,7 @@ CCA_officers_controll = {
 		}
 	}
 }
-#Территориальные части
+#РўРµСЂСЂРёС‚РѕСЂРёР°Р»СЊРЅС‹Рµ С‡Р°СЃС‚Рё
 CCA_territorial_corps_cat = {
 	CCA_territorial_corps_decision = { # FROM - state
 		icon = mobilization_of_CCA_corps_icon
@@ -3058,7 +3058,7 @@ CCA_territorial_corps_cat = {
 		}
 	}
 }
-#Формирование национальных частей
+#Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РЅР°С†РёРѕРЅР°Р»СЊРЅС‹С… С‡Р°СЃС‚РµР№
 CCA_national_corps_cat = {
 	CCA_latyshi = {
 		icon = generic_army_support

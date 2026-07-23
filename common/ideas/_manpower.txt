@@ -169,10 +169,17 @@ ideas = {
 				}
 				if = {
 					limit = {
+
 						original_tag = UBD
 						has_idea = UBD_german_occupation_idea
 					}
 					NOT = { has_idea = UBD_german_occupation_idea }
+					limit = {
+					
+						original_tag = POL
+						has_idea = POL_Kingdom_that_failed
+					}
+					NOT = { has_idea = POL_Kingdom_that_failed }
 				}
 			}
 
@@ -269,6 +276,12 @@ ideas = {
 						has_idea = UBD_german_occupation_idea
 					}
 					NOT = { has_idea = UBD_german_occupation_idea }
+					limit = {
+					
+						original_tag = POL
+						has_idea = POL_Kingdom_that_failed
+					}
+					NOT = { has_idea = POL_Kingdom_that_failed }
 				}
 			}
 
@@ -380,6 +393,12 @@ ideas = {
 						has_idea = UBD_german_occupation_idea
 					}
 					NOT = { has_idea = UBD_german_occupation_idea }
+					limit = {
+					
+						original_tag = POL
+						has_idea = POL_Kingdom_that_failed
+					}
+					NOT = { has_idea = POL_Kingdom_that_failed }
 				}
 			}
 
@@ -491,6 +510,12 @@ ideas = {
 						has_idea = UBD_german_occupation_idea
 					}
 					NOT = { has_idea = UBD_german_occupation_idea }
+					limit = {
+					
+						original_tag = POL
+						has_idea = POL_Kingdom_that_failed
+					}
+					NOT = { has_idea = POL_Kingdom_that_failed }
 				}
 			}
 

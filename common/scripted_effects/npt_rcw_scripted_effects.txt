@@ -597,10 +597,6 @@ remove_tsar_regime_unit_leaders = {
 		limit = { NOT = { any_country = { any_unit_leader = { has_id = 77650 } } } }
 		create_corps_commander = { name = "Alexandr Krymov" id = 77650 portrait_path = "gfx/leaders/RUS/Portrait_Alexandr_Krymov.dds" traits = { cavalry_officer } skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
 	}
-	if = {
-		limit = { NOT = { any_country = { any_unit_leader = { has_id = 78000 } } } }
-		create_corps_commander = { name = "Abram Dragomirov" id = 78000 portrait_path = "gfx/leaders/RUS/Portrait_Abram_Dragomirov.dds" traits = { old_guard skilled_staffer organisational_leader } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 3 logistics_skill = 2 }
-	}
 }
 remove_white_unit_leaders = {
 	every_unit_leader = {
@@ -656,7 +652,12 @@ remove_white_unit_leaders = {
 		limit = { has_character = RUS_Lavr_Kornilov }
 		RUS_Lavr_Kornilov = { clr_character_flag = dismissed_flag set_nationality = REB }
 	}
-	every_unit_leader = { limit = { OR = { has_id = 76321 has_id = 77650 has_id = 77474 } } set_nationality = REB } #RVA
+	if = {
+		limit = { has_character = RUS_Vyacheslav_Tkachov }
+		RUS_Vyacheslav_Tkachov = { clr_character_flag = dismissed_flag set_nationality = RVA } #РїРѕ Р’РёРєРё: РїСЂРёР±С‹Р» РЅР° РљСѓР±Р°РЅСЊ РІ РґРµРєР°Р±СЂРµ 1917
+	}
+	every_unit_leader = { limit = { OR = { has_id = 76321 has_id = 78000 } } set_nationality = REB } #RVA. Mikhail_Alexeev, Abram Dragomirov
+	every_unit_leader = { limit = { OR = { has_id = 77650 has_id = 77474 } } set_nationality = REB } #Alexandr Krymov, Nikolay Bredov
 	DON_Pyotr_Krasnov = { set_nationality = DON }
 	DON_Alexey_Kaledin = { set_nationality = DON }
 	DON = {
@@ -665,7 +666,6 @@ remove_white_unit_leaders = {
 	}
 	every_unit_leader = { limit = { has_id = 77400 } set_nationality = REB } # Mikhail Diterihs
 	every_unit_leader = { limit = { has_id = 88147 } set_nationality = CCA } # Mikhail Hanjin
-	every_unit_leader = { limit = { has_id = 78000 } set_nationality = RVA } # Abram Dragomirov, see 10 strings up
 	
 	if = {
 		limit = { has_character = ARM_Thomas_Nazarbekov }
@@ -750,8 +750,8 @@ bolsheviks_fleet = {
 				count = all
 			}
 			set_global_flag = baltic_fleet_in_exile_prev
-			country_event = { id = rcw.11 days = 10 } #—ерноморский флот в тумане
-			country_event = { id = rcw.12 days = 17 } #‘ибирскаЯ флотилиЯ на Якоре
+			country_event = { id = rcw.11 days = 10 } #Р§РµСЂРЅРѕРјРѕСЂСЃРєРёР№ С„Р»РѕС‚ РІ С‚СѓРјР°РЅРµ
+			country_event = { id = rcw.12 days = 17 } #РЎРёР±РёСЂСЃРєР°СЏ С„Р»РѕС‚РёР»РёСЏ РЅР° СЏРєРѕСЂРµ
 }
 bolsheviks_victory = {
 			hidden_effect = {
@@ -1188,7 +1188,7 @@ bolsheviks_fall = {
 	clr_country_flag = RUS_Oktober_revolution_fired
 	load_focus_tree = Russia_Republic_focus
 	clr_country_flag = RUS_Order_N_1
-	#clr_country_flag = Kornilov_affair_near #будет удалЯтьсЯ после конца выступлениЯ Љеренского-Љраснова, только Љеренского-Љраснова-Љорнилова
+	#clr_country_flag = Kornilov_affair_near #Р±СѓРґРµС‚ СѓРґР°Р»СЏС‚СЊСЃСЏ РїРѕСЃР»Рµ РєРѕРЅС†Р° РІС‹СЃС‚СѓРїР»РµРЅРёСЏ РљРµСЂРµРЅСЃРєРѕРіРѕ-РљСЂР°СЃРЅРѕРІР°, С‚РѕР»СЊРєРѕ РљРµСЂРµРЅСЃРєРѕРіРѕ-РљСЂР°СЃРЅРѕРІР°-РљРѕСЂРЅРёР»РѕРІР°
 	clr_country_flag = RUS_Kornilov_civil_war_near
 	clr_country_flag = RUS_kornilov_eser_and_menysheviks_are_neutral
 	clr_country_flag = RUS_kornilov_eser_and_menysheviks_are_neutralized
@@ -1335,7 +1335,7 @@ add_red_unit_leaders = {
 	#	portrait_path = "gfx/leaders/SOV/Portrait_Lev_Trotsky_military.dds"
 	#	traits = { politically_connected media_personality }
 	#	skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 2
-	#	} Теперь по фокусу RUS_WPRA
+	#	} вЂњРµРїРµСЂСЊ РїРѕ С„РѕРєСѓСЃСѓ RUS_WPRA
 		
 	create_field_marshal = {  name = "Joachim Vacetis"
 		id = 19171
@@ -1613,7 +1613,7 @@ add_red_unit_leaders = {
 		traits = { }
 		skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 2 logistics_skill = 3 }
 	
-	#19211 - это „зержинский
+	#19211 - СЌС‚Рѕ Р”Р·РµСЂР¶РёРЅСЃРєРёР№
 	
 	create_corps_commander = {
 		name = "Avgust Kork"
@@ -1672,31 +1672,31 @@ add_red_unit_leaders = {
 		skill = 2 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 		
 	
-	create_corps_commander = { #„онской красный казак
+	create_corps_commander = { #Р”РѕРЅСЃРєРѕР№ РєСЂР°СЃРЅС‹Р№ РєР°Р·Р°Рє
 		name = "Filipp Mironov"
 		id = 28001
 		portrait_path = "gfx/leaders/SOV/Portrait_Filipp_Mironov.dds"
 		traits = { old_guard trickster cavalry_officer cavalry_leader commando }
 		skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 3 }
-	create_corps_commander = { #„онской красный казак
+	create_corps_commander = { #Р”РѕРЅСЃРєРѕР№ РєСЂР°СЃРЅС‹Р№ РєР°Р·Р°Рє
 		name = "Grigoriy Kolpakov"
 		id = 28002
 		portrait_path = "gfx/leaders/SOV/Portrait_Grigoriy_Kolpakov.dds"
 		traits = { cavalry_officer }
 		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
-	create_corps_commander = { #„онской красный казак
+	create_corps_commander = { #Р”РѕРЅСЃРєРѕР№ РєСЂР°СЃРЅС‹Р№ РєР°Р·Р°Рє
 		name = "Fyodor Podtyolkov"
 		id = 28003
 		portrait_path = "gfx/leaders/DON/Portrait_Fyodor_Podtyolkov.dds"
 		traits = { cavalry_leader media_personality }
 		skill = 1 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
-	create_corps_commander = { #„онской красный казак
+	create_corps_commander = { #Р”РѕРЅСЃРєРѕР№ РєСЂР°СЃРЅС‹Р№ РєР°Р·Р°Рє
 		name = "Mikhail Krivoshlykov"
 		id = 28004
 		portrait_path = "gfx/leaders/SOV/Portrait_Mikhail_Krivoshlykov.dds"
 		traits = { trait_cautious }
 		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
-	create_corps_commander = { #„онской красный казак
+	create_corps_commander = { #Р”РѕРЅСЃРєРѕР№ РєСЂР°СЃРЅС‹Р№ РєР°Р·Р°Рє
 		name = "Boris Dumenko"
 		id = 28005
 		portrait_path = "gfx/leaders/SOV/Portrait_Boris_Dumenko.dds"
@@ -1716,8 +1716,8 @@ add_left_esser_unit_leaders = {
 	create_corps_commander = { name = "Semyon Kotlyarevsky" id = 77435 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 	create_corps_commander = { name = "Ivan Nudiga" id = 77436 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 	create_corps_commander = { name = "Grigoriy Oreshkin" id = 77437 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
-	create_corps_commander = { name = "Sergey Mikhailov" id = 77438 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 } #џ („. ћ. ‹адыгин) не уверен в имени этого человека
-	create_corps_commander = { name = "Pavel Lazimir" id = 77439 portrait_path = "gfx/leaders/SOV/Portrait_Pavel_Lazimir.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 } #џ („. ћ. ‹адыгин) не уверен был ли он на момент восстаниЯ левым эсером
+	create_corps_commander = { name = "Sergey Mikhailov" id = 77438 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 } #РЇ (Р”. Р®. Р›Р°РґС‹РіРёРЅ) РЅРµ СѓРІРµСЂРµРЅ РІ РёРјРµРЅРё СЌС‚РѕРіРѕ С‡РµР»РѕРІРµРєР°
+	create_corps_commander = { name = "Pavel Lazimir" id = 77439 portrait_path = "gfx/leaders/SOV/Portrait_Pavel_Lazimir.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 } #РЇ (Р”. Р®. Р›Р°РґС‹РіРёРЅ) РЅРµ СѓРІРµСЂРµРЅ Р±С‹Р» Р»Рё РѕРЅ РЅР° РјРѕРјРµРЅС‚ РІРѕСЃСЃС‚Р°РЅРёСЏ Р»РµРІС‹Рј СЌСЃРµСЂРѕРј
 	create_corps_commander = { name = "Yakov Fishman" id = 77440 portrait_path = "gfx/leaders/SOV/Portrait_Yakov_Fishman.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 	create_corps_commander = { name = "Yuriy Sablin" id = 77441 portrait_path = "gfx/leaders/SOV/Portrait_Yuriy_Sablin.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 	create_corps_commander = { name = "Vasiliy Likhobadin" id = 77442 portrait_path = "gfx/leaders/RGR/Portrait_Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
