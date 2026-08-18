@@ -41,7 +41,7 @@ characters = {
 		country_leader = {
 			desc = UBD_Alexander_von_Rahden_DESC
 			ideology = conservatism_ideology
-			traits = { min_1_gentleman_politician }
+			traits = {  }
 		}
 	}
 	
@@ -69,12 +69,6 @@ characters = {
 			desc = UBD_Alfred_Fletcher_DESC
 			ideology = despotism_ideology
 			traits = { warmonger_old_general }
-		}
-		advisor = {
-			slot = theorist
-			idea_token = UBD_Alfred_Fletcher_theorist
-			ledger = army
-			traits = { superior_firepower_expert }
 		}
 	}
 	

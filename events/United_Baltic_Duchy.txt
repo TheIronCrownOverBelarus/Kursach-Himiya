@@ -116,6 +116,110 @@ country_event = {
 	}
 }
 
+#Поражение Германии#
+country_event = {
+	id = ubd.30
+	title = ubd.30.t
+	desc = ubd.30.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.30.a
+		country_event = { id = ubd.31 days = 1 }
+	}
+	option = {
+		name = ubd.30.b
+		country_event = { id = ubd.32 days = 1 }
+	}
+	option = {
+		name = ubd.30.c
+		country_event = { id = ubd.33 days = 1 }
+		country_event = { id = ubd.34 days = 3 }
+	}
+}
+
+#Упразднение Герцогства#
+country_event = {
+	id = ubd.31
+	title = ubd.31.t
+	desc = ubd.31.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.31.a
+	}
+	option = {
+		name = ubd.31.b
+	}
+	option = {
+		name = ubd.31.c
+	}
+}
+
+#Образование Балтийской Конфедерации#
+country_event = {
+	id = ubd.32
+	title = ubd.32.t
+	desc = ubd.32.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.32.a
+		LAT = {
+			transfer_state = 190
+			transfer_state = 810
+			transfer_state = 1378
+			transfer_state = 12
+			transfer_state = 809
+			transfer_state = 1351
+		}
+		EST = {
+			transfer_state = 812
+			transfer_state = 811
+			transfer_state = 1393
+			transfer_state = 13
+			transfer_state = 191
+			transfer_state = 813
+			transfer_state = 1003
+			transfer_state = 915
+			transfer_state = 1002
+			transfer_state = 1004
+		}
+		create_faction_from_template = {
+			template = faction_template_regional_anti_communist
+			name = "Балтийская Конфедерация"
+			icon = GFX_faction_logo_generic_2
+			color = { 41 41 41 }
+		}
+		add_to_faction = LAT
+		add_to_faction = EST
+	}
+}
+
+#Восстание сепаратистов#
+country_event = {
+	id = ubd.33
+	title = ubd.33.t
+	desc = ubd.33.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.33.a
+	}
+}
+
+#Осадное положение#
+country_event = {
+	id = ubd.34
+	title = ubd.34.t
+	desc = ubd.34.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.34.a
+	}
+}
+
 #Рост Инфляции#
 country_event = {
 	id = ubd.67
@@ -140,3 +244,133 @@ country_event = {
 	}
 }
 
+#Предложение из Риги#
+country_event = {
+	id = ubd.100
+	title = ubd.100.t
+	desc = ubd.100.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.100.a
+		UBD = {
+				country_event = { id = ubd.102 days = 3 }
+			}
+	}
+	option = {
+		name = ubd.100.b
+		UBD = {
+				country_event = { id = ubd.101 days = 3 }
+			}
+	}
+}
+
+#Согласие Лондона#
+country_event = {
+	id = ubd.101
+	title = ubd.101.t
+	desc = ubd.101.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.101.a
+		
+	}
+}
+
+#Отказ Лондона#
+country_event = {
+	id = ubd.102
+	title = ubd.102.t
+	desc = ubd.102.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.102.a
+	}
+}
+
+#Контакт с Литвой#
+country_event = {
+	id = ubd.103
+	title = ubd.103.t
+	desc = ubd.103.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.103.a
+		add_war_support = 0.04
+		add_popularity = { ideology = authoritarism popularity = -0.03 }
+	}
+	option = {
+		name = ubd.103.b
+		add_opinion_modifier = {
+				target = UBD
+				modifier = BLR_Ylychenie_otnocheniy
+		}
+		UBD = {
+			add_opinion_modifier = {
+				target = LIT
+				modifier = BLR_Ylychenie_otnocheniy
+			}
+		}
+		add_political_power = 20
+		add_popularity = { ideology = authoritarism popularity = 0.03 }
+	}
+	option = {
+		name = ubd.103.c
+		diplomatic_relation = {
+			country = UBD
+			relation = non_aggression_pact
+			active = yes
+		}
+		LIT = {
+			add_opinion_modifier = {
+				target = UBD
+				modifier = BLR_Ylychenie_otnocheniy
+			}
+			give_military_access = UBD
+		}
+		UBD = {
+			add_opinion_modifier = {
+				target = LIT
+				modifier = BLR_Ylychenie_otnocheniy	
+			}
+			give_military_access = LIT
+		}
+		add_political_power = 20
+		add_popularity = { ideology = authoritarism popularity = 0.03 }
+	}
+}
+
+#Призыв о помощи#
+country_event = {
+	id = ubd.104
+	title = ubd.104.t
+	desc = ubd.104.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.104.a
+	}
+	option = {
+		name = ubd.104.b
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 300
+			target = UBD
+		}
+	}
+	option = {
+		name = ubd.104.c
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 400
+			target = UBD
+		}
+		add_manpower = -1000
+		UBD = {
+			add_manpower = 1000
+		}
+	}
+}

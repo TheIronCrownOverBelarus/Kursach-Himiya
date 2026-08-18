@@ -65,6 +65,7 @@ promote_character = {
     ideology = conservatism
 }
 
+create_country_leader = { name = "Степан Петриченко" desc = "" picture = "gfx/leaders/SOV/Portrait_Stepan_Petrichenko.dds" ideology = anarchist_communism traits = { baltic_fleet_sailor } }
 create_country_leader = { name = "Фрицис Розинь" desc = "" picture = "gfx/leaders/LAT/Portrait_Fritsis_Rozin.dds" ideology = leninism traits = { } }
 create_country_leader = { name = "Август Деглав" desc = "" picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds" ideology = social_reformism traits = { min_4_man_of_the_people } }
 create_country_leader = { name = "Владимир Буковский" desc = "" picture = "gfx/leaders/Russia/Portrait_Russia_Generic_3.dds" ideology = narodopravstvo traits = { min_5_lawyer } }
@@ -73,8 +74,6 @@ set_politics = {
 	ruling_party = conservatism
 	elections_allowed = no
 }
-
-set_cosmetic_tag = UBD_authoritarism
 
 1918.3.14 = {
 
@@ -115,6 +114,5 @@ set_cosmetic_tag = UBD_authoritarism
 		ruling_party = despotism
 		elections_allowed = no
 	}
-	set_cosmetic_tag = UBD_authoritarism
 	
 }

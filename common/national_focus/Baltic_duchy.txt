@@ -305,7 +305,7 @@ focus_tree = {
         cost = 4
 		completion_reward = {
 			add_political_power = -50
-			808 = {
+			812 = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = 	dockyard
@@ -817,6 +817,204 @@ focus_tree = {
         cost = 2
 		completion_reward = {
 			country_event = { id = ubd.8 days = 5 }
+		}
+	}
+	
+	focus = {
+        id = UBD_entente_question
+		icon = GFX_UBD_crush_separatist_organisations
+		available = {
+			has_global_flag = WWI_GER_HAS_CAPITULATED
+			is_puppet = false
+			NOT = { is_ally_with = GER }
+		}
+		mutually_exclusive = {
+			focus = UBD_pilar_winnig_agreement
+		}
+        x = 24
+        y = 1
+        cost = 1
+		completion_reward = {
+			ENG = {
+				country_event = { id = ubd.100 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+        id = UBD_pilar_winnig_agreement
+		icon = GFX_UBD_crush_separatist_organisations
+		available = {
+			has_global_flag = WWI_GER_HAS_CAPITULATED
+			is_puppet = false
+			NOT = { is_ally_with = GER }
+		}
+		mutually_exclusive = {
+			focus = UBD_entente_question
+		}
+        x = 26
+        y = 1
+        cost = 1
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+        id = UBD_contact_lithunia
+		icon = GFX_UBD_crush_separatist_organisations
+		prerequisite = {
+			focus = UBD_entente_question
+			focus = UBD_pilar_winnig_agreement
+		}
+		available = {
+			country_exists = LIT
+			LIT = {
+				is_puppet = false
+			}
+			NOT = { has_war_with = LIT }
+		}
+        x = 23
+        y = 2
+        cost = 1
+		completion_reward = {
+			LIT = {
+				country_event = { id = ubd.103 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+        id = UBD_ally_finland
+		icon = GFX_UBD_crush_separatist_organisations
+		prerequisite = {
+			focus = UBD_contact_lithunia
+		}
+		mutually_exclusive = {
+			focus = UBD_petrograd_offensive
+		}
+		available = {
+			country_exists = LIT
+			LIT = {
+				is_puppet = false
+			}
+			NOT = { has_war_with = LIT }
+		}
+        x = 24
+        y = 3
+        cost = 1
+		completion_reward = {
+			LIT = {
+				country_event = { id = ubd.103 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+        id = UBD_help_from_scandinavia
+		icon = GFX_UBD_crush_separatist_organisations
+		prerequisite = {
+			focus = UBD_entente_question
+			focus = UBD_pilar_winnig_agreement
+		}
+        x = 22
+        y = 3
+        cost = 1
+		completion_reward = {
+			add_political_power = -30
+			add_war_support = 0.05
+			DEN = { 
+				country_event = { id = ubd.104 days = 1 }
+			}
+			NOR = {
+				country_event = { id = ubd.104 days = 1 }
+			}
+			SWE = {
+				country_event = { id = ubd.104 days = 1 }
+			}
+			FIN = {
+				country_event = { id = ubd.104 days = 1 }
+			}
+		}
+	}
+	
+	focus = {
+        id = UBD_ally_north_western_army
+		icon = GFX_UBD_form_rus_batalions
+		available = {
+			country_exists = NWA
+			NOT = { has_war_with = NWA }
+			NWA = {
+				is_puppet = false
+				is_in_faction = no
+			}
+		}
+		prerequisite = {
+			focus = UBD_entente_question
+			focus = UBD_pilar_winnig_agreement
+		}
+        x = 25
+        y = 2
+        cost = 3
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+        id = UBD_avalov_problem
+		icon = GFX_UBD_form_rus_batalions
+		prerequisite = {
+			focus = UBD_entente_question
+			focus = UBD_pilar_winnig_agreement
+		}
+        x = 27
+        y = 2
+        cost = 3
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+        id = UBD_petrograd_offensive
+		icon = GFX_UBD_form_rus_batalions
+		available = {
+			country_exists = NWA
+			NOT = { has_war_with = NWA }
+			NWA = {
+				is_puppet = false
+				is_in_faction = no
+			}
+			has_country_flag = UBD_NWA_agreed_flag
+		}
+		prerequisite = {
+			focus = UBD_ally_north_western_army
+		}
+		prerequisite = {
+			focus = UBD_avalov_problem
+		}
+		mutually_exclusive = {
+			focus = UBD_ally_finland
+		}
+        x = 26
+        y = 3
+        cost = 5
+		completion_reward = {
+			create_faction_from_template = {
+				template = faction_template_regional_anti_communist
+				name = "Северо-Западный Фронт"
+				icon = GFX_faction_logo_generic_2
+				color = { 27 27 27 }
+			}
+			add_to_faction = NWA
+			custom_effect_tooltip = UBD_petrograd_offensive_tt
+			add_war_support = 0.04
+			add_popularity = { ideology = national_syndicalism popularity = 0.03 }
+			add_timed_idea = { idea = OCH_wide_offensive_idea days = 90 }
+			NWA = {
+				add_timed_idea = { idea = OCH_wide_offensive_idea days = 90 }
+			}
 		}
 	}
 
