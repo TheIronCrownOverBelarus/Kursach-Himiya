@@ -9,11 +9,8 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.1.a
-		add_ideas = {
-			Hugo_von_Kathen_1
-			Alfred_von_Gossler_4
-			Adolf_von_Seckendorff_6
-		}
+		add_popularity = { ideology = ROOT popularity = 0.01 }
+		add_ideas = decrees_of_ruler_b_law
 	}
 }
 
@@ -26,6 +23,13 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.2.a
+		add_political_power = 15
+		add_stability = 0.03
+		add_popularity = { ideology = conservatism popularity = 0.04 }
+		promote_character = {
+			character = UBD_Eduard_Delinsgauzen
+			ideology = conservatism
+		}
 	}
 }
 
@@ -38,6 +42,42 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.3.a
+		hidden_effect = {
+			promote_character = {
+				character = UBD_Adolf_Pilar_von_Pilchau
+				ideology = conservatism
+			}
+			set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+			}
+		}
+	}
+		option = {
+		name = ubd.3.b
+		hidden_effect = {
+			promote_character = {
+				character = UBD_Eduard_Delinsgauzen
+				ideology = conservatism
+			}
+			set_politics = {
+					ruling_party = conservatism
+					elections_allowed = no
+			}
+		}
+	}
+		option = {
+		name = ubd.3.f
+		hidden_effect = {
+			promote_character = {
+				character = UBD_Vilhelm_Reimers
+				ideology = conservatism
+			}
+			set_politics = {
+						ruling_party = conservatism
+						elections_allowed = no
+			}
+		}
 	}
 }
 
@@ -156,7 +196,7 @@ country_event = {
 	}
 }
 
-#Образование Балтийской Конфедерации#
+#Восстание сепаратистов#
 country_event = {
 	id = ubd.32
 	title = ubd.32.t
@@ -167,36 +207,32 @@ country_event = {
 		name = ubd.32.a
 		LAT = {
 			transfer_state = 190
-			transfer_state = 810
 			transfer_state = 1378
 			transfer_state = 12
 			transfer_state = 809
 			transfer_state = 1351
+			declare_war_on = {
+				target = UBD
+				type = annex_everything
+			}
 		}
 		EST = {
 			transfer_state = 812
-			transfer_state = 811
-			transfer_state = 1393
-			transfer_state = 13
-			transfer_state = 191
 			transfer_state = 813
 			transfer_state = 1003
 			transfer_state = 915
 			transfer_state = 1002
+			transfer_state = 13
 			transfer_state = 1004
+			declare_war_on = {
+				target = UBD
+				type = annex_everything
+			}
 		}
-		create_faction_from_template = {
-			template = faction_template_regional_anti_communist
-			name = "Балтийская Конфедерация"
-			icon = GFX_faction_logo_generic_2
-			color = { 41 41 41 }
-		}
-		add_to_faction = LAT
-		add_to_faction = EST
 	}
 }
 
-#Восстание сепаратистов#
+#Военное положение#
 country_event = {
 	id = ubd.33
 	title = ubd.33.t
@@ -208,7 +244,7 @@ country_event = {
 	}
 }
 
-#Осадное положение#
+#Высадка англичан на островах#
 country_event = {
 	id = ubd.34
 	title = ubd.34.t
@@ -217,10 +253,598 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.34.a
+		ENG = {
+			transfer_state = 1393
+			transfer_state = 811
+			division_template = {
+				name = "Marines Brigade"
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+				}
+				is_locked = no
+			}
+			811 = {
+				create_unit = {
+					division = "name = \"Marines Brigade\" division_template = \"Marines Brigade\" start_experience_factor = 0.5 start_manpower_factor = 1 start_equipment_factor = 1"
+					owner = ENG
+				}
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 200
+				target = EST
+			}
+		}
 	}
 }
 
-#Рост Инфляции#
+#Требования британцев#
+country_event = {
+	id = ubd.50
+	title = ubd.50.t
+	desc = ubd.50.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.50.a
+		country_event = { id = ubd.51 days = 1 }
+	}
+	option = {
+		name = ubd.50.b
+	}
+}
+
+#Обстрел Риги английской эскадрой#
+country_event = {
+	id = ubd.51
+	title = ubd.51.t
+	desc = ubd.51.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.51.a
+	}
+	option = {
+		name = ubd.51.b
+	}
+}
+
+#Переговоры с британцами после обстрела Риги#
+country_event = {
+	id = ubd.52
+	title = ubd.52.t
+	desc = ubd.52.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.52.a
+	}
+	option = {
+		name = ubd.52.b
+	}
+	
+}
+
+#Победа в погранконфликте за эзель#
+country_event = {
+	id = ubd.53
+	title = ubd.53.t
+	desc = ubd.53.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.53.a
+	}
+}
+
+#Поражение в погранконфликте за эзель#
+country_event = {
+	id = ubd.54
+	title = ubd.54.t
+	desc = ubd.54.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.54.a
+	}
+}
+
+#Планы генерала Гольца#
+country_event = {
+	id = ubd.55
+	title = ubd.55.t
+	desc = ubd.55.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	trigger = {
+		has_character = GER_Rudiger_von_der_Goltz
+		has_active_mission = UBD_6_corps_leaving_mission
+		GER = {
+			has_country_flag = GER_monarchy_fall
+			NOT = {
+				has_government = conservatism
+			}
+		}
+	}
+	option = {
+		name = ubd.55.a
+		add_political_power = -100
+		set_country_flag = UBD_goltz_is_supported_flag
+		PRE = {
+			set_cosmetic_tag = PRE_6_corps
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+				producer = UBD
+			}
+		}
+		GER = {
+			add_popularity = { ideology = despotism popularity = 0.05 }
+		}
+	}
+	option = {
+		name = ubd.55.b
+		add_stability = 0.05
+		add_popularity = { ideology = ROOT popularity = 0.03 }
+	}
+}
+
+#Восстание 6 корпуса#
+country_event = {
+	id = ubd.56
+	title = ubd.56.t
+	desc = ubd.56.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.56.a
+		PRE = { 
+			hidden_effect = {
+				transfer_state = 188
+				set_popularities = {
+					radical_socialism = 0
+					communism = 5
+					social_democracy = 0
+					social_liberalism = 0
+					market_liberalism = 10
+					conservatism = 15
+					authoritarism = 30
+					
+					despotism = 40
+					fascism = 0
+					national_syndicalism = 0
+				}
+				add_ideas = { 
+					military_dictatorship_gov_form
+					PRE_last_kaiserschlacht
+				}
+				set_nationality = {
+					target_country = PRE
+					character = GER_Rudiger_von_der_Goltz
+				}
+			}
+			promote_character = {
+				character = GER_Rudiger_von_der_Goltz
+				ideology = despotism
+			}
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+		GER = {
+			country_event = { id = ubd.57 days = 3 }
+		}
+	}
+	option = {
+		name = ubd.56.b
+		PRE = { 
+			hidden_effect = {
+				transfer_state = 188
+				set_popularities = {
+					radical_socialism = 0
+					communism = 5
+					social_democracy = 0
+					social_liberalism = 0
+					market_liberalism = 10
+					conservatism = 15
+					authoritarism = 30
+					despotism = 40
+					fascism = 0
+					national_syndicalism = 0
+				}
+				add_ideas = { 
+					military_dictatorship_gov_form
+					PRE_last_kaiserschlacht
+				}
+				set_nationality = {
+					target_country = PRE
+					character = GER_Rudiger_von_der_Goltz
+				}
+			}
+			promote_character = {
+				character = GER_Rudiger_von_der_Goltz
+				ideology = despotism
+			}
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			change_tag_from = UBD 
+		}
+		GER = {
+			country_event = { id = ubd.57 days = 3 }
+		}
+	}
+	option = {
+		name = ubd.56.c
+		PRE = { 
+			hidden_effect = {
+				transfer_state = 188
+				set_popularities = {
+					radical_socialism = 0
+					communism = 5
+					social_democracy = 0
+					social_liberalism = 0
+					market_liberalism = 10
+					conservatism = 15
+					authoritarism = 30
+					despotism = 40
+					fascism = 0
+					national_syndicalism = 0
+				}
+				add_ideas = { 
+					military_dictatorship_gov_form
+					PRE_last_kaiserschlacht
+				}
+				set_nationality = {
+					target_country = PRE
+					character = GER_Rudiger_von_der_Goltz
+				}
+			}
+			promote_character = {
+				character = GER_Rudiger_von_der_Goltz
+				ideology = despotism
+			}
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+		GER = {
+			change_tag_from = UBD 
+			country_event = { id = ubd.57 days = 3 }
+		}
+	}
+}
+
+#Неподчинение армии#
+country_event = {
+	id = ubd.57
+	title = ubd.57.t
+	desc = ubd.57.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.57.a
+		add_ideas = {
+			UBD_army_mutinities_ger_idea
+		}
+		country_event = { id = ubd.58 days = 3 }
+	}
+}
+
+#Слухи#
+country_event = {
+	id = ubd.58
+	title = ubd.58.t
+	desc = ubd.58.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.58.a
+		add_stability = -0.05
+		add_popularity = { ideology = despotism popularity = 0.07 }
+		add_popularity = { ideology = authoritarism popularity = 0.05 }
+		add_popularity = { ideology = fascism popularity = 0.02 }
+		add_popularity = { ideology = national_syndicalism popularity = 0.01 }
+		country_event = { id = ubd.59 days = 5 }
+	}
+}
+
+#Проблемная бригада#
+country_event = {
+	id = ubd.59
+	title = ubd.59.t
+	desc = ubd.59.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.59.a
+		add_stability = -0.05
+		add_war_support = -0.03
+		add_popularity = { ideology = despotism popularity = 0.03 }
+		add_popularity = { ideology = authoritarism popularity = 0.01 }
+		country_event = { id = ubd.60 days = 10 }
+	}
+}
+
+#Ультиматум Лютвицца#
+country_event = {
+	id = ubd.60
+	title = ubd.60.t
+	desc = ubd.60.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.60.a
+		country_event = { id = ubd.61 days = 3 }
+	}
+}
+
+#Капповский Путч#
+country_event = {
+	id = ubd.61
+	title = ubd.61.t
+	desc = ubd.61.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.61.a
+		hidden_effect = {
+			set_country_flag = GER_military_putch_flag
+			recruit_character = GER_Wolfgang_Kapp
+			recruit_character = GER_Walther_von_Luttwitz
+			recruit_character = GER_Hans_von_Seekt
+			recruit_character = GER_Hermann_Ehrhardt
+			promote_character = {
+				character = GER_Wolfgang_Kapp
+				ideology = despotism
+			}
+		}
+		add_stability = -0.1
+		add_popularity = { ideology = despotism popularity = 0.05 }
+		add_popularity = { ideology = communism popularity = 0.07 }
+		set_party_name = { 
+			ideology = despotism
+			long_name = "Национальная Ассоциация"
+			name = "Национальная Ассоциация"
+		}
+		set_politics = {
+			ruling_party = despotism
+			elections_allowed = no
+		}
+		add_ideas = {
+			RUS_weak_state_suppression_apparatus
+		}
+		remove_ideas = {
+			UBD_army_mutinities_ger_idea
+		}
+		country_event = { id = ubd.62 days = 5 }
+		PRE = { 
+			country_event = { id = ubd.64 days = 1 }
+		}
+		country_event = { id = ubd.65 days = 3 }
+	}
+}
+
+#Восстание в Руре#
+country_event = {
+	id = ubd.62
+	title = ubd.62.t
+	desc = ubd.62.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.62.a
+		set_country_flag = GER_ruhr_uprising_flag
+		RHI = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			transfer_state = 51
+			transfer_state = 1266
+			transfer_state = 57
+			57 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			country_event = { id = ubd.63 days = 5 }
+		}
+	}
+	option = {
+		name = ubd.62.b
+		set_country_flag = GER_ruhr_uprising_flag
+		RHI = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			transfer_state = 51
+			transfer_state = 1266
+			transfer_state = 57
+			57 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			country_event = { id = ubd.63 days = 5 }
+		}
+		change_tag_from = GER
+	}
+}
+
+#Подъем рабочих#
+country_event = {
+	id = ubd.63
+	title = ubd.63.t
+	desc = ubd.63.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.63.a
+		HAN = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			transfer_state = 1382
+			1382 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			declare_war_on = GER
+		}
+		BAY = {
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			transfer_state = 52
+			52 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			declare_war_on = GER
+		}
+	}
+	option = {
+		name = ubd.63.b
+		RHI = {
+			transfer_state = 52
+			52 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			transfer_state = 1382
+			1382 = {
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+				spawn_krasnoarmeyskaya_brigada_in_state = yes
+			}
+			set_cosmetic_tag = GER_communism
+		}
+	}
+}
+
+#Переворот в Берлине#
+country_event = {
+	id = ubd.64
+	title = ubd.64.t
+	desc = ubd.64.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.64.a
+		hidden_effect = {
+			drop_cosmetic_tag = yes
+		}
+		GER = {
+			annex_country = { 
+				target = PRE 
+				transfer_troops = yes 
+			}
+		}
+	}
+}
+
+#Конфликт в правительстве#
+country_event = {
+	id = ubd.65
+	title = ubd.65.t
+	desc = ubd.65.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.65.a
+		add_popularity = { ideology = ROOT popularity = -0.03 }
+		add_trait = {
+			ideology = despotism
+			trait = cabinet_crisis
+		}
+		hidden_effect = {
+			country_event = { id = ubd.66 days = 2 }
+		}
+	}
+}
+
+#Переворот Лютвицца##
+country_event = {
+	id = ubd.66
+	title = ubd.66.t
+	desc = ubd.66.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.66.a
+		remove_trait = {
+			ideology = despotism
+			trait = cabinet_crisis
+		}
+		add_stability = -0.1
+		add_war_support = 0.07
+		add_popularity = { ideology = authoritarism popularity = 0.1 }
+		promote_character = {
+			character = GER_Walther_von_Luttwitz
+			ideology = authoritarism
+		}
+		set_politics = {
+			ruling_party = authoritarism
+			elections_allowed = no
+		}
+		add_ideas = { 
+			absolute_monarchy_gov_form 
+			decrees_of_ruler_b_law
+		}
+		hidden_effect = {
+			country_event = { id = ubd.67 days = 3 }
+		}
+	}
+	option = {
+		name = ubd.66.b
+		remove_trait = {
+			ideology = despotism
+			trait = cabinet_crisis
+		}
+		add_stability = 0.03
+		add_war_support = 0.05
+		add_popularity = { ideology = authoritarism popularity = 0.04 }
+		promote_character = {
+			character = GER_Walther_von_Luttwitz
+			ideology = authoritarism
+		}
+		set_politics = {
+				ruling_party = authoritarism
+				elections_allowed = no
+		}
+		add_ideas = { 
+			military_dictatorship_gov_form
+			emergency_laws_b_law
+		}
+		set_cosmetic_tag = GER_lutwiz_regime
+	}
+}
+
+#Контрпереворот Эрхардта##
 country_event = {
 	id = ubd.67
 	title = ubd.67.t
@@ -229,148 +853,111 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.67.a
+		GER_Walther_von_Luttwitz = {
+			retire = yes
+		}
+		add_stability = 0.05
+		promote_character = {
+			character = GER_Wolfgang_Kapp
+			ideology = despotism
+		}
+		set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+		}
+		add_ideas = { 
+			military_dictatorship_gov_form
+			emergency_laws_b_law
+		}
+		
+	}
+	option = {
+		name = ubd.67.b
+		GER_Walther_von_Luttwitz = {
+			retire = yes
+		}
+		add_stability = 0.03
+		add_war_support = 0.05
+		promote_character = {
+			character = GER_Hans_von_Seekt
+			ideology = despotism
+		}
+		set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+		}
+		add_ideas = { 
+			military_dictatorship_gov_form
+			emergency_laws_b_law
+		}
+	}
+	option = {
+		name = ubd.67.c
+		GER_Walther_von_Luttwitz = {
+			retire = yes
+		}
+		add_stability = -0.15
+		add_war_support = -0.1
+		promote_character = {
+			character = GER_Hermann_Ehrhardt
+			ideology = despotism
+		}
+		set_politics = {
+				ruling_party = despotism
+				elections_allowed = no
+		}
+		add_ideas = { 
+			military_dictatorship_gov_form
+			emergency_laws_b_law
+		}
+		set_cosmetic_tag = GER_erhardt_regime
 	}
 }
 
-#Продовольственный кризис#
+#Конец гражданской войны в Германии#
 country_event = {
 	id = ubd.68
 	title = ubd.68.t
 	desc = ubd.68.desc
 	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
+	trigger = {
+		tag = GER
+		has_country_flag = GER_military_putch_flag
+		has_country_flag = GER_ruhr_uprising_flag
+		has_war = no
+	}
 	option = {
 		name = ubd.68.a
+		add_stability = 0.2
+		remove_ideas = { RUS_weak_state_suppression_apparatus }
 	}
 }
 
-#Предложение из Риги#
+#Восстановление монархии#
 country_event = {
-	id = ubd.100
-	title = ubd.100.t
-	desc = ubd.100.desc
+	id = ubd.69
+	title = ubd.69.t
+	desc = ubd.69.desc
 	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.100.a
-		UBD = {
-				country_event = { id = ubd.102 days = 3 }
-			}
+	trigger = {
+		tag = GER
+		has_country_flag = GER_military_putch_flag
+		has_country_flag = GER_ruhr_uprising_flag
+		has_war = no
+		GER_Walther_von_Luttwitz = {
+			is_country_leader = yes
+		}
 	}
 	option = {
-		name = ubd.100.b
-		UBD = {
-				country_event = { id = ubd.101 days = 3 }
-			}
+		name = ubd.68.a
+		add_political_power = 100
+		add_stability = 0.2
+		add_popularity = { ideology = authoritarism popularity = 0.1 }
+		recruit_character = GER_Wilhelm_III
+		promote_character = {
+			character = GER_Wilhelm_III
+			ideology = authoritarism
+		}
 	}
 }
 
-#Согласие Лондона#
-country_event = {
-	id = ubd.101
-	title = ubd.101.t
-	desc = ubd.101.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.101.a
-		
-	}
-}
-
-#Отказ Лондона#
-country_event = {
-	id = ubd.102
-	title = ubd.102.t
-	desc = ubd.102.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.102.a
-	}
-}
-
-#Контакт с Литвой#
-country_event = {
-	id = ubd.103
-	title = ubd.103.t
-	desc = ubd.103.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.103.a
-		add_war_support = 0.04
-		add_popularity = { ideology = authoritarism popularity = -0.03 }
-	}
-	option = {
-		name = ubd.103.b
-		add_opinion_modifier = {
-				target = UBD
-				modifier = BLR_Ylychenie_otnocheniy
-		}
-		UBD = {
-			add_opinion_modifier = {
-				target = LIT
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-		}
-		add_political_power = 20
-		add_popularity = { ideology = authoritarism popularity = 0.03 }
-	}
-	option = {
-		name = ubd.103.c
-		diplomatic_relation = {
-			country = UBD
-			relation = non_aggression_pact
-			active = yes
-		}
-		LIT = {
-			add_opinion_modifier = {
-				target = UBD
-				modifier = BLR_Ylychenie_otnocheniy
-			}
-			give_military_access = UBD
-		}
-		UBD = {
-			add_opinion_modifier = {
-				target = LIT
-				modifier = BLR_Ylychenie_otnocheniy	
-			}
-			give_military_access = LIT
-		}
-		add_political_power = 20
-		add_popularity = { ideology = authoritarism popularity = 0.03 }
-	}
-}
-
-#Призыв о помощи#
-country_event = {
-	id = ubd.104
-	title = ubd.104.t
-	desc = ubd.104.desc
-	picture = GFX_report_event_sib_czechoslovakians
-	is_triggered_only = yes
-	option = {
-		name = ubd.104.a
-	}
-	option = {
-		name = ubd.104.b
-		send_equipment = {
-			equipment = infantry_equipment
-			amount = 300
-			target = UBD
-		}
-	}
-	option = {
-		name = ubd.104.c
-		send_equipment = {
-			equipment = infantry_equipment
-			amount = 400
-			target = UBD
-		}
-		add_manpower = -1000
-		UBD = {
-			add_manpower = 1000
-		}
-	}
-}

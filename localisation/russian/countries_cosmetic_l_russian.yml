@@ -18,6 +18,16 @@
  COUNTRY_autonomy_collaboration_government_DEF: "$OVERLORDADJ$ $NONIDEOLOGYDEF$"
  COUNTRY_autonomy_collaboration_government_ADJ: "$OVERLORDADJ$ $NONIDEOLOGYADJ$"
  
+ GER_lutwiz_regime: "Германское Государство"
+ GER_lutwiz_regime_DEF: "Германское Государство"
+ GER_lutwiz_regime_ADJ: "Германск"
+ GER_erhardt_regime: "Германский Рейх"
+ GER_erhardt_regime_DEF: "Германский Рейх"
+ GER_erhardt_regime_ADJ: "Германск"
+ PRE_6_corps: "6 Резервный Корпус"
+ PRE_6_corps_DEF: "6 Резервный Корпус"
+ PRE_6_corps_ADJ: "Немецк"
+ 
  IZH_army_authoritarism: "Ижевская армия"
  IZH_army_authoritarism_DEF: "Ижевская армия"
  IZH_army_authoritarism_ADJ: "Ижевск"

@@ -232,7 +232,7 @@ ideas = {
 				UBD = { is_puppet_of = GER }
 			}
 			removal_cost = -1
-			picture = GER_wartime_measures
+			picture = GFX_idea_CRI_german_raids_idea
 			modifier = {
 				stability_weekly = -0.003
 				command_power_gain = 0.25
@@ -254,7 +254,7 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			picture = hyper_inflation1
+			picture = GFX_idea_CCA_no_money
 			modifier = {
 				political_power_factor = -0.1
 				stability_weekly = -0.004
@@ -540,6 +540,26 @@ ideas = {
 				training_time_army_factor = -0.1
 				war_support_weekly = 0.002
 				weekly_manpower = 300
+			}
+		}
+		
+		UBD_army_mutinities_ger_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { 
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_volunteer_expedition_bonus
+			modifier = {
+				training_time_army_factor = 1
+				army_attack_factor = -0.75
+				planning_speed = -0.5
+				army_morale_factor = -0.5
 			}
 		}
 		

@@ -137,4 +137,101 @@
 			traits = { warmonger_old_general dictator }
 		}
 	}
+	
+	GER_Wolfgang_Kapp = {
+		name = GER_Wolfgang_Kapp
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Wolfgang_Kapp.dds"
+			}
+		}
+		country_leader = {
+			desc = GER_Wolfgang_Kapp_DESC
+			ideology = despotism_ideology
+			traits = { dislike_jew anti_democrat }
+		}
+	}
+	
+	GER_Walther_von_Luttwitz = {
+		name = GER_Walther_von_Luttwitz
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Walther_von_Luttwitz.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_Walther_von_Luttwitz.dds"
+			}
+		}
+		corps_commander = {
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 1
+			traits = { infantry_officer }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = GER_Walther_von_Luttwitz_DESC
+			ideology = monarchism
+			traits = { warmonger_old_general staunch_monarchist }
+		}
+	}
+	
+	GER_Hans_von_Seekt = {
+		name = GER_Hans_von_Seekt
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Hans_von_Seekt.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_Hans_von_Seekt.dds"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 4
+			logistics_skill = 2
+			traits = { organizer }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = GER_Hans_von_Seekt_DESC
+			ideology = despotism_ideology
+			traits = { warmonger_old_general great_war_hero }
+		}
+	}
+	
+	GER_Hermann_Ehrhardt = {
+		name = GER_Hermann_Ehrhardt
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Hermann_Ehrhardt.dds"
+			}
+			army = {
+				large = "gfx/leaders/GER/Portrait_Hermann_Ehrhardt.dds"
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+		country_leader = {
+			desc = GER_Hermann_Ehrhardt_DESC
+			ideology = despotism_ideology
+			traits = { GER_freikorps_commander anti_democrat anti_communist }
+		}
+	}
+	
 }

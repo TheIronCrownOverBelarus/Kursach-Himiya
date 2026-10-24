@@ -7,7 +7,6 @@ set_war_support = 0.25
 starting_train_buffer = 1.0
 set_convoys = 20
 
-country_event = { id = npt.kostili.5 hours = 2 }
 set_research_slots = 2
 
 set_tech_group_6 = yes
@@ -17,7 +16,7 @@ set_researched_doctrine_6 = yes
 set_grand_doctrine = mass_assault
 
 add_ideas = {
-	military_dictatorship_gov_form
+	limited_monarchy_gov_form
 	unitary_gov_terr
 	local_assembly_decisions_b_law
 	poliparty_system_law
@@ -54,21 +53,54 @@ set_popularities = {
 	national_syndicalism = 0
 }
 
-recruit_character = UBD_Adolf_Friedreich_Mecklenburg
-promote_character = {
-    character = UBD_Adolf_Friedreich_Mecklenburg
-    ideology = monarchism
-}
+recruit_character = UBD_Stepan_Petrichenko
+recruit_character = UBD_Fritsis_Rozin
+recruit_character = UBD_Augusts_Deglavs
+recruit_character = UBD_Eduard_fon_Rozenberg
+recruit_character = UBD_Paul_Schiemann
+recruit_character = UBD_Eduard_Delinsgauzen
+recruit_character = UBD_Vilhelm_Reimers
 recruit_character = UBD_Adolf_Pilar_von_Pilchau
+recruit_character = UBD_Alfred_Fletcher
+recruit_character = UBD_Adolf_Friedreich_Mecklenburg
+recruit_character = UBD_Vladimir_Bukovsky
+
+promote_character = {
+    character = UBD_Stepan_Petrichenko
+    ideology = radical_socialism
+}
+promote_character = {
+    character = UBD_Fritsis_Rozin
+    ideology = communism
+}
+promote_character = {
+    character = UBD_Augusts_Deglavs
+    ideology = social_democracy
+}
+promote_character = {
+    character = UBD_Eduard_fon_Rozenberg
+    ideology = social_liberalism
+}
+promote_character = {
+    character = UBD_Paul_Schiemann
+    ideology = market_liberalism
+}
 promote_character = {
     character = UBD_Adolf_Pilar_von_Pilchau
     ideology = conservatism
 }
-
-create_country_leader = { name = "Степан Петриченко" desc = "" picture = "gfx/leaders/SOV/Portrait_Stepan_Petrichenko.dds" ideology = anarchist_communism traits = { baltic_fleet_sailor } }
-create_country_leader = { name = "Фрицис Розинь" desc = "" picture = "gfx/leaders/LAT/Portrait_Fritsis_Rozin.dds" ideology = leninism traits = { } }
-create_country_leader = { name = "Август Деглав" desc = "" picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds" ideology = social_reformism traits = { min_4_man_of_the_people } }
-create_country_leader = { name = "Владимир Буковский" desc = "" picture = "gfx/leaders/Russia/Portrait_Russia_Generic_3.dds" ideology = narodopravstvo traits = { min_5_lawyer } }
+promote_character = {
+    character = UBD_Alfred_Fletcher
+    ideology = despotism
+}
+promote_character = {
+    character = UBD_Adolf_Friedreich_Mecklenburg
+    ideology = authoritarism
+}
+promote_character = {
+    character = UBD_Vladimir_Bukovsky
+    ideology = national_syndicalism
+}
 
 set_politics = {
 	ruling_party = conservatism
@@ -78,6 +110,7 @@ set_politics = {
 1918.3.14 = {
 
 	GER = { UBD = { subjecting_script_with_transfer_parties_poster_government = yes } }
+	set_cosmetic_tag = UBD_authoritarism
 	COU = {
 		set_nationality = {
 			target_country = UBD
@@ -109,6 +142,9 @@ set_politics = {
 			character = GER_Hugo_von_Kathen
 			ideology = despotism_ideology
 		}
+	}
+	add_ideas = {
+		military_dictatorship_gov_form
 	}
 	set_politics = {
 		ruling_party = despotism

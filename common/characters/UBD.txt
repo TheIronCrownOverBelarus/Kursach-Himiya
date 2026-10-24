@@ -1,17 +1,77 @@
 characters = {
 	
-	UBD_Adolf_Friedreich_Mecklenburg = {
-		name = UBD_Adolf_Friedreich_Mecklenburg
+	UBD_Stepan_Petrichenko = {
+		name = UBD_Stepan_Petrichenko
 		gender = male
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/UBD/Portrait_Adolf_Friedreich_Mecklenburg.dds"
+				large = "gfx/leaders/UBD/Portrait_UBD_Stepan_Petrichenko.dds"
 			}
 		}
 		country_leader = {
-			desc = UBD_Adolf_Friedreich_Mecklenburg_DESC
-			ideology = monarchism
-			traits = { UBD_baltenland_herzog UBD_absent }
+			desc = UBD_Stepan_Petrichenko_DESC
+			ideology = anarchist_communism
+			traits = { UBD_matros_anarchist }
+		}
+	}
+	
+	UBD_Fritsis_Rozin = {
+		name = UBD_Fritsis_Rozin
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_UBD_Fritsis_Rozin.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Fritsis_Rozin_DESC
+			ideology = leninism
+			traits = { UBD_marxist_theorist }
+		}
+	}
+	
+	UBD_Augusts_Deglavs = {
+		name = UBD_Augusts_Deglavs
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Augusts_Deglavs.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Augusts_Deglavs_DESC
+			ideology = social_reformism
+			traits = { UBD_patriot_romantic }
+		}
+	}
+	
+	UBD_Eduard_fon_Rozenberg = {
+		name = UBD_Eduard_fon_Rozenberg
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Eduard_fon_Rozenberg.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Eduard_fon_Rozenberg_DESC
+			ideology = social_liberalism_ideology
+			traits = { UBD_progressive_lawyer }
+		}
+	}
+	
+	UBD_Paul_Schiemann = {
+		name = UBD_Paul_Schiemann
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Paul_Schiemann.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Paul_Schiemann_DESC
+			ideology = national_liberalism
+			traits = { UBD_controversial_journalist }
 		}
 	}
 	
@@ -30,6 +90,36 @@ characters = {
 		}
 	}
 	
+	UBD_Eduard_Delinsgauzen = {
+		name = UBD_Eduard_Delinsgauzen
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Eduard_Delinsgauzen.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Eduard_Delinsgauzen_DESC
+			ideology = conservatism_ideology
+			traits = { UBD_estland_landmarshall UBD_minorities_protector }
+		}
+	}
+	
+	UBD_Vilhelm_Reimers = {
+		name = UBD_Vilhelm_Reimers
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Vilhelm_Reimers.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Vilhelm_Reimers_DESC
+			ideology = conservatism_ideology
+			traits = { UBD_guild_protege }
+		}
+	}
+	
 	UBD_Alexander_von_Rahden = {
 		name = UBD_Alexander_von_Rahden
 		gender = male
@@ -41,7 +131,7 @@ characters = {
 		country_leader = {
 			desc = UBD_Alexander_von_Rahden_DESC
 			ideology = conservatism_ideology
-			traits = {  }
+			traits = { UBD_large_landowner }
 		}
 	}
 	
@@ -94,11 +184,6 @@ characters = {
 		}
 		country_leader = {
 			desc = UBD_Alfred_von_Gossler_DESC
-			ideology = despotism_ideology
-			traits = { good_administrator }
-		}
-		country_leader = {
-			desc = UBD_Alfred_von_Gossler_DESC
 			ideology = authoritarism_ideology
 			traits = { good_administrator }
 		}
@@ -147,6 +232,45 @@ characters = {
 		}
 	}
 	
+	UBD_Adolf_Friedreich_Mecklenburg = {
+		name = UBD_Adolf_Friedreich_Mecklenburg
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Adolf_Friedreich_Mecklenburg.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Adolf_Friedreich_Mecklenburg_DESC
+			ideology = monarchism
+			traits = { UBD_baltenland_herzog UBD_absent }
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = { }
+			visible = { NOT = { has_character_flag = dismissed_flag } }
+		}
+	}
+	
+	UBD_Vladimir_Bukovsky = {
+		name = UBD_Vladimir_Bukovsky
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_Vladimir_Bukovsky.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Vladimir_Bukovsky_DESC
+			ideology = narodopravstvo
+			traits = { UBD_civil_law_expert }
+		}
+	}
+	
 	UBD_William_von_Engelhart = {
 		name = UBD_William_von_Engelhart
 		gender = male
@@ -164,7 +288,6 @@ characters = {
 			defense_skill = 1
 			planning_skill = 2
 			logistics_skill = 2
-			legacy_id = 10006
 			traits = { old_guard cavalry_officer cavalry_leader }
 			visible = { NOT = { has_character_flag = dismissed_flag } }
 		}
