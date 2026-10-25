@@ -30,144 +30,6 @@ ideas = {
 				}
 			}
 		}
-		
-		UBD_Adolf_Pilar_von_Pilchau_1 = {
-			allowed = {
-				original_tag = UBD
-			}
-			available = {
-				if = {
-					limit = { has_character = UBD_Adolf_Pilar_von_Pilchau }
-					UBD_Adolf_Pilar_von_Pilchau = {
-						NOT = { has_character_flag = dismissed_flag }
-					}
-				}
-				min_despotism_conciliatory = yes
-			}
-			visible = {
-				has_character = UBD_Adolf_Pilar_von_Pilchau
-			}
-			traits = { head_of_government_trait despotist_counselor min_1_supreme_ruler despotist_min_1 }
-			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { min_despotism_fanatic = yes }
-				}
-			}
-		}
-		
-		UBD_Alexander_von_Rahden_1 = {
-			allowed = {
-				original_tag = UBD
-				original_tag = COU
-			}
-			available = {
-				if = {
-					limit = { has_character = UBD_Alexander_von_Rahden }
-					UBD_Alexander_von_Rahden = {
-						NOT = { has_character_flag = dismissed_flag }
-					}
-				}
-				min_despotism_conciliatory = yes
-			}
-			visible = {
-				has_character = UBD_Alexander_von_Rahden
-			}
-			traits = { head_of_government_trait despotist_counselor min_1_supreme_ruler despotist_min_1 }
-			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { min_despotism_fanatic = yes }
-				}
-			}
-		}
-		
-		UBD_Alfred_Fletcher_1 = {
-			allowed = {
-				original_tag = UBD
-			}
-			available = {
-				if = {
-					limit = { has_character = UBD_Alfred_Fletcher }
-					UBD_Alfred_Fletcher = {
-						NOT = { has_character_flag = dismissed_flag }
-					}
-				}
-				min_despotism_conciliatory = yes
-			}
-			visible = {
-				has_character = UBD_Alfred_Fletcher
-			}
-			traits = { head_of_government_trait despotist_counselor min_1_supreme_ruler despotist_min_1 }
-			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { min_despotism_fanatic = yes }
-				}
-			}
-		}
-		
-		GER_Hugo_von_Kathen_1 = {
-			allowed = {
-				original_tag = GER
-				original_tag = UBD
-			}
-			available = {
-				if = {
-					limit = { has_character = GER_Hugo_von_Kathen }
-					GER_Hugo_von_Kathen = {
-						NOT = { has_character_flag = dismissed_flag }
-					}
-				}
-				min_despotism_conciliatory = yes
-			}
-			visible = {
-				has_character = GER_Hugo_von_Kathen
-			}
-			traits = { head_of_government_trait despotist_counselor min_1_supreme_ruler despotist_min_1 }
-			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { min_despotism_fanatic = yes }
-				}
-			}
-		}
-		
-		GER_Rudiger_von_der_Goltz_1 = {
-			allowed = {
-				original_tag = GER
-				original_tag = UBD
-			}
-			available = {
-				if = {
-					limit = { has_character = GER_Rudiger_von_der_Goltz }
-					GER_Rudiger_von_der_Goltz = {
-						NOT = { has_character_flag = dismissed_flag }
-					}
-				}
-				min_despotism_conciliatory = yes
-			}
-			visible = {
-				has_character = GER_Rudiger_von_der_Goltz
-			}
-			traits = { head_of_government_trait despotist_counselor min_1_supreme_ruler despotist_min_1 }
-			on_add = { if = { add_popularity = { ideology = despotism popularity = 0.01 } } }
-			ai_will_do = {
-				factor = 1
-				modifier = {
-					factor = 0
-					NOT = { min_despotism_fanatic = yes }
-				}
-			}
-		}
 	
 	}
 	
@@ -197,6 +59,20 @@ ideas = {
 	
 	country = {
 	
+		UBD_Adolf_Friedreich_Mecklenburg_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+	
 		UBD_ethnic_conflict_idea = {
 			allowed = {
 				always = no
@@ -221,6 +97,23 @@ ideas = {
 			}
 		}
 		
+		UBD_ethnic_conflict_05_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			picture = generic_disjointed_gov
+			modifier = {
+				conscription_factor = -0.15
+				resistance_target = 0.05
+				army_core_defence_factor = -0.05
+				social_democracy_drift = 0.01
+			}
+		}
+		
 		UBD_german_occupation_idea = {
 			allowed = {
 				always = no
@@ -240,6 +133,30 @@ ideas = {
 				resistance_activity = 0.15
 				resistance_target = 0.15
 				consumer_goods_factor = 0.03
+				autonomy_gain_global_factor = -0.1
+				despotism_drift = 0.02
+				custom_modifier_tooltip = UBD_german_occupation_idea_tt
+			}
+		}
+		
+		UBD_german_occupation_05_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { 
+				UBD = { is_puppet_of = GER }
+			}
+			removal_cost = -1
+			picture = GFX_idea_CRI_german_raids_idea
+			modifier = {
+				command_power_gain = 0.25
+				required_garrison_factor = -0.2
+				resistance_activity = 0.07
+				resistance_target = 0.07
+				consumer_goods_factor = 0.1
 				autonomy_gain_global_factor = -0.1
 				despotism_drift = 0.02
 				custom_modifier_tooltip = UBD_german_occupation_idea_tt
@@ -540,6 +457,43 @@ ideas = {
 				training_time_army_factor = -0.1
 				war_support_weekly = 0.002
 				weekly_manpower = 300
+			}
+		}
+		
+		UBD_parzitans_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = { 
+				always = yes
+			}
+			removal_cost = -1
+			picture = GFX_idea_CRI_red_partisans
+			modifier = {
+				communism_drift = 0.05
+				social_democracy_drift = 0.03
+				stability_weekly = -0.005
+				war_support_factor = -0.05
+				political_power_factor = -0.05
+				conscription_factor = -0.05
+			}
+			targeted_modifier = {
+				tag = RUS
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+			targeted_modifier = {
+				tag = LAT
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
+			}
+			targeted_modifier = {
+				tag = EST
+				attack_bonus_against = -0.05
+				defense_bonus_against = -0.05
 			}
 		}
 		

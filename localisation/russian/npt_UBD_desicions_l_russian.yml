@@ -1,19 +1,12 @@
 ﻿l_russian:
  UBD_ost_politik_decisions_category: "Ост-Политика"
- UBD_land_measurements_decision: "Землемерные работы"
- UBD_take_land_decision: "Изъятие Орденских владений"
- UBD_loyalist_lands_decision: "Вознаграждение за верность"
- UBD_german_immigration_decision: "Привлечение немецких поселенцев"
+ UBD_stop_german_explotation_decision: "Прекращение реквизиций"
+ UBD_land_parzelation_decision: "Парцеляция помещичьих владений"
+ UBD_appease_loyalists_decision: "Поддержка лояльных фермеров"
+ UBD_cooperatives_organization_decision: "Организация кооперативов"
+ UBD_import_settlers_decision: "Привлечение немецких поселенцев"
  
- UBD_crush_separatism_decisions_category: "Борьба с сепаратизмом"
- UBD_crush_separatism_in_courland_decision: "Восстановление порядка в Курляндии"
- UBD_crush_separatism_in_estland_decision: "Восстановление порядка в Эстляндии"
- UBD_crush_separatism_in_osel_and_dago_decision: "Восстановление порядка на Эзеле и Даго"
- UBD_crush_separatism_in_livonia_decision: "Восстановление порядка в Ливонии"
+ UBD_end_partizan_activity_decision: "Разгром партизанства"
  
- UBD_education_decisions_category: "Образовательная Реформа"
- UBD_education_germanisation_decision: "Германизация образования"
- UBD_tartu_university_decision: "Восстановление Тартутского университета"
- UBD_war_on_illiteracy_decision: "Борьба с неграмотностью"
  
  

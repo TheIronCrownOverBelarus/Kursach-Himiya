@@ -26,6 +26,9 @@ country_event = {
 		add_political_power = 15
 		add_stability = 0.03
 		add_popularity = { ideology = conservatism popularity = 0.04 }
+		GER = {
+			country_event = { id = ubd.3 days = 5 }
+		}
 		promote_character = {
 			character = UBD_Eduard_Delinsgauzen
 			ideology = conservatism
@@ -33,7 +36,7 @@ country_event = {
 	}
 }
 
-#Регентский Совет#
+#Делегация из Риги#
 country_event = {
 	id = ubd.3
 	title = ubd.3.t
@@ -42,6 +45,104 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ubd.3.a
+		UBD = {
+			country_event = { id = ubd.4 days = 5 }
+		}
+		RUS = {
+			country_event = { id = ubd.5 days = 5 }
+		}
+	}
+}
+
+#Ответ Берлина#
+country_event = {
+	id = ubd.4
+	title = ubd.4.t
+	desc = ubd.4.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.4.a
+	}
+}
+
+#Предложение Хинце#
+country_event = {
+	id = ubd.5
+	title = ubd.5.t
+	desc = ubd.5.desc
+	is_triggered_only = yes
+	option = {
+		name = ubd.5.a
+		country_event = { id = ubd.6 days = 3 }
+		country_event = { id = ubd.7 days = 3 }
+	}
+}
+
+#Дополнительный протокол часть первая#
+country_event = {
+	id = ubd.6
+	title = ubd.6.t
+	desc = ubd.6.desc
+	is_triggered_only = yes
+	option = {
+		name = ubd.6.a
+	}
+}
+
+#Дополнительный протокол часть вторая#
+country_event = {
+	id = ubd.7
+	title = ubd.7.t
+	desc = ubd.7.desc
+	is_triggered_only = yes
+	option = {
+		name = ubd.7.a
+		GER = {
+			country_event = { id = ubd.8 days = 3 }
+		}
+	}
+}
+
+#Москва подписывает доппротокол#
+country_event = {
+	id = ubd.8
+	title = ubd.8.t
+	desc = ubd.8.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.8.a
+		UBD = {
+			country_event = { id = ubd.9 days = 5 }
+		}
+	}
+}
+
+#Долгожданное признание#
+country_event = {
+	id = ubd.9
+	title = ubd.9.t
+	desc = ubd.9.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.9.a
+		add_political_power = 30
+		add_stability = 0.07
+		add_popularity = { ideology = conservatism popularity = 0.05 }
+	}
+}
+
+#Регентский Совет#
+country_event = {
+	id = ubd.10
+	title = ubd.10.t
+	desc = ubd.10.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.10.a
 		hidden_effect = {
 			promote_character = {
 				character = UBD_Adolf_Pilar_von_Pilchau
@@ -54,7 +155,7 @@ country_event = {
 		}
 	}
 		option = {
-		name = ubd.3.b
+		name = ubd.10.b
 		hidden_effect = {
 			promote_character = {
 				character = UBD_Eduard_Delinsgauzen
@@ -67,7 +168,7 @@ country_event = {
 		}
 	}
 		option = {
-		name = ubd.3.f
+		name = ubd.10.c
 		hidden_effect = {
 			promote_character = {
 				character = UBD_Vilhelm_Reimers
@@ -81,78 +182,277 @@ country_event = {
 	}
 }
 
-#Вопрос о государственной власти#
+#Балтийская Конституция#
 country_event = {
-	id = ubd.4
-	title = ubd.4.t
-	desc = ubd.4.desc
+	id = ubd.11
+	title = ubd.11.t
+	desc = ubd.11.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.4.a
-		country_event = { id = ubd.5 days = 5 }
+		name = ubd.11.a
+		set_cosmetic_tag = UBD_authoritarism
+		add_ideas = {
+			unitary_gov_terr
+		}
+		add_ideas = {
+			limited_monarchy_gov_form
+		}
+		country_event = { id = ubd.12 days = 15 }
+	}
+	option = {
+		name = ubd.11.b
+		set_cosmetic_tag = UBD_authoritarism
+		add_ideas = {
+			federal_gov_terr
+		}
+		add_ideas = {
+			limited_monarchy_gov_form
+		}
+		country_event = { id = ubd.12 days = 15 }
+	}
+	option = {
+		name = ubd.11.c
+		trigger = {
+			has_global_flag = WWI_GER_HAS_CAPITULATED
+		}
+		set_cosmetic_tag = UBD_market_liberalism
+		add_ideas = {
+			federal_gov_terr
+		}
+		add_ideas = {
+			parliamentary_republic_gov_form
+		}
 	}
 }
 
-#Вопрос о территориальном устройстве#
+#Коронация#
 country_event = {
-	id = ubd.5
-	title = ubd.5.t
-	desc = ubd.5.desc
+	id = ubd.12
+	title = ubd.12.t
+	desc = ubd.12.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.5.a
-		country_event = { id = ubd.6 days = 5 }
+		name = ubd.12.a
+		add_stability = 0.03
+		add_popularity = { ideology = ROOT popularity = 0.05 }
+		add_ideas = {
+			UBD_Adolf_Friedreich_Mecklenburg_idea
+		}
+	}
+	option = {
+		name = ubd.12.b
+		add_stability = -0.03
+		add_war_support = 0.05
+		add_popularity = { ideology = authoritarism popularity = 0.05 }
+		promote_character = {
+			character = UBD_Adolf_Friedreich_Mecklenburg
+			ideology = authoritarism
+		}
+		remove_trait = {
+			character = UBD_Adolf_Friedreich_Mecklenburg
+			trait = UBD_absent
+		}
+		set_politics = {
+			ruling_party = authoritarism
+			elections_allowed = no
+		}
 	}
 }
 
-#Вопрос о флаге#
+#Результат аграрных преобразований#
 country_event = {
-	id = ubd.6
-	title = ubd.6.t
-	desc = ubd.6.desc
+	id = ubd.13
+	title = ubd.13.t
+	desc = ubd.13.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.6.a
-		country_event = { id = ubd.7 days = 5}
+		name = ubd.13.a
+		add_stability = 0.15
+		add_war_support = 0.1
+		add_popularity = { ideology = ROOT popularity = 0.1 }
+		add_ideas = {
+			cooperative_land_ownership
+		}
 	}
 }
 
-#Завершение собрания#
+#Языковой вопрос#
 country_event = {
-	id = ubd.7
-	title = ubd.7.t
-	desc = ubd.7.desc
+	id = ubd.14
+	title = ubd.14.t
+	desc = ubd.14.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.7.a
+		name = ubd.14.a
+		add_political_power = -30
+		add_stability = 0.04
+		add_popularity = { ideology = ROOT popularity = 0.03 }
+	}
+	option = {
+		name = ubd.14.b
+		add_stability = -0.1
+		add_war_support = -0.07
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.1 }
 	}
 }
 
-#Арест Демблока#
+#Открытие Дерптского Университета#
 country_event = {
-	id = ubd.8
-	title = ubd.8.t
-	desc = ubd.8.desc
+	id = ubd.15
+	title = ubd.15.t
+	desc = ubd.15.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.8.a
+		name = ubd.15.a
+		add_stability = 0.02
+		add_popularity = { ideology = ROOT popularity = 0.01 }
+		add_research_slot = 1
 	}
 }
 
-#Восстание сепаратистов#
+#Борьба с неграмотностью#
 country_event = {
-	id = ubd.9
-	title = ubd.9.t
-	desc = ubd.9.desc
+	id = ubd.16
+	title = ubd.16.t
+	desc = ubd.16.desc
 	picture = GFX_report_event_sib_czechoslovakians
 	is_triggered_only = yes
 	option = {
-		name = ubd.9.a
+		name = ubd.16.a
+		add_political_power = -50
+		add_stability = 0.05
+		add_popularity = { ideology = ROOT popularity = 0.03 }
+		add_ideas = {
+			low_literacy_in_countryside
+		}
+	}
+}
+
+#Прибытие немецких войск#
+country_event = {
+	id = ubd.17
+	title = ubd.17.t
+	desc = ubd.17.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.17.a
+		add_popularity = { ideology = despotism popularity = 0.03 }
+		GER = {
+			set_nationality = {
+				target_country = UBD
+				character = GER_Rudiger_von_der_Goltz
+			}
+		}
+	}
+}
+
+#Арест Демократического Блока#
+country_event = {
+	id = ubd.18
+	title = ubd.18.t
+	desc = ubd.18.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.18.a
+		add_popularity = { ideology = social_democracy popularity = -0.05 }
+		retire_character = UBD_Augusts_Deglavs
+		promote_character = {
+			character = UBD_Arved_Berg
+			ideology = social_democracy
+		}
+		country_event = { id = ubd.19 days = 3 }
+	}
+}
+
+#Президенты самозванцы#
+country_event = {
+	id = ubd.19
+	title = ubd.19.t
+	desc = ubd.19.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.19.a
+		add_stability = -0.03
+		add_popularity = { ideology = social_democracy popularity = -0.05 }
+		LAT = {
+			retire_country_leader = yes
+		}
+		EST = {
+			retire_country_leader = yes
+		}
+		hidden_effect = {
+			country_event = { id = ubd.20 days = 3 }
+		}
+	}
+	option = {
+		name = ubd.19.b
+		add_political_power = -35
+		add_stability = -0.05
+		add_popularity = { ideology = social_democracy popularity = -0.07 }
+		LAT = {
+			kill_country_leader = yes
+		}
+		EST = {
+			kill_country_leader = yes
+		}
+		hidden_effect = {
+			country_event = { id = ubd.20 days = 3 }
+			country_event = { id = ubd.21 days = 7 }
+		}
+	}
+}
+
+#Партизанская активность#
+country_event = {
+	id = ubd.20
+	title = ubd.20.t
+	desc = ubd.20.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.20.a
+		add_stability = -0.05
+		add_manpower = -823
+		add_popularity = { ideology = communism popularity = 0.05 }
+		add_popularity = { ideology = social_democracy popularity = 0.03 }
+		swap_ideas = {
+			remove_idea = UBD_ethnic_conflict_idea
+			add_idea = UBD_parzitans_idea
+		}
+		rise_foodstuffs_supply_crisis = yes
+	}
+}
+
+#Мятеж#
+country_event = {
+	id = ubd.21
+	title = ubd.21.t
+	desc = ubd.21.desc
+	picture = GFX_report_event_sib_czechoslovakians
+	is_triggered_only = yes
+	option = {
+		name = ubd.21.a
+		add_stability = -0.1
+		add_war_support = -0.07
+		add_popularity = { ideology = ROOT popularity = -0.05 }
+		add_manpower = -384
+		add_timed_idea = {
+			idea = disorganization_of_army
+			time = 20 days
+		}
+		delete_unit_template_and_units = {
+			division_template = "Ethnisches Regiment"
+			disband = no
+		}
 	}
 }
 
@@ -778,7 +1078,7 @@ country_event = {
 		name = ubd.65.a
 		add_popularity = { ideology = ROOT popularity = -0.03 }
 		add_trait = {
-			ideology = despotism
+			character = GER_Wolfgang_Kapp
 			trait = cabinet_crisis
 		}
 		hidden_effect = {
@@ -797,7 +1097,7 @@ country_event = {
 	option = {
 		name = ubd.66.a
 		remove_trait = {
-			ideology = despotism
+			character = GER_Wolfgang_Kapp
 			trait = cabinet_crisis
 		}
 		add_stability = -0.1

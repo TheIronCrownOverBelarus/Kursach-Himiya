@@ -45,6 +45,21 @@ characters = {
 		}
 	}
 	
+	UBD_Arved_Berg = {
+		name = UBD_Arved_Berg
+		gender = male
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/UBD/Portrait_UBD_Arved_Berg.dds"
+			}
+		}
+		country_leader = {
+			desc = UBD_Arved_Berg_DESC
+			ideology = social_reformism
+			traits = { min_2_sovereignty_supporter }
+		}
+	}
+	
 	UBD_Eduard_fon_Rozenberg = {
 		name = UBD_Eduard_fon_Rozenberg
 		gender = male

@@ -15,9 +15,7 @@ focus_tree = {
 	focus = {
         id = UBD_create_government_system
 		icon = GFX_UBD_create_government_system
-		available = {
-		}
-        x = 14
+        x = 16
         y = 0
         cost = 10
 		select_effect = {
@@ -34,9 +32,7 @@ focus_tree = {
 	focus = {
         id = UBD_gather_landesrat
 		icon = GFX_UBD_gather_landesrat
-		available = { 
-		}
-        x = 16
+        x = 14
         y = 0
         cost = 2
 		completion_reward = {
@@ -48,6 +44,9 @@ focus_tree = {
 	focus = {
         id = UBD_regentschaftsrat
 		icon = GFX_UBD_regentschaftsrat
+		available = {
+			has_country_flag = UBD_recognized_by_germany_flag
+		}
 		prerequisite = {
 			focus = UBD_create_government_system
 		}
@@ -58,9 +57,7 @@ focus_tree = {
         y = 1
         cost = 1
 		completion_reward = {
-			add_political_power = 50
-			add_stability = 0.07
-			country_event = { id = ubd.3 days = 2 }
+			country_event = { id = ubd.10 days = 1 }
 		}
 	}
 	
@@ -74,7 +71,10 @@ focus_tree = {
         y = 2
         cost = 5
 		completion_reward = {
-			country_event = { id = ubd.4 days = 2 }
+			add_ideas = {
+				constitution_b_law
+			}
+			country_event = { id = ubd.11 days = 1 }
 		}
 	}
 	
@@ -101,13 +101,15 @@ focus_tree = {
 			focus = UBD_knighthood_support
 		}
 		available = {
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 5
         y = 4
         cost = 3
 		completion_reward = {
-			custom_effect_tooltip = UBD_education_reform_tt
+			country_event = { id = ubd.14 days = 1 }
+			country_event = { id = ubd.15 days = 7 }
+			country_event = { id = ubd.16 days = 30 }
 		}
 	}
 	
@@ -118,7 +120,7 @@ focus_tree = {
 			focus = UBD_knighthood_support
 		}
 		available = {
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 7
         y = 4
@@ -138,7 +140,7 @@ focus_tree = {
 			focus = UBD_constitution
 		}
 		available = { 
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 8
         y = 3
@@ -161,7 +163,7 @@ focus_tree = {
 			focus = UBD_regentschaftsrat
 		}
 		available = {
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 13
         y = 2
@@ -346,18 +348,17 @@ focus_tree = {
 			focus = UBD_regentschaftsrat
 		}
 		available = {
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 15
         y = 2
         cost = 4
 		completion_reward = {
-			set_country_flag = UBD_landwehr_formed
-			add_ideas = UBD_landwehr_1_idea
 			rise_mobilization_law = yes
-			recruit_character = UBD_Alfred_Fletcher
+			add_ideas = UBD_landwehr_1_idea
 			custom_effect_tooltip = UBD_form_landwehr_tt
 			hidden_effect = {
+				recruit_character = UBD_Alfred_Fletcher
 				lack_of_officers_rise = yes
 				division_template = {
 					name = "Landeswehr Brigade"
@@ -486,19 +487,19 @@ focus_tree = {
         cost = 4
 		completion_reward = {
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
-			add_ideas = UBD_RUS_regiments_idea
 			set_party_name = { 
 				ideology = national_syndicalism
 				long_name = "Союз Русских Офицеров"
 				name = "Союз Офицеров"
 			}
-			recruit_character = UBD_William_von_Engelhart
 			promote_character = {
 				character = UBD_William_von_Engelhart
 				ideology = national_syndicalism_ideology
 			}
+			add_ideas = UBD_RUS_regiments_idea
 			custom_effect_tooltip = UBD_form_rus_batalions_tt
 			hidden_effect = {
+				recruit_character = UBD_William_von_Engelhart
 				lack_of_officers_fall = yes
 				division_template = {
 					name = "Russisches Regiment"
@@ -538,9 +539,9 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = despotism popularity = 0.03 }
 			add_command_power = 30
-			recruit_character = UBD_Hans_von_Manteuffel_Szoege
 			custom_effect_tooltip = UBD_mobilise_officers_tt
 			hidden_effect = {
+				recruit_character = UBD_Hans_von_Manteuffel_Szoege
 				lack_of_officers_fall = yes
 			}
 		}
@@ -653,7 +654,7 @@ focus_tree = {
 			focus = UBD_landowners_finance
 		}
 		available = { 
-			has_country_flag = UBD_financial_peoblem_solved
+			has_country_flag = UBD_financial_peoblem_solved_flag
 		}
         x = 19
         y = 3
@@ -670,7 +671,7 @@ focus_tree = {
 			focus = UBD_start_ostpolitik
 		}
 		available = {
-			has_country_flag = UBD_land_taken_flag
+			has_country_flag = UBD_parzelation_finished_flag
 		}
         x = 19
         y = 4
@@ -680,9 +681,9 @@ focus_tree = {
 				idea = UBD_service_for_land_idea
 				days = 100
 			}
-			recruit_character = UBD_Josef_Bischoff
 			custom_effect_tooltip = UBD_eiserne_division_tt
 			hidden_effect = {
+				recruit_character = UBD_Josef_Bischoff
 				division_template = {
 					name = "Eiserne Division"
 					regiments = {
@@ -719,12 +720,7 @@ focus_tree = {
         y = 5
         cost = 4
 		completion_reward = {
-			GER = {
-				set_nationality = {
-					target_country = UBD
-					character = GER_Rudiger_von_der_Goltz
-				}
-			}
+			country_event = { id = ubd.17 days = 30 }
 			custom_effect_tooltip = UBD_six_reserve_corps_tt
 			hidden_effect = {
 				division_template = {
@@ -788,22 +784,28 @@ focus_tree = {
         y = 5
         cost = 5
 		completion_reward = {
+			rise_2_mobilization_law = yes
 			swap_ideas = {
 				remove_idea = UBD_landwehr_1_idea
 				add_idea = UBD_landwehr_2_idea
 			}
-			rise_2_mobilization_law = yes
-			remove_ideas = UBD_german_occupation_idea
+			if = {
+				limit = { has_idea = UBD_german_occupation_idea }
+				remove_ideas = UBD_german_occupation_idea
+			}
+			else_if = {
+				limit = { has_idea = UBD_german_occupation_05_idea }
+				remove_ideas = UBD_german_occupation_05_idea
+			}
 			set_party_name = { 
 				ideology = despotism
-				long_name = "Штаб Остзейской армии"
-				name = "Штаб Остзейской армии"
+				long_name = "Штаб Остзейской Армии"
+				name = "Штаб Остзейской Армии"
 			}
 			promote_character = {
 				character = UBD_Alfred_Fletcher
 				ideology = despotism_ideology
 			}
-			
 		}
 	}
 	
@@ -817,7 +819,7 @@ focus_tree = {
         y = 6
         cost = 3
 		completion_reward = {
-			country_event = { id = ubd.8 days = 5 }
+			country_event = { id = ubd.18 days = 1 }
 		}
 	}
 	
